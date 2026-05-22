@@ -6,4 +6,13 @@ set(CMAKE_CXX_STANDARD 14)
 add_executable(Proyecto_2___Kris_y_Derek
         .idea/workspace.xml
         main.cpp
-        README.md)
+        README.md
+        Adapter/Video.h
+        Utilities/Utilities.h
+        Adapter/MP4.cpp
+        Adapter/MP4.h
+        Adapter/Video.cpp
+        Adapter/MPG.cpp
+        Adapter/MPG.h
+        Adapter/AdapterMPG.cpp
+        Adapter/AdapterMPG.h)
