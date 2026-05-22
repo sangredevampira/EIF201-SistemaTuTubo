@@ -23,18 +23,9 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2aad945c-61cf-4ded-8f60-d3eeab25ee47" name="Changes" comment="commit">
-      <change afterPath="$PROJECT_DIR$/Adapter/AdapterMPG.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Adapter/AdapterMPG.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Adapter/MPG.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Adapter/MPG.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Adapter/Video.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Adapter/Video.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Utilities/Utilities.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+    <list default="true" id="2aad945c-61cf-4ded-8f60-d3eeab25ee47" name="Changes" comment="implementacion del adapter sujeto a cambios">
       <change beforePath="$PROJECT_DIR$/Video.cpp" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Video.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -154,6 +145,12 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\Clion\Proyecto-2---Kris-y-Derek\Utilities" />
+      <recent name="E:\Clion\Proyecto-2---Kris-y-Derek\Adapter" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
@@ -255,7 +252,15 @@
       <option name="project" value="LOCAL" />
       <updated>1779422261141</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="implementacion del adapter sujeto a cambios">
+      <option name="closed" value="true" />
+      <created>1779429956167</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1779429956167</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -268,7 +273,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="commit" />
+    <MESSAGE value="implementacion del adapter sujeto a cambios" />
+    <option name="LAST_COMMIT_MESSAGE" value="implementacion del adapter sujeto a cambios" />
   </component>
   <component name="github-copilot-workspace">
     <instructionFileLocations>
