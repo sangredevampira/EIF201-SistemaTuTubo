@@ -3,9 +3,12 @@
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
-  <component name="CMakePresetLoader"><![CDATA[{
-  "useNewFormat": true
-}]]></component>
+  <component name="BackendCodeEditorMiscSettings">
+    <option name="/Default/Housekeeping/FeatureSuggestion/FeatureSuggestionManager/DisabledSuggesters/=SwitchToGoToActionSuggester/@EntryIndexedValue" value="true" type="bool" />
+  </component>
+  <component name="CMakePresetLoader">{
+  &quot;useNewFormat&quot;: true
+}</component>
   <component name="CMakeProjectFlavorService">
     <option name="flavorId" value="CMakePlainProjectFlavor" />
   </component>
@@ -23,9 +26,10 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2aad945c-61cf-4ded-8f60-d3eeab25ee47" name="Changes" comment="implementacion del adapter sujeto a cambios">
-      <change beforePath="$PROJECT_DIR$/Video.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Video.h" beforeDir="false" />
+    <list default="true" id="2aad945c-61cf-4ded-8f60-d3eeab25ee47" name="Changes" comment="implementacion del patron iterador sujeto a cambios">
+      <change beforePath="$PROJECT_DIR$/.idea/Proyecto_2___Kris_y_Derek.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,7 +42,7 @@
   <component name="CopilotChats">
     <option name="panelChat">
       <chat>
-        <option name="activeSessionId" value="1ed85668-5626-46c4-882e-a8ecfbb426e6" />
+        <option name="activeSessionId" value="cb58a3f8-02e4-4550-afc9-8efc08a7c598" />
         <option name="sessions">
           <session>
             <option name="chatType" value="PANEL" />
@@ -52,6 +56,14 @@
           <session>
             <option name="chatType" value="PANEL" />
             <option name="id" value="1ed85668-5626-46c4-882e-a8ecfbb426e6" />
+            <option name="modeId" value="Ask" />
+            <option name="modelType" value="builtin_family" />
+            <option name="modelValue" value="claude-haiku-4.5" />
+            <option name="targetType" value="LOCAL" />
+          </session>
+          <session>
+            <option name="chatType" value="PANEL" />
+            <option name="id" value="cb58a3f8-02e4-4550-afc9-8efc08a7c598" />
             <option name="modeId" value="Ask" />
             <option name="modelType" value="builtin_family" />
             <option name="modelValue" value="claude-haiku-4.5" />
@@ -77,7 +89,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="Modulo-Iterator" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -129,6 +141,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "CMake Application.Proyecto_2___Kris_y_Derek.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.RadMigrateCodeStyle": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.cidr.known.project.marker": "true",
@@ -140,99 +153,31 @@
     "cidr.known.project.marker": "true",
     "git-widget-placeholder": "Modulo-Videos",
     "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "E:/Clion/Proyecto-2---Kris-y-Derek",
     "nodejs_package_manager_path": "npm",
     "org.rust.first.attach.projects": "true",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Clion\Proyecto-2---Kris-y-Derek" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\Clion\Proyecto-2---Kris-y-Derek\Utilities" />
       <recent name="E:\Clion\Proyecto-2---Kris-y-Derek\Adapter" />
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="Proyecto_2___Kris_y_Derek" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Proyecto_2___Kris_y_Derek" TARGET_NAME="Proyecto_2___Kris_y_Derek" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Proyecto_2___Kris_y_Derek" RUN_TARGET_NAME="Proyecto_2___Kris_y_Derek">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
-      <module name="Proyecto_2___Kris_y_Derek" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="RUN_TOOL" value="" />
-      <option name="SCRIPT_NAME" value="" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration default="true" type="Tox" factoryName="Tox">
-      <module name="Proyecto_2___Kris_y_Derek" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="RUN_TOOL" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration default="true" type="tests" factoryName="Autodetect">
-      <module name="Proyecto_2___Kris_y_Derek" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="RUN_TOOL" value="" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;&quot;" />
-      <option name="_new_targetType" value="&quot;PATH&quot;" />
-      <method v="2" />
-    </configuration>
-    <configuration default="true" type="tests" factoryName="Doctests">
-      <module name="Proyecto_2___Kris_y_Derek" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="RUN_TOOL" value="" />
-      <option name="SCRIPT_NAME" value="" />
-      <option name="CLASS_NAME" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_SCRIPT" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
-      <method v="2" />
+    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
     </configuration>
   </component>
   <component name="TaskManager">
@@ -243,6 +188,8 @@
       <option name="presentableId" value="Default" />
       <updated>1779420660889</updated>
       <workItem from="1779420663969" duration="2017000" />
+      <workItem from="1779500235774" duration="342000" />
+      <workItem from="1779500641492" duration="2526000" />
     </task>
     <task id="LOCAL-00001" summary="commit">
       <option name="closed" value="true" />
@@ -260,7 +207,31 @@
       <option name="project" value="LOCAL" />
       <updated>1779429956167</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="implementacion del adapter sujeto a cambios">
+      <option name="closed" value="true" />
+      <created>1779431063525</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1779431063525</updated>
+    </task>
+    <task id="LOCAL-00004" summary="commit">
+      <option name="closed" value="true" />
+      <created>1779500724191</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1779500724192</updated>
+    </task>
+    <task id="LOCAL-00005" summary="implementacion del patron iterador sujeto a cambios">
+      <option name="closed" value="true" />
+      <created>1779504341077</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1779504341077</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -272,9 +243,10 @@
     <isAutomaticReloadCMake value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="commit" />
     <MESSAGE value="implementacion del adapter sujeto a cambios" />
-    <option name="LAST_COMMIT_MESSAGE" value="implementacion del adapter sujeto a cambios" />
+    <MESSAGE value="commit" />
+    <MESSAGE value="implementacion del patron iterador sujeto a cambios" />
+    <option name="LAST_COMMIT_MESSAGE" value="implementacion del patron iterador sujeto a cambios" />
   </component>
   <component name="github-copilot-workspace">
     <instructionFileLocations>
