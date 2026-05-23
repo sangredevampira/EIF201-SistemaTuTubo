@@ -16,3 +16,8 @@ add_executable(Proyecto_2___Kris_y_Derek
         Adapter/MPG.h
         Adapter/AdapterMPG.cpp
         Adapter/AdapterMPG.h)
+        README.md
+        Utilities/Utilities.h
+        ConcreteIterator.h
+        List.h
+        Nodo.h)

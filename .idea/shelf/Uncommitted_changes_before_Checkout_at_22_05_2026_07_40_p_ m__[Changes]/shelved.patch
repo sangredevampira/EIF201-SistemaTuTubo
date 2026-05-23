@@ -1,0 +1,20 @@
+Index: .idea/Proyecto-2---Kris-y-Derek.iml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<module type=\"CPP_MODULE\" version=\"4\">\r\n  <component name=\"NewModuleRootManager\">\r\n    <content url=\"file://$MODULE_DIR$\" />\r\n    <orderEntry type=\"inheritedJdk\" />\r\n    <orderEntry type=\"sourceFolder\" forTests=\"false\" />\r\n  </component>\r\n</module>
+===================================================================
+diff --git a/.idea/Proyecto-2---Kris-y-Derek.iml b/.idea/Proyecto-2---Kris-y-Derek.iml
+--- a/.idea/Proyecto-2---Kris-y-Derek.iml	(revision d82854702840f1eb92f09d8cc9a62f2c17b9a10e)
++++ b/.idea/Proyecto-2---Kris-y-Derek.iml	(date 1779500252952)
+@@ -1,8 +1,2 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+-<module type="CPP_MODULE" version="4">
+-  <component name="NewModuleRootManager">
+-    <content url="file://$MODULE_DIR$" />
+-    <orderEntry type="inheritedJdk" />
+-    <orderEntry type="sourceFolder" forTests="false" />
+-  </component>
+-</module>
+\ No newline at end of file
++<module classpath="CIDR" type="CPP_MODULE" version="4" />
+\ No newline at end of file
