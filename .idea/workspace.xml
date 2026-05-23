@@ -4,6 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="BackendCodeEditorMiscSettings">
+    <option name="/Default/Environment/Hierarchy/GeneratedFilesCacheKey/Timestamp/@EntryValue" value="3" type="long" />
     <option name="/Default/Housekeeping/FeatureSuggestion/FeatureSuggestionManager/DisabledSuggesters/=SwitchToGoToActionSuggester/@EntryIndexedValue" value="true" type="bool" />
   </component>
   <component name="CMakePresetLoader">{
@@ -26,10 +27,17 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2aad945c-61cf-4ded-8f60-d3eeab25ee47" name="Changes" comment="implementacion del patron iterador sujeto a cambios">
-      <change beforePath="$PROJECT_DIR$/.idea/Proyecto_2___Kris_y_Derek.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+    <list default="true" id="2aad945c-61cf-4ded-8f60-d3eeab25ee47" name="Changes" comment="Implementacion clase Channel">
+      <change afterPath="$PROJECT_DIR$/.idea/amazonq.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Entities/Authenticator.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Entities/Authenticator.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Entities/User.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Entities/User.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Entities/UsersController.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Entities/UsersController.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/editor.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/editor.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,7 +50,7 @@
   <component name="CopilotChats">
     <option name="panelChat">
       <chat>
-        <option name="activeSessionId" value="cb58a3f8-02e4-4550-afc9-8efc08a7c598" />
+        <option name="activeSessionId" value="92445bbc-996c-45a3-8872-c2927667d4f7" />
         <option name="sessions">
           <session>
             <option name="chatType" value="PANEL" />
@@ -69,6 +77,14 @@
             <option name="modelValue" value="claude-haiku-4.5" />
             <option name="targetType" value="LOCAL" />
           </session>
+          <session>
+            <option name="chatType" value="PANEL" />
+            <option name="id" value="92445bbc-996c-45a3-8872-c2927667d4f7" />
+            <option name="modeId" value="Ask" />
+            <option name="modelType" value="builtin_family" />
+            <option name="modelValue" value="auto" />
+            <option name="targetType" value="LOCAL" />
+          </session>
         </option>
         <option name="type" value="PANEL" />
       </chat>
@@ -76,6 +92,7 @@
   </component>
   <component name="CopilotPersistence">
     <persistenceIdMap>
+      <entry key="_C:/Users/XPC/Documents/Proyecto 2 - Grupo 8" value="3E77p5AaSrYC8ClGYeYLQYkMn6s" />
       <entry key="_E:/Clion/Proyecto-2---Kris-y-Derek" value="3E3wdxmu6qsrP2mCNDKc5Y98hDa" />
     </persistenceIdMap>
   </component>
@@ -89,7 +106,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="Modulo-Iterator" />
+        <entry key="$PROJECT_DIR$" value="Modulo-Usuario-Canal" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -103,11 +120,27 @@
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/sangredevampira/Proyecto-2---Kris-y-Derek.git&quot;,
-    &quot;accountId&quot;: &quot;c808a30d-f741-4a06-b8f4-fe9a61194d3d&quot;
+    &quot;accountId&quot;: &quot;e826efe3-0324-475a-ba6f-9945e83258ef&quot;
+  },
+  &quot;recentNewPullRequestHead&quot;: {
+    &quot;server&quot;: {
+      &quot;useHttp&quot;: false,
+      &quot;host&quot;: &quot;github.com&quot;,
+      &quot;port&quot;: null,
+      &quot;suffix&quot;: null
+    },
+    &quot;owner&quot;: &quot;sangredevampira&quot;,
+    &quot;repository&quot;: &quot;Proyecto-2---Kris-y-Derek&quot;
   }
 }</component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Observer/Channel.cpp" root0="FORCE_HIGHLIGHTING" />
+  </component>
   <component name="MacroExpansionManager">
     <option name="directoryName" value="c0BFYCoC" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectApplicationVersion">
     <option name="ide" value="CLion" />
@@ -149,21 +182,25 @@
     "RunOnceActivity.readMode.enableVisualFormatting": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "RunOnceActivity.west.config.association.type.startup.service": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "cf.first.check.clang-format": "false",
     "cidr.known.project.marker": "true",
-    "git-widget-placeholder": "Modulo-Videos",
+    "git-widget-placeholder": "Modulo-Usuario-Canal",
     "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "E:/Clion/Proyecto-2---Kris-y-Derek",
+    "last_opened_file_path": "C:/Users/XPC/Documents/Proyecto 2 - Grupo 8/Exceptions",
     "nodejs_package_manager_path": "npm",
     "org.rust.first.attach.projects": "true",
+    "settings.editor.selected.configurable": "com.github.copilot.settings.completions.CompletionsConfigurable",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\XPC\Documents\Proyecto 2 - Grupo 8\Exceptions" />
       <recent name="E:\Clion\Proyecto-2---Kris-y-Derek" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\XPC\Documents\Proyecto 2 - Grupo 8\Iterator" />
       <recent name="E:\Clion\Proyecto-2---Kris-y-Derek\Utilities" />
       <recent name="E:\Clion\Proyecto-2---Kris-y-Derek\Adapter" />
     </key>
@@ -190,6 +227,9 @@
       <workItem from="1779420663969" duration="2017000" />
       <workItem from="1779500235774" duration="342000" />
       <workItem from="1779500641492" duration="2526000" />
+      <workItem from="1779520872286" duration="1035000" />
+      <workItem from="1779521945516" duration="7843000" />
+      <workItem from="1779568258924" duration="4390000" />
     </task>
     <task id="LOCAL-00001" summary="commit">
       <option name="closed" value="true" />
@@ -231,7 +271,23 @@
       <option name="project" value="LOCAL" />
       <updated>1779504341077</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Merge de los modulos de derek">
+      <option name="closed" value="true" />
+      <created>1779518376305</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1779518376305</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Implementacion clase Channel">
+      <option name="closed" value="true" />
+      <created>1779529734574</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1779529734574</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -246,7 +302,9 @@
     <MESSAGE value="implementacion del adapter sujeto a cambios" />
     <MESSAGE value="commit" />
     <MESSAGE value="implementacion del patron iterador sujeto a cambios" />
-    <option name="LAST_COMMIT_MESSAGE" value="implementacion del patron iterador sujeto a cambios" />
+    <MESSAGE value="Merge de los modulos de derek" />
+    <MESSAGE value="Implementacion clase Channel" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implementacion clase Channel" />
   </component>
   <component name="github-copilot-workspace">
     <instructionFileLocations>

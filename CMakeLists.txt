@@ -32,4 +32,10 @@ add_executable(Proyecto_2___Kris_y_Derek
         Exceptions/VideosNotAvailable.h
         Exceptions/NoSuscribers.cpp
         Exceptions/NoSuscribers.h
+        Entities/User.cpp
+        Entities/User.h
+        Entities/UsersController.cpp
+        Entities/UsersController.h
+        Entities/Authenticator.cpp
+        Entities/Authenticator.h
 )
