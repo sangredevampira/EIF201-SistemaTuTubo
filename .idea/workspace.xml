@@ -26,15 +26,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2aad945c-61cf-4ded-8f60-d3eeab25ee47" name="Changes" comment="commit">
-      <change afterPath="$PROJECT_DIR$/ConcreteIterator.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/List.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Nodo.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Utilities/Utilities.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
-    </list>
+    <list default="true" id="2aad945c-61cf-4ded-8f60-d3eeab25ee47" name="Changes" comment="implementacion del patron iterador sujeto a cambios" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -193,7 +185,7 @@
       <updated>1779420660889</updated>
       <workItem from="1779420663969" duration="2017000" />
       <workItem from="1779500235774" duration="342000" />
-      <workItem from="1779500641492" duration="1892000" />
+      <workItem from="1779500641492" duration="2526000" />
     </task>
     <task id="LOCAL-00001" summary="commit">
       <option name="closed" value="true" />
@@ -227,7 +219,15 @@
       <option name="project" value="LOCAL" />
       <updated>1779500724192</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="implementacion del patron iterador sujeto a cambios">
+      <option name="closed" value="true" />
+      <created>1779504341077</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1779504341077</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -241,7 +241,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="implementacion del adapter sujeto a cambios" />
     <MESSAGE value="commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="commit" />
+    <MESSAGE value="implementacion del patron iterador sujeto a cambios" />
+    <option name="LAST_COMMIT_MESSAGE" value="implementacion del patron iterador sujeto a cambios" />
   </component>
   <component name="github-copilot-workspace">
     <instructionFileLocations>
