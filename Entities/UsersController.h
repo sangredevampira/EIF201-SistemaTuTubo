@@ -1,0 +1,22 @@
+//
+// Created by XPC on 23/5/2026.
+//
+
+#ifndef PROYECTO_2___KRIS_Y_DEREK_USERSCONTROLLER_H
+#define PROYECTO_2___KRIS_Y_DEREK_USERSCONTROLLER_H
+
+#include "User.h"
+
+class UsersController
+{
+private:
+    std::shared_ptr<List<User>> usersList;
+public:
+    UsersController();
+    std::shared_ptr<List<User>> getUsersList();
+    std::shared_ptr<Channel> searchUser(std::string, std::string);
+    std::string addUser(std::string, std::string, std::string);
+};
+
+
+#endif //PROYECTO_2___KRIS_Y_DEREK_USERSCONTROLLER_H
