@@ -16,6 +16,20 @@ add_executable(Proyecto_2___Kris_y_Derek
         Adapter/AdapterMPG.cpp
         Adapter/AdapterMPG.h
         README.md
-        ConcreteIterator.h
-        List.h
-        Nodo.h)
+        Iterator/ConcreteIterator.h
+        Iterator/List.h
+        Iterator/Nodo.h
+        Observer/ObserverInterface.h
+        Observer/Channel.h
+        Observer/Channel.cpp
+        Exceptions/GeneralException.h
+        Exceptions/GeneralException.cpp
+        Exceptions/IncorrectPassword.cpp
+        Exceptions/MissingAccount.cpp
+        Exceptions/MissingVideo.cpp
+        Exceptions/MissingVideo.h
+        Exceptions/VideosNotAvailable.cpp
+        Exceptions/VideosNotAvailable.h
+        Exceptions/NoSuscribers.cpp
+        Exceptions/NoSuscribers.h
+)
