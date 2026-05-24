@@ -27,8 +27,16 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2aad945c-61cf-4ded-8f60-d3eeab25ee47" name="Changes" comment="Estructura clases User, UserController y Authenticator">
+    <list default="true" id="2aad945c-61cf-4ded-8f60-d3eeab25ee47" name="Changes" comment="Archivo Channel.cpp">
+      <change afterPath="$PROJECT_DIR$/Exceptions/NoRegisteredUsers.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Exceptions/NoRegisteredUsers.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Entities/User.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Entities/User.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Entities/User.h" beforeDir="false" afterPath="$PROJECT_DIR$/Entities/User.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Entities/UsersController.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Entities/UsersController.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Entities/UsersController.h" beforeDir="false" afterPath="$PROJECT_DIR$/Entities/UsersController.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Observer/Channel.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Observer/Channel.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,7 +49,7 @@
   <component name="CopilotChats">
     <option name="panelChat">
       <chat>
-        <option name="activeSessionId" value="92445bbc-996c-45a3-8872-c2927667d4f7" />
+        <option name="activeSessionId" value="e035bd02-2a0e-4f0e-a1ed-7f60a7ff5b27" />
         <option name="sessions">
           <session>
             <option name="chatType" value="PANEL" />
@@ -74,6 +82,14 @@
             <option name="modeId" value="Ask" />
             <option name="modelType" value="builtin_family" />
             <option name="modelValue" value="auto" />
+            <option name="targetType" value="LOCAL" />
+          </session>
+          <session>
+            <option name="chatType" value="PANEL" />
+            <option name="id" value="e035bd02-2a0e-4f0e-a1ed-7f60a7ff5b27" />
+            <option name="modeId" value="Ask" />
+            <option name="modelType" value="builtin_family" />
+            <option name="modelValue" value="claude-haiku-4.5" />
             <option name="targetType" value="LOCAL" />
           </session>
         </option>
@@ -176,7 +192,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "cf.first.check.clang-format": "false",
     "cidr.known.project.marker": "true",
-    "git-widget-placeholder": "Modulo-Usuario-Canal",
+    "git-widget-placeholder": "#4 on Modulo-Usuario-Canal",
     "ignore.virus.scanning.warn.message": "true",
     "last_opened_file_path": "C:/Users/XPC/Documents/Proyecto 2 - Grupo 8/Exceptions",
     "nodejs_package_manager_path": "npm",
@@ -197,6 +213,11 @@
     </key>
   </component>
   <component name="RunManager">
+    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Proyecto_2___Kris_y_Derek" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Proyecto_2___Kris_y_Derek" TARGET_NAME="Proyecto_2___Kris_y_Derek" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Proyecto_2___Kris_y_Derek" RUN_TARGET_NAME="Proyecto_2___Kris_y_Derek">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -216,7 +237,7 @@
       <workItem from="1779520872286" duration="1035000" />
       <workItem from="1779521945516" duration="7843000" />
       <workItem from="1779568258924" duration="4457000" />
-      <workItem from="1779598121724" duration="8000" />
+      <workItem from="1779598121724" duration="4077000" />
     </task>
     <task id="LOCAL-00001" summary="commit">
       <option name="closed" value="true" />
@@ -282,7 +303,15 @@
       <option name="project" value="LOCAL" />
       <updated>1779572976774</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Archivo Channel.cpp">
+      <option name="closed" value="true" />
+      <created>1779598263035</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1779598263035</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -300,7 +329,8 @@
     <MESSAGE value="Merge de los modulos de derek" />
     <MESSAGE value="Implementacion clase Channel" />
     <MESSAGE value="Estructura clases User, UserController y Authenticator" />
-    <option name="LAST_COMMIT_MESSAGE" value="Estructura clases User, UserController y Authenticator" />
+    <MESSAGE value="Archivo Channel.cpp" />
+    <option name="LAST_COMMIT_MESSAGE" value="Archivo Channel.cpp" />
   </component>
   <component name="github-copilot-workspace">
     <instructionFileLocations>

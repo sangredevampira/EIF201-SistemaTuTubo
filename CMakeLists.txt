@@ -38,4 +38,6 @@ add_executable(Proyecto_2___Kris_y_Derek
         Entities/UsersController.h
         Entities/Authenticator.cpp
         Entities/Authenticator.h
+        Exceptions/NoRegisteredUsers.cpp
+        Exceptions/NoRegisteredUsers.h
 )
