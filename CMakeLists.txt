@@ -40,4 +40,6 @@ add_executable(Proyecto_2___Kris_y_Derek
         Entities/Authenticator.h
         Exceptions/NoRegisteredUsers.cpp
         Exceptions/NoRegisteredUsers.h
+        VideosController.cpp
+        VideosController.h
 )
