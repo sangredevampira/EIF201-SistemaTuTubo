@@ -5,7 +5,7 @@
 #ifndef PRACTICA_TEMPLATES_NODO_H
 #define PRACTICA_TEMPLATES_NODO_H
 
-#include "Utilities/Utilities.h"
+#include "../Utilities/Utilities.h"
 template<class T>
 class Nodo {
 private:
