@@ -5,15 +5,36 @@
 #include "UsersController.h"
 
 UsersController::UsersController()
-{
-}
+    : usersList(std::make_shared<List<User>>())
+{}
 
-std::shared_ptr<List<User>> UsersController::getUsersList()
-{
-}
+std::shared_ptr<List<User>> UsersController::getUsersList() { return usersList; }
 
-std::shared_ptr<Channel> UsersController::searchUser(std::string, std::string)
+std::shared_ptr<Channel> UsersController::login(std::string username, std::string password)
 {
+    if (usersList->isEmpty()) throw MissingAccount();
+
+    auto iterator = usersList->createIterator();
+    std::shared_ptr<Channel> channel = nullptr;
+    bool found = false;
+
+    while (iterator->hasNext())
+    {
+        auto user = iterator->getNext();
+
+        if (user->verifyUsername(username))
+        {
+            found = true;
+
+            if (user->verifyPassword(password))
+                channel = user->getOwnedChannel();
+            else throw IncorrectPassword();
+        }
+    }
+
+    if (!found) throw MissingAccount();
+
+    return channel;
 }
 
 std::string UsersController::addUser(std::string, std::string, std::string)

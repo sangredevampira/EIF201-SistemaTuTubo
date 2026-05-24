@@ -18,6 +18,7 @@ public:
     std::string getUsername() const;
     std::string getPassword() const;
     std::shared_ptr<Channel> getOwnedChannel() const;
+    bool verifyUsername(std::string) const;
     bool verifyPassword(std::string) const;
 };
 

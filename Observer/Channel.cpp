@@ -32,22 +32,26 @@ std::shared_ptr<List<Video>> Channel::getUploadedVideos() { return uploadedVideo
 
 std::shared_ptr<Video> Channel::searchVideoName(std::string title)
 {
-    if (uploadedVideos->isEmpty()) throw MissingVideo();
+    if (uploadedVideos->isEmpty()) throw VideosNotAvailable();
 
-    std::shared_ptr<ConcreteIterator<Video>> iterator = uploadedVideos->createIterator();
+    auto iterator = uploadedVideos->createIterator();
     std::shared_ptr<Video> video = nullptr;
     bool found = false;
 
-    while (iterator->hasNext() && !found)
+    while (iterator->hasNext())
     {
+        auto currentVideo = iterator->getNext();
+
         if (iterator->getNext()->getVideoName() == title)
         {
             found = true;
-            video = iterator->getNext();
+            video = currentVideo;
         }
     }
 
-    if (video == nullptr) throw MissingVideo();
+    if (!found) throw MissingVideo();
+
+    return video;
 }
 
 std::string Channel::notifySubscribers(std::string channelName, std::string videoTitle)

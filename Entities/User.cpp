@@ -14,4 +14,6 @@ std::string User::getPassword() const { return password;}
 
 std::shared_ptr<Channel> User::getOwnedChannel() const { return ownedChannel; }
 
+bool User::verifyUsername(std::string otherUsername) const { return getUsername() == otherUsername; }
+
 bool User::verifyPassword(std::string otherPassword) const { return getPassword() == otherPassword; }
