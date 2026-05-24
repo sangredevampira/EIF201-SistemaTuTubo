@@ -38,4 +38,12 @@ add_executable(Proyecto_2___Kris_y_Derek
         Entities/UsersController.h
         Entities/Authenticator.cpp
         Entities/Authenticator.h
+        VideosController.cpp
+        VideosController.h
+        Observer/Channel.h
+        Observer/ObserverInterface.h
+        Entities/Authenticator.h
+        Entities/Authenticator.h
+        Entities/Authenticator.cpp
+        Observer/Channel.cpp
 )
