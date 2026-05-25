@@ -42,4 +42,6 @@ add_executable(Proyecto_2___Kris_y_Derek
         Exceptions/NoRegisteredUsers.h
         VideosController.cpp
         VideosController.h
+        TuTubo.cpp
+        TuTubo.h
 )
