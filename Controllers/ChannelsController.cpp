@@ -6,6 +6,10 @@
 
 ChannelsController::ChannelsController() { channelsList = std::make_shared<List<Channel>>(); }
 
+std::shared_ptr<List<Channel>> ChannelsController::getChannelsList() {
+    return channelsList;
+}
+
 std::string ChannelsController::addChannel(std::shared_ptr<Channel> newChannel) {
     channelsList->insertFirst(  newChannel);
     return "Canal registrado exitosamente!";

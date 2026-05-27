@@ -22,9 +22,11 @@ private:
 public:
     Channel(std::string name = "");
     std::string getName();
+    std::shared_ptr<List<Channel>> getSubscriptions();
     std::string uploadVideo(std::shared_ptr<Video>);
     std::shared_ptr<List<Video>> getUploadedVideos();
     std::shared_ptr<Video> searchVideoName(std::string);
+    std::string addSuscriber(std::shared_ptr<ObserverInterface> suscriber);
 
     std::string notifySubscribers(std::string, std::string) override;
 

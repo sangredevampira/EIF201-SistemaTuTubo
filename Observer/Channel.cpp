@@ -14,6 +14,10 @@ Channel::Channel(std::string name)
 
 std::string Channel::getName() { return name; }
 
+std::shared_ptr<List<Channel>> Channel::getSubscriptions() {
+    return subscriptions;
+}
+
 std::string Channel::uploadVideo(std::shared_ptr<Video> newVideo)
 {
     std::stringstream ss;
@@ -68,6 +72,15 @@ std::string Channel::notifySubscribers(std::string channelName, std::string vide
     }
 
     return ss.str();
+}
+
+std::string Channel::addSuscriber(std::shared_ptr<ObserverInterface> suscriber) {
+    std::stringstream s;
+    if (suscriber != nullptr){
+        suscribers->insertFirst(suscriber);
+        s << "Suscripcion agregado al canal: " << getName();
+    }
+    return s.str();
 }
 
 std::ostream & operator<<(std::ostream &os, const Channel &channel) {

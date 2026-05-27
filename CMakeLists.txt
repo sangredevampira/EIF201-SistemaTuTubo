@@ -53,4 +53,6 @@ add_executable(Proyecto_2___Kris_y_Derek
         Exceptions/MissingChannel.h
         Iterator/ListInterface.h
         Observer/ObserverInterface.cpp
+        Exceptions/DuplicateVideo.cpp
+        Exceptions/DuplicateVideo.h
 )

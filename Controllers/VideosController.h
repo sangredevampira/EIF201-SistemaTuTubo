@@ -6,7 +6,8 @@
 #define PROYECTO_2___KRIS_Y_DEREK_VIDEOSCONTROLLER_H
 
 #include "../Iterator/List.h"
-#include "../Adapter/Video.h"
+#include "../Adapter/Video.h"\
+#include "../Exceptions/DuplicateVideo.h"
 
 class VideosController {
 private:
@@ -14,6 +15,7 @@ private:
 public:
     VideosController();
     std::shared_ptr<Video> searchVideoName(std::string name);
+    std::string addVideo(std::shared_ptr<Video> newVideo);
 };
 
 
