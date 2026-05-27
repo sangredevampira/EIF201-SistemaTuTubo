@@ -10,22 +10,25 @@ TuTubo::TuTubo(){
     videosManagement = std::make_shared<VideosController>();
 }
 
-void TuTubo::setActiveSession(std::shared_ptr<Channel>) {
+void TuTubo::setActiveSession(std::shared_ptr<Channel>) { //kris
 }
 
-std::string TuTubo::createUser(std::string, std::string, std::string) {
+std::string TuTubo::createUser(std::string, std::string, std::string) { //kris
 }
 
-std::shared_ptr<Channel> TuTubo::login(std::string, std::string) {
+std::shared_ptr<Channel> TuTubo::login(std::string, std::string) { //kris
 }
 
-std::string TuTubo::uploadVideo(std::string) {
+std::string TuTubo::uploadVideo(std::string) { //Derek
+    //agregar un video a la lista general y al canal
 }
 
-std::string TuTubo::suscribeToChannel(std::string) {
+std::string TuTubo::suscribeToChannel(std::string) { //Derek
+    //mostrar lista de canales, preguntar y que seleccionen por numero
 }
 
-std::string TuTubo::unsuscribeFromChannel(std::string) {
+std::string TuTubo::unsuscribeFromChannel(std::string) { //Derek
+    //mostrar todos los canales suscritos, preguntar y seleccionar por numero
 }
 
 std::string TuTubo::searchVideoByTitle(std::string title) {
@@ -45,8 +48,10 @@ std::string TuTubo::searchVideoByTitle(std::string title) {
     return s.str();
 }
 
-std::string TuTubo::searchVideoByChannel(std::string, std::string) {
+std::string TuTubo::searchVideoByChannel(std::string, std::string) { //Derek
+
 }
 
-std::string TuTubo::playVideo(std::shared_ptr<Video>) {
+std::string TuTubo::playVideo(std::shared_ptr<Video>) { //Derek
+    //preguntar el video a ver y seleccionar
 }
