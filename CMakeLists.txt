@@ -34,14 +34,22 @@ add_executable(Proyecto_2___Kris_y_Derek
         Exceptions/NoSuscribers.h
         Entities/User.cpp
         Entities/User.h
-        Entities/UsersController.cpp
-        Entities/UsersController.h
+        Controllers/UsersController.cpp
+        Controllers/UsersController.h
         Entities/Authenticator.cpp
         Entities/Authenticator.h
         Exceptions/NoRegisteredUsers.cpp
         Exceptions/NoRegisteredUsers.h
-        VideosController.cpp
-        VideosController.h
-        TuTubo.cpp
-        TuTubo.h
+        Controllers/VideosController.cpp
+        Controllers/VideosController.h
+        Entities/TuTubo.cpp
+        Entities/TuTubo.h
+        Controllers/ChannelsController.cpp
+        Controllers/ChannelsController.h
+        Iterator/IteratorInterface.h
+        Exceptions/NoExistingChannels.cpp
+        Exceptions/NoExistingChannels.h
+        Exceptions/MissingChannel.cpp
+        Exceptions/MissingChannel.h
+        Iterator/ListInterface.h
 )

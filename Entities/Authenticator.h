@@ -5,7 +5,7 @@
 #ifndef PROYECTO_2___KRIS_Y_DEREK_AUTHENTICATOR_H
 #define PROYECTO_2___KRIS_Y_DEREK_AUTHENTICATOR_H
 
-#include "UsersController.h"
+#include "../Controllers/UsersController.h"
 
 class Authenticator
 {

@@ -5,17 +5,19 @@
 #ifndef PROYECTO_2___KRIS_Y_DEREK_TUTUBO_H
 #define PROYECTO_2___KRIS_Y_DEREK_TUTUBO_H
 
-#include "Exceptions/MissingVideo.h"
-#include "Exceptions/VideosNotAvailable.h"
-#include "Observer/Channel.h"
-#include "VideosController.h"
+#include "../Exceptions/MissingVideo.h"
+#include "../Exceptions/VideosNotAvailable.h"
+#include "../Entities/Authenticator.h"
+#include "../Controllers/ChannelsController.h"
+#include "../Controllers/UsersController.h"
+#include "../Controllers/VideosController.h"
 
 class TuTubo {
 private:
-    std::shared_ptr<VideosController> videosManagement;
     std::shared_ptr<Channel> activeSession;
-    //falta incluir la clase ChannelsController
-    // falta incluir la clase Aunteticator
+    std::shared_ptr<ChannelsController> channelsManagement;
+    std::shared_ptr<VideosController> videosManagement;
+    std::shared_ptr<Authenticator> loginManager;
 public:
     TuTubo();
     void setActiveSession(std::shared_ptr<Channel>);

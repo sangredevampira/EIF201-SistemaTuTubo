@@ -5,7 +5,7 @@
 #ifndef PROYECTO_2___KRIS_Y_DEREK_USERSCONTROLLER_H
 #define PROYECTO_2___KRIS_Y_DEREK_USERSCONTROLLER_H
 
-#include "User.h"
+#include "../Entities/User.h"
 #include "../Exceptions/MissingAccount.h"
 #include "../Exceptions/IncorrectPassword.h"
 

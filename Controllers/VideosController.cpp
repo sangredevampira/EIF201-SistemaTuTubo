@@ -4,7 +4,8 @@
 
 #include "VideosController.h"
 
-VideosController::VideosController(std::shared_ptr<List<Video>> videoList): videoList(videoList) {}
+VideosController::VideosController()
+{ videoList = std::make_shared<List<Video>>(); }
 
 std::shared_ptr<Video> VideosController::searchVideoName(std::string name) {
     if (videoList->isEmpty()) {

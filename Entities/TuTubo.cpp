@@ -4,7 +4,10 @@
 
 #include "TuTubo.h"
 
-TuTubo::TuTubo():videosManagement(nullptr),activeSession(nullptr){
+TuTubo::TuTubo(){
+    activeSession = nullptr;
+    channelsManagement = std::make_shared<ChannelsController>();
+    videosManagement = std::make_shared<VideosController>();
 }
 
 void TuTubo::setActiveSession(std::shared_ptr<Channel>) {

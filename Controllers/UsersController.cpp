@@ -37,6 +37,8 @@ std::shared_ptr<Channel> UsersController::login(std::string username, std::strin
     return channel;
 }
 
-std::string UsersController::addUser(std::string, std::string, std::string)
+std::string UsersController::addUser(std::string username, std::string password, std::string channelName)
 {
+    usersList->insertFirst(std::make_shared<User>(username, password, channelName));
+    return "Usuario agregado exitosamente!";
 }
