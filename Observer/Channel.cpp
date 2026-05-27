@@ -69,3 +69,8 @@ std::string Channel::notifySubscribers(std::string channelName, std::string vide
 
     return ss.str();
 }
+
+std::ostream & operator<<(std::ostream &os, const Channel &channel) {
+    os << channel.name << ",";
+    return os;
+}

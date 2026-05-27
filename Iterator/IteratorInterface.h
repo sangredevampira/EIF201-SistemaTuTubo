@@ -6,6 +6,8 @@
 #define PROYECTO_2___KRIS_Y_DEREK_ITERATORINTERFACE_H
 
 #include <memory>
+template<class T> class Nodo;
+
 
 template <class T>
 class IteratorInterface {

@@ -7,6 +7,7 @@
 
 #include "ObserverInterface.h"
 #include "../Iterator/List.h"
+#include "../Adapter/Video.h"
 #include "../Exceptions/MissingVideo.h"
 #include "../Exceptions/NoSuscribers.h"
 #include "../Exceptions/VideosNotAvailable.h"
@@ -26,6 +27,8 @@ public:
     std::shared_ptr<Video> searchVideoName(std::string);
 
     std::string notifySubscribers(std::string, std::string) override;
+
+    friend std::ostream& operator<<(std::ostream& os, const Channel &channel);
 };
 
 #endif //PROYECTO_2___KRIS_Y_DEREK_CHANNEL_H

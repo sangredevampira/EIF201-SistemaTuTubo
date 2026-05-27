@@ -11,7 +11,8 @@
 class ObserverInterface {
 public:
     virtual std::string notifySubscribers(std::string, std::string) = 0;
+    friend std::ostream& operator<<(std::ostream& os, const ObserverInterface& observer);
 };
-
+std::ostream& operator<<(std::ostream& os, const ObserverInterface& observer);
 
 #endif //PROYECTO_2___KRIS_Y_DEREK_OBSERVERINTERFACE_H

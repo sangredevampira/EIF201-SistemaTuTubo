@@ -6,6 +6,8 @@
   <component name="BackendCodeEditorMiscSettings">
     <option name="/Default/Environment/Hierarchy/GeneratedFilesCacheKey/Timestamp/@EntryValue" value="3" type="long" />
     <option name="/Default/Housekeeping/FeatureSuggestion/FeatureSuggestionManager/DisabledSuggesters/=SwitchToGoToActionSuggester/@EntryIndexedValue" value="true" type="bool" />
+    <option name="/Default/Housekeeping/GlobalSettingsUpgraded/IsUpgraded/@EntryValue" value="true" type="bool" />
+    <option name="/Default/RiderDebugger/RiderRestoreDecompile/RestoreDecompileSetting/@EntryValue" value="false" type="bool" />
   </component>
   <component name="CMakePresetLoader">{
   &quot;useNewFormat&quot;: true
@@ -27,27 +29,22 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2aad945c-61cf-4ded-8f60-d3eeab25ee47" name="Changes" comment="Archivo Channel.cpp">
-      <change afterPath="$PROJECT_DIR$/Controllers/ChannelsController.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Controllers/ChannelsController.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Exceptions/MissingChannel.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Exceptions/MissingChannel.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Exceptions/NoExistingChannels.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Exceptions/NoExistingChannels.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Iterator/IteratorInterface.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Iterator/ListInterface.h" afterDir="false" />
+    <list default="true" id="2aad945c-61cf-4ded-8f60-d3eeab25ee47" name="Changes" comment="implementacion de TuTubo y el metodo searchVideoByTitle">
+      <change afterPath="$PROJECT_DIR$/Observer/ObserverInterface.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Adapter/Video.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Adapter/Video.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Adapter/Video.h" beforeDir="false" afterPath="$PROJECT_DIR$/Adapter/Video.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Entities/Authenticator.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Entities/Authenticator.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Entities/Authenticator.h" beforeDir="false" afterPath="$PROJECT_DIR$/Entities/Authenticator.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Entities/UsersController.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/UsersController.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Entities/UsersController.h" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/UsersController.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Iterator/ConcreteIterator.h" beforeDir="false" afterPath="$PROJECT_DIR$/Iterator/ConcreteIterator.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controllers/UsersController.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/UsersController.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controllers/UsersController.h" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/UsersController.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Entities/User.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Entities/User.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Entities/User.h" beforeDir="false" afterPath="$PROJECT_DIR$/Entities/User.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Iterator/IteratorInterface.h" beforeDir="false" afterPath="$PROJECT_DIR$/Iterator/IteratorInterface.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Iterator/List.h" beforeDir="false" afterPath="$PROJECT_DIR$/Iterator/List.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TuTubo.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Entities/TuTubo.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TuTubo.h" beforeDir="false" afterPath="$PROJECT_DIR$/Entities/TuTubo.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VideosController.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/VideosController.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VideosController.h" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/VideosController.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Iterator/ListInterface.h" beforeDir="false" afterPath="$PROJECT_DIR$/Iterator/ListInterface.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Observer/Channel.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Observer/Channel.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Observer/Channel.h" beforeDir="false" afterPath="$PROJECT_DIR$/Observer/Channel.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Observer/ObserverInterface.h" beforeDir="false" afterPath="$PROJECT_DIR$/Observer/ObserverInterface.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,7 +57,7 @@
   <component name="CopilotChats">
     <option name="panelChat">
       <chat>
-        <option name="activeSessionId" value="01f6eec3-9f80-442a-9cb4-3a386c603a6f" />
+        <option name="activeSessionId" value="6cb24e84-770b-4ab0-a1dc-1691d17f56c6" />
         <option name="sessions">
           <session>
             <option name="chatType" value="PANEL" />
@@ -89,15 +86,7 @@
           </session>
           <session>
             <option name="chatType" value="PANEL" />
-            <option name="id" value="92445bbc-996c-45a3-8872-c2927667d4f7" />
-            <option name="modeId" value="Ask" />
-            <option name="modelType" value="builtin_family" />
-            <option name="modelValue" value="auto" />
-            <option name="targetType" value="LOCAL" />
-          </session>
-          <session>
-            <option name="chatType" value="PANEL" />
-            <option name="id" value="e035bd02-2a0e-4f0e-a1ed-7f60a7ff5b27" />
+            <option name="id" value="a61c3b9d-3412-471b-8fc2-361c15c05052" />
             <option name="modeId" value="Ask" />
             <option name="modelType" value="builtin_family" />
             <option name="modelValue" value="claude-haiku-4.5" />
@@ -105,10 +94,71 @@
           </session>
           <session>
             <option name="chatType" value="PANEL" />
-            <option name="id" value="01f6eec3-9f80-442a-9cb4-3a386c603a6f" />
+            <option name="id" value="e4674a7a-f8a4-4b34-9a2b-d0e762c1ade0" />
             <option name="modeId" value="Ask" />
             <option name="modelType" value="builtin_family" />
-            <option name="modelValue" value="auto" />
+            <option name="modelValue" value="claude-haiku-4.5" />
+            <option name="status" value="Completed" />
+            <option name="targetType" value="LOCAL" />
+          </session>
+          <session>
+            <option name="chatType" value="PANEL" />
+            <option name="id" value="a1187643-e02f-4657-8a05-6b3f46ee5655" />
+            <option name="modeId" value="Ask" />
+            <option name="modelType" value="builtin_family" />
+            <option name="modelValue" value="claude-haiku-4.5" />
+            <option name="targetType" value="LOCAL" />
+          </session>
+          <session>
+            <option name="chatType" value="PANEL" />
+            <option name="id" value="6d82d910-343b-4aad-b317-f322245d6920" />
+            <option name="modeId" value="Ask" />
+            <option name="modelType" value="builtin_family" />
+            <option name="modelValue" value="claude-haiku-4.5" />
+            <option name="targetType" value="LOCAL" />
+          </session>
+          <session>
+            <option name="chatType" value="PANEL" />
+            <option name="id" value="b15caac2-476f-4b45-bc4b-2990eabca35b" />
+            <option name="modeId" value="Ask" />
+            <option name="modelType" value="builtin_family" />
+            <option name="modelValue" value="claude-haiku-4.5" />
+            <option name="status" value="Stopped" />
+            <option name="targetType" value="LOCAL" />
+          </session>
+          <session>
+            <option name="chatType" value="PANEL" />
+            <option name="id" value="9c778d99-3b81-48b1-bc31-796d32abcf9d" />
+            <option name="modeId" value="Ask" />
+            <option name="modelType" value="builtin_family" />
+            <option name="modelValue" value="claude-haiku-4.5" />
+            <option name="status" value="Completed" />
+            <option name="targetType" value="LOCAL" />
+          </session>
+          <session>
+            <option name="chatType" value="PANEL" />
+            <option name="id" value="ea14d221-9d24-49cf-a2bc-9baf7cc2e49f" />
+            <option name="modeId" value="Ask" />
+            <option name="modelType" value="builtin_family" />
+            <option name="modelValue" value="claude-haiku-4.5" />
+            <option name="status" value="Completed" />
+            <option name="targetType" value="LOCAL" />
+          </session>
+          <session>
+            <option name="chatType" value="PANEL" />
+            <option name="id" value="f9bc3f79-5d96-48ce-a2d8-10499b4aacac" />
+            <option name="modeId" value="Ask" />
+            <option name="modelType" value="builtin_family" />
+            <option name="modelValue" value="claude-haiku-4.5" />
+            <option name="targetType" value="LOCAL" />
+          </session>
+          <session>
+            <option name="chatType" value="PANEL" />
+            <option name="id" value="6cb24e84-770b-4ab0-a1dc-1691d17f56c6" />
+            <option name="modeId" value="Ask" />
+            <option name="modelType" value="builtin_family" />
+            <option name="modelValue" value="claude-haiku-4.5" />
+            <option name="status" value="Completed" />
             <option name="targetType" value="LOCAL" />
           </session>
         </option>
@@ -118,9 +168,8 @@
   </component>
   <component name="CopilotPersistence">
     <persistenceIdMap>
-      <entry key="_C:/Users/XPC/Documents/Proyecto 2 - Grupo 8" value="3E77p5AaSrYC8ClGYeYLQYkMn6s" />
-      <entry key="_C:/Users/krisp/Documents/UNIVERSIDAD/Programacion 2/Proyecto 2 - Grupo 8" value="3EHXA4nheUbHE78K08EhxsZjSn7" />
       <entry key="_E:/Clion/Proyecto-2---Kris-y-Derek" value="3E3wdxmu6qsrP2mCNDKc5Y98hDa" />
+      <entry key="_E:/Clion/Proyecto_2___Kris_y_Derek" value="3E9hPVwUdcXqBhHwh8TjExd0VPb" />
     </persistenceIdMap>
   </component>
   <component name="CopilotUserSelectedModel">
@@ -133,7 +182,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="Modulo-TuTubo" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -147,7 +196,7 @@
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/sangredevampira/Proyecto-2---Kris-y-Derek.git&quot;,
-    &quot;accountId&quot;: &quot;e109f7c9-9f07-47bf-a389-fe24bea7a1b8&quot;
+    &quot;accountId&quot;: &quot;c808a30d-f741-4a06-b8f4-fe9a61194d3d&quot;
   },
   &quot;recentNewPullRequestHead&quot;: {
     &quot;server&quot;: {
@@ -160,14 +209,8 @@
     &quot;repository&quot;: &quot;Proyecto-2---Kris-y-Derek&quot;
   }
 }</component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Observer/Channel.cpp" root0="FORCE_HIGHLIGHTING" />
-  </component>
   <component name="MacroExpansionManager">
     <option name="directoryName" value="c0BFYCoC" />
-  </component>
-  <component name="ProblemsViewState">
-    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectApplicationVersion">
     <option name="ide" value="CLion" />
@@ -214,22 +257,18 @@
     &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;Modulo-Usuario-Canal&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/XPC/Documents/Proyecto 2 - Grupo 8/Exceptions&quot;,
+    &quot;last_opened_file_path&quot;: &quot;E:/Clion/Proyecto_2___Kris_y_Derek&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;org.rust.first.attach.projects&quot;: &quot;true&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.github.copilot.settings.completions.CompletionsConfigurable&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\XPC\Documents\Proyecto 2 - Grupo 8\Exceptions" />
       <recent name="E:\Clion\Proyecto-2---Kris-y-Derek" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\krisp\Documents\UNIVERSIDAD\Programacion 2\Proyecto 2 - Grupo 8\Entities" />
-      <recent name="C:\Users\krisp\Documents\UNIVERSIDAD\Programacion 2\Proyecto 2 - Grupo 8\Controllers" />
-      <recent name="C:\Users\XPC\Documents\Proyecto 2 - Grupo 8\Iterator" />
+      <recent name="E:\Clion\Proyecto_2___Kris_y_Derek\Observer" />
       <recent name="E:\Clion\Proyecto-2---Kris-y-Derek\Utilities" />
       <recent name="E:\Clion\Proyecto-2---Kris-y-Derek\Adapter" />
     </key>
@@ -256,13 +295,14 @@
       <workItem from="1779420663969" duration="2017000" />
       <workItem from="1779500235774" duration="342000" />
       <workItem from="1779500641492" duration="2526000" />
-      <workItem from="1779520872286" duration="1035000" />
-      <workItem from="1779521945516" duration="7843000" />
-      <workItem from="1779568258924" duration="4457000" />
-      <workItem from="1779598121724" duration="4077000" />
-      <workItem from="1779836302111" duration="672000" />
-      <workItem from="1779837942433" duration="1898000" />
-      <workItem from="1779850202345" duration="8845000" />
+      <workItem from="1779593959086" duration="1331000" />
+      <workItem from="1779595508413" duration="11000" />
+      <workItem from="1779596669353" duration="1416000" />
+      <workItem from="1779620659371" duration="565000" />
+      <workItem from="1779684903080" duration="1843000" />
+      <workItem from="1779738920031" duration="2562000" />
+      <workItem from="1779853561101" duration="4860000" />
+      <workItem from="1779860898044" duration="3854000" />
     </task>
     <task id="LOCAL-00001" summary="commit">
       <option name="closed" value="true" />
@@ -304,39 +344,55 @@
       <option name="project" value="LOCAL" />
       <updated>1779504341077</updated>
     </task>
-    <task id="LOCAL-00006" summary="Merge de los modulos de derek">
+    <task id="LOCAL-00006" summary=".ignore">
       <option name="closed" value="true" />
-      <created>1779518376305</created>
+      <created>1779507429735</created>
       <option name="number" value="00006" />
       <option name="presentableId" value="LOCAL-00006" />
       <option name="project" value="LOCAL" />
-      <updated>1779518376305</updated>
+      <updated>1779507429735</updated>
     </task>
-    <task id="LOCAL-00007" summary="Implementacion clase Channel">
+    <task id="LOCAL-00007" summary="controlador de videos">
       <option name="closed" value="true" />
-      <created>1779529734574</created>
+      <created>1779594974923</created>
       <option name="number" value="00007" />
       <option name="presentableId" value="LOCAL-00007" />
       <option name="project" value="LOCAL" />
-      <updated>1779529734574</updated>
+      <updated>1779594974923</updated>
     </task>
-    <task id="LOCAL-00008" summary="Estructura clases User, UserController y Authenticator">
+    <task id="LOCAL-00008" summary="controlador de videos(commit dos)">
       <option name="closed" value="true" />
-      <created>1779572976774</created>
+      <created>1779597303842</created>
       <option name="number" value="00008" />
       <option name="presentableId" value="LOCAL-00008" />
       <option name="project" value="LOCAL" />
-      <updated>1779572976774</updated>
+      <updated>1779597303842</updated>
     </task>
-    <task id="LOCAL-00009" summary="Archivo Channel.cpp">
+    <task id="LOCAL-00009" summary="Channel">
       <option name="closed" value="true" />
-      <created>1779598263035</created>
+      <created>1779598839496</created>
       <option name="number" value="00009" />
       <option name="presentableId" value="LOCAL-00009" />
       <option name="project" value="LOCAL" />
-      <updated>1779598263035</updated>
+      <updated>1779598839496</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="creacion de rama TuTubo basada en el main :)">
+      <option name="closed" value="true" />
+      <created>1779739323395</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1779739323395</updated>
+    </task>
+    <task id="LOCAL-00011" summary="implementacion de TuTubo y el metodo searchVideoByTitle">
+      <option name="closed" value="true" />
+      <created>1779741361118</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1779741361118</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -351,11 +407,13 @@
     <MESSAGE value="implementacion del adapter sujeto a cambios" />
     <MESSAGE value="commit" />
     <MESSAGE value="implementacion del patron iterador sujeto a cambios" />
-    <MESSAGE value="Merge de los modulos de derek" />
-    <MESSAGE value="Implementacion clase Channel" />
-    <MESSAGE value="Estructura clases User, UserController y Authenticator" />
-    <MESSAGE value="Archivo Channel.cpp" />
-    <option name="LAST_COMMIT_MESSAGE" value="Archivo Channel.cpp" />
+    <MESSAGE value=".ignore" />
+    <MESSAGE value="controlador de videos" />
+    <MESSAGE value="controlador de videos(commit dos)" />
+    <MESSAGE value="Channel" />
+    <MESSAGE value="creacion de rama TuTubo basada en el main :)" />
+    <MESSAGE value="implementacion de TuTubo y el metodo searchVideoByTitle" />
+    <option name="LAST_COMMIT_MESSAGE" value="implementacion de TuTubo y el metodo searchVideoByTitle" />
   </component>
   <component name="github-copilot-workspace">
     <instructionFileLocations>

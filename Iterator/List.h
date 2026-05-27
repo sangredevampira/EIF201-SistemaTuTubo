@@ -11,20 +11,20 @@
 #include "ConcreteIterator.h"
 
 template<class T>
-class List : ListInterface<T> {
+class List : public ListInterface<T> {
 private:
     std::shared_ptr<Nodo<T>> first;
 public:
     List();
-    void insertFirst(std::shared_ptr<T>);
-    void insertLast(std::shared_ptr<T> element);
-    bool isEmpty();
-    void deleteElement(std::shared_ptr<T>);
-    std::shared_ptr<Nodo<T>> getFirst() const;
-    int length();
-    std::string showList();
-    std::shared_ptr<List<T>> clone() const;
-    std::shared_ptr<IteratorInterface<T>> createIterator();
+    void insertFirst(std::shared_ptr<T>) ;
+    void insertLast(std::shared_ptr<T> element) ;
+    bool isEmpty() ;
+    void deleteElement(std::shared_ptr<T>) ;
+    std::shared_ptr<Nodo<T>> getFirst() const ;
+    int length() ;
+    std::string showList() ;
+    std::shared_ptr<List<T>> clone() const ;
+    std::shared_ptr<IteratorInterface<T>> createIterator() override;
 };
 
 template<class T>

@@ -20,6 +20,7 @@ public:
     std::shared_ptr<Channel> getOwnedChannel() const;
     bool verifyUsername(std::string) const;
     bool verifyPassword(std::string) const;
+    friend std::ostream& operator<<(std::ostream& os, const User &user);
 };
 
 
