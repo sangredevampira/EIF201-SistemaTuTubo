@@ -7,6 +7,7 @@
 
 #include "../Exceptions/MissingVideo.h"
 #include "../Exceptions/VideosNotAvailable.h"
+#include "../Exceptions/NoActiveAccount.h"
 #include "../Entities/Authenticator.h"
 #include "../Controllers/ChannelsController.h"
 #include "../Controllers/UsersController.h"
@@ -17,7 +18,7 @@
 
 class TuTubo {
 private:
-    std::shared_ptr<Channel> activeSession;
+    std::shared_ptr<ObserverInterface> activeSession;
     std::shared_ptr<ChannelsController> channelsManagement;
     std::shared_ptr<VideosController> videosManagement;
     std::shared_ptr<Authenticator> loginManager;

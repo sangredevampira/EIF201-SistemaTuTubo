@@ -55,4 +55,6 @@ add_executable(Proyecto_2___Kris_y_Derek
         Observer/ObserverInterface.cpp
         Exceptions/DuplicateVideo.cpp
         Exceptions/DuplicateVideo.h
+        Exceptions/NoActiveAccount.cpp
+        Exceptions/NoActiveAccount.h
 )

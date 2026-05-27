@@ -18,6 +18,7 @@ public:
     std::string addChannel(std::shared_ptr<Channel>);
     std::shared_ptr<Channel> searchChannel(std::string);
     std::shared_ptr<List<Channel>> getChannelsList();
+    std::string suscribeToChannel(std::string);
 };
 
 

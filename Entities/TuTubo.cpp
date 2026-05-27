@@ -57,7 +57,7 @@ std::string TuTubo::suscribeToChannel(std::string channelName) { //Derek
     std::stringstream s;
 
     if (activeSession == nullptr) {
-        throw MissingAccount();
+        throw NoActiveAccount();
     }
 
     auto channelsList = channelsManagement->getChannelsList();
@@ -75,7 +75,7 @@ std::string TuTubo::unsuscribeFromChannel(std::string channelName) { //Derek
     std::stringstream s;
 
     if (activeSession == nullptr) {
-        throw MissingAccount();
+        throw NoActiveAccount();
     }
 
     auto subscriptionsList = activeSession->getSubscriptions();
@@ -83,8 +83,11 @@ std::string TuTubo::unsuscribeFromChannel(std::string channelName) { //Derek
 
     std::shared_ptr<Channel> targetChannel = channelsManagement->searchChannel(channelName);
 
-    subscriptionsList->deleteElement(targetChannel);
-    s << "\nTe desuscribiste de: " << targetChannel->getName();
+    if (targetChannel != nullptr)
+    {
+        subscriptionsList->deleteElement(targetChannel);
+        s << "\nTe desuscribiste de: " << targetChannel->getName();
+    }
 
     return s.str();
 }

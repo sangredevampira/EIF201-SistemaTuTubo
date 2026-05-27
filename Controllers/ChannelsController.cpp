@@ -10,8 +10,13 @@ std::shared_ptr<List<Channel>> ChannelsController::getChannelsList() {
     return channelsList;
 }
 
+std::string ChannelsController::suscribeToChannel(std::string channelName)
+{
+
+}
+
 std::string ChannelsController::addChannel(std::shared_ptr<Channel> newChannel) {
-    channelsList->insertFirst(  newChannel);
+    channelsList->insertFirst(newChannel);
     return "Canal registrado exitosamente!";
 }
 
