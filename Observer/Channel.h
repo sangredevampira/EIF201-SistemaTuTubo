@@ -27,6 +27,8 @@ public:
     std::shared_ptr<List<Video>> getUploadedVideos();
     std::shared_ptr<Video> searchVideoName(std::string);
     std::string addSuscriber(std::shared_ptr<ObserverInterface> suscriber);
+    std::string addChannelSuscription(std::shared_ptr<Channel> channel); //agrega a la lista de subs
+    std::string removeSuscriber(std::shared_ptr<ObserverInterface> suscriber);
 
     std::string notifySubscribers(std::string, std::string) override;
 

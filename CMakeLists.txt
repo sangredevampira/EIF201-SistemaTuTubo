@@ -36,6 +36,8 @@ add_executable(Proyecto_2___Kris_y_Derek
         Entities/User.h
         Controllers/UsersController.cpp
         Controllers/UsersController.h
+        Entities/Authenticator.cpp
+        Entities/Authenticator.h
         Exceptions/NoRegisteredUsers.cpp
         Exceptions/NoRegisteredUsers.h
         Controllers/VideosController.cpp
@@ -57,4 +59,12 @@ add_executable(Proyecto_2___Kris_y_Derek
         Exceptions/NoActiveAccount.h
         Exceptions/DuplicatedUser.cpp
         Exceptions/DuplicatedUser.h
+        Fachada/Menu.cpp
+        Fachada/Menu.h
+        Exceptions/Miscapture.h
+        Utilities/ConsoleService.h
+        Utilities/ConsoleService.cpp
+        Exceptions/IndexOutOfRange.h
+        Exceptions/IndexOutOfRange.cpp
+        Exceptions/Miscapture.cpp
 )
