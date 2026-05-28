@@ -83,6 +83,25 @@ std::string Channel::addSuscriber(std::shared_ptr<ObserverInterface> suscriber) 
     return s.str();
 }
 
+std::string Channel::addChannelSuscription(std::shared_ptr<Channel> channel) {
+    std::stringstream s;
+    if (channel != nullptr){
+        subscriptions->insertFirst(channel);
+        s << "Canal suscrito correctamente!";
+    }
+    return s.str();
+}
+
+std::string Channel::removeSuscriber(std::shared_ptr<ObserverInterface> suscriber) {
+    std::stringstream s;
+    if (suscriber != nullptr){
+        suscribers->deleteElement(suscriber);
+        s << "Te desuscribiste del canal: " << getName();
+    }
+    return s.str();
+
+}
+
 std::ostream & operator<<(std::ostream &os, const Channel &channel) {
     os << channel.name << ",";
     return os;

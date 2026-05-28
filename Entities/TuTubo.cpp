@@ -52,8 +52,11 @@ std::string TuTubo::uploadVideo(std::string video, int type) { //Derek
     return s.str();
 }
 
-std::string TuTubo::suscribeToChannel(std::string channelName) { //Derek
+std::string TuTubo::suscribeToChannel(std::string channelName) {
+    //Derek
     //mostrar lista de canales, preguntar y que seleccionen por numero
+    //Agrega a Derek como suscriptor de MusicChannel (para notificaciones)
+    // MusicChannel a las suscripciones de Derek (para que lo vea)
     std::stringstream s;
 
     if (activeSession == nullptr) {
@@ -65,13 +68,18 @@ std::string TuTubo::suscribeToChannel(std::string channelName) { //Derek
 
     std::shared_ptr<Channel> targetChannel = channelsManagement->searchChannel(channelName);
 
-    s << "\n" << targetChannel->addSuscriber(activeSession);
+    s << "\n" << targetChannel->addSuscriber(activeSession); //cuando el canal suba un video, notificara a Derek
+
+    s << "\n" << activeSession->addChannelSuscription(targetChannel); //Derek puede ver a que canales esta suscritos
 
     return s.str();
 }
 
 std::string TuTubo::unsuscribeFromChannel(std::string channelName) { //Derek
     //mostrar todos los canales suscritos, preguntar y seleccionar por nombre
+    //Derek ya no ve a MusicChannel en su lista de suscripciones
+    //MusicChannel ya no envía notificaciones a Derek
+    //Derek no aparece más en los suscriptores de MusicChanne
     std::stringstream s;
 
     if (activeSession == nullptr) {
@@ -82,9 +90,10 @@ std::string TuTubo::unsuscribeFromChannel(std::string channelName) { //Derek
     s << "Canales a los que estás suscrito:\n" << subscriptionsList->showList();
 
     std::shared_ptr<Channel> targetChannel = channelsManagement->searchChannel(channelName);
-
+    
     subscriptionsList->deleteElement(targetChannel);
-    s << "\nTe desuscribiste de: " << targetChannel->getName();
+
+    s << "\n" << targetChannel->removeSuscriber(activeSession);
 
     return s.str();
 }

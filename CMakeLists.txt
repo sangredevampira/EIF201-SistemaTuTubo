@@ -55,4 +55,12 @@ add_executable(Proyecto_2___Kris_y_Derek
         Observer/ObserverInterface.cpp
         Exceptions/DuplicateVideo.cpp
         Exceptions/DuplicateVideo.h
+        Fachada/Menu.cpp
+        Fachada/Menu.h
+        Exceptions/Miscapture.h
+        Utilities/ConsoleService.h
+        Utilities/ConsoleService.cpp
+        Exceptions/IndexOutOfRange.h
+        Exceptions/IndexOutOfRange.cpp
+        Exceptions/Miscapture.cpp
 )
