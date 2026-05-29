@@ -29,9 +29,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2aad945c-61cf-4ded-8f60-d3eeab25ee47" name="Changes" comment="implementacion de metodos en channel para usarlos en TuTubo e inicio de Fachada :D">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="2aad945c-61cf-4ded-8f60-d3eeab25ee47" name="Changes" comment="pull request, merge de rama de kris y mia" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -384,7 +382,23 @@
       <option name="project" value="LOCAL" />
       <updated>1779956624396</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="pull request, merge de rama de kris y mia">
+      <option name="closed" value="true" />
+      <created>1780031448465</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1780031448465</updated>
+    </task>
+    <task id="LOCAL-00015" summary="pull request, merge de rama de kris y mia">
+      <option name="closed" value="true" />
+      <created>1780031643241</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1780031643241</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -406,7 +420,8 @@
     <MESSAGE value="commit merge" />
     <MESSAGE value="commit" />
     <MESSAGE value="implementacion de metodos en channel para usarlos en TuTubo e inicio de Fachada :D" />
-    <option name="LAST_COMMIT_MESSAGE" value="implementacion de metodos en channel para usarlos en TuTubo e inicio de Fachada :D" />
+    <MESSAGE value="pull request, merge de rama de kris y mia" />
+    <option name="LAST_COMMIT_MESSAGE" value="pull request, merge de rama de kris y mia" />
   </component>
   <component name="github-copilot-workspace">
     <instructionFileLocations>
