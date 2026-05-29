@@ -29,9 +29,18 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2aad945c-61cf-4ded-8f60-d3eeab25ee47" name="Changes" comment="cambio de listas a interfaces de lista">
+    <list default="true" id="2aad945c-61cf-4ded-8f60-d3eeab25ee47" name="Changes" comment="cambio de listas a interfaces de lista y cambio de puntero de sesion activa">
+      <change afterPath="$PROJECT_DIR$/Exceptions/DuplicatedUser.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Exceptions/DuplicatedUser.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controllers/UsersController.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/UsersController.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controllers/UsersController.h" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/UsersController.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Entities/Authenticator.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Entities/Authenticator.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Entities/TuTubo.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Entities/TuTubo.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Entities/TuTubo.h" beforeDir="false" afterPath="$PROJECT_DIR$/Entities/TuTubo.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Exceptions/DuplicateVideo.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Exceptions/DuplicateVideo.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -119,22 +128,22 @@
     &quot;assignee&quot;: &quot;DerekGH08&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/sangredevampira/Proyecto-2---Kris-y-Derek.git&quot;,
-    &quot;accountId&quot;: &quot;c808a30d-f741-4a06-b8f4-fe9a61194d3d&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/sangredevampira/Proyecto-2---Kris-y-Derek.git",
+    "accountId": "e109f7c9-9f07-47bf-a389-fe24bea7a1b8"
   },
-  &quot;recentNewPullRequestHead&quot;: {
-    &quot;server&quot;: {
-      &quot;useHttp&quot;: false,
-      &quot;host&quot;: &quot;github.com&quot;,
-      &quot;port&quot;: null,
-      &quot;suffix&quot;: null
+  "recentNewPullRequestHead": {
+    "server": {
+      "useHttp": false,
+      "host": "github.com",
+      "port": null,
+      "suffix": null
     },
-    &quot;owner&quot;: &quot;sangredevampira&quot;,
-    &quot;repository&quot;: &quot;Proyecto-2---Kris-y-Derek&quot;
+    "owner": "sangredevampira",
+    "repository": "Proyecto-2---Kris-y-Derek"
   }
-}</component>
+}]]></component>
   <component name="MacroExpansionManager">
     <option name="directoryName" value="c0BFYCoC" />
   </component>
@@ -307,7 +316,15 @@
       <option name="project" value="LOCAL" />
       <updated>1780013737765</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="cambio de listas a interfaces de lista y cambio de puntero de sesion activa">
+      <option name="closed" value="true" />
+      <created>1780013823904</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1780013823904</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -327,7 +344,8 @@
     <MESSAGE value="controlador de videos(commit dos)" />
     <MESSAGE value="Channel" />
     <MESSAGE value="cambio de listas a interfaces de lista" />
-    <option name="LAST_COMMIT_MESSAGE" value="cambio de listas a interfaces de lista" />
+    <MESSAGE value="cambio de listas a interfaces de lista y cambio de puntero de sesion activa" />
+    <option name="LAST_COMMIT_MESSAGE" value="cambio de listas a interfaces de lista y cambio de puntero de sesion activa" />
   </component>
   <component name="github-copilot-workspace">
     <instructionFileLocations>

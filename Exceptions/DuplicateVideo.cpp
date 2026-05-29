@@ -5,5 +5,5 @@
 #include "DuplicateVideo.h"
 
 DuplicateVideo::DuplicateVideo()
-    : GeneralException("El video que se intenta subir ya existe en la plataforma. Intente con otro nombre o revise su lista de videos subidos.")
+    : GeneralException("El video que se intenta subir ya existe en la plataforma. Intenta con otro nombre o revisa tu lista de videos subidos.")
 {}

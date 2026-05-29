@@ -8,10 +8,11 @@
 #include "../Exceptions/MissingVideo.h"
 #include "../Exceptions/VideosNotAvailable.h"
 #include "../Exceptions/NoActiveAccount.h"
-#include "../Entities/Authenticator.h"
+#include "../Exceptions/DuplicatedUser.h"
 #include "../Controllers/ChannelsController.h"
 #include "../Controllers/UsersController.h"
 #include "../Controllers/VideosController.h"
+#include "../Controllers/UsersController.h"
 #include "../Adapter/MP4.h"
 #include "../Adapter/MPG.h"
 #include "../Adapter/AdapterMPG.h"
@@ -21,12 +22,14 @@ private:
     std::shared_ptr<Channel> activeSession;
     std::shared_ptr<ChannelsController> channelsManagement;
     std::shared_ptr<VideosController> videosManagement;
-    std::shared_ptr<Authenticator> loginManager;
+    std::shared_ptr<UsersController> usersManagement;
 public:
     TuTubo();
+
     void setActiveSession(std::shared_ptr<Channel>);
-    std::string createUser(std::string,std::string,std::string); // falta incluir la clase aunthenticator
-    std::shared_ptr<Channel> login(std::string,std::string); // falta clase aunthenticator
+    std::shared_ptr<UsersController> getUsersManagement();
+    std::string createUser(std::string,std::string,std::string);
+    std::string login(std::string,std::string); // falta clase aunthenticator
     std::string uploadVideo(std::string, int ); //falta ChannelsController
     std::string suscribeToChannel(std::string);
     std::string unsuscribeFromChannel(std::string);

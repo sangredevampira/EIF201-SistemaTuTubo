@@ -8,16 +8,25 @@ TuTubo::TuTubo(){
     activeSession = nullptr;
     channelsManagement = std::make_shared<ChannelsController>();
     videosManagement = std::make_shared<VideosController>();
+    usersManagement = std::make_shared<UsersController>();
 }
 
-void TuTubo::setActiveSession(std::shared_ptr<Channel>) { //kris
+void TuTubo::setActiveSession(std::shared_ptr<Channel> loggedChannel) { activeSession = loggedChannel; }
+
+std::shared_ptr<UsersController> TuTubo::getUsersManagement() { return usersManagement; }
+
+
+std::string TuTubo::createUser(std::string username, std::string password, std::string channelName) { //kris
+    if (!usersManagement->existingUser(username))
+        channelsManagement->addChannel(usersManagement->addUser(username, password, channelName));
+    else throw DuplicatedUser();
+    return "* Usuario registrado exitosamente!";
 }
 
-
-std::string TuTubo::createUser(std::string, std::string, std::string) { //kris
-}
-
-std::shared_ptr<Channel> TuTubo::login(std::string, std::string) { //kris
+std::string TuTubo::login(std::string username, std::string password) {
+    auto loggedChannel = usersManagement->login(username, password);
+    setActiveSession(loggedChannel);
+    return "[" + loggedChannel->getName() + "]: Has iniciado sesion con exito!";
 }
 
 std::string TuTubo::uploadVideo(std::string video, int type) { //Derek
