@@ -29,7 +29,7 @@ std::string TuTubo::login(std::string username, std::string password) {
     return "[" + loggedChannel->getName() + "]: Has iniciado sesion con exito!";
 }
 
-std::string TuTubo::uploadVideo(std::string video, int type) { //Derek
+std::string TuTubo::uploadVideo(std::string video) { //Derek
     //agregar un video a la lista general y al canal
     std::stringstream s;
 
@@ -43,15 +43,24 @@ std::string TuTubo::uploadVideo(std::string video, int type) { //Derek
 
     std::shared_ptr<Video> newVideo;
 
-    if (type == 1) {
+    size_t pos = video.rfind('.');
+    if (pos == std::string::npos) {
+        throw MissingVideo(); //cambiarlo
+    }
+
+    // Convierte la extensión a minúsculas
+    std::string extension = video.substr(pos);
+    std::transform(extension.begin(), extension.end(), extension.begin(), ::tolower);
+
+    if (extension == ".mp4") {
         newVideo = std::make_shared<MP4>(video);
     }
-    else if (type == 2) {
+    else if (extension == ".mpg") {
         std::shared_ptr<MPG> mpgVideo = std::make_shared<MPG>();
         newVideo = std::make_shared<AdapterMPG>(mpgVideo, video);
     }
     else {
-        throw VideosNotAvailable();
+        throw FormatNotAvaible(); //cambiar
     }
 
     videosManagement->addVideo(newVideo);

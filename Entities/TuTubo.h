@@ -16,6 +16,8 @@
 #include "../Adapter/MP4.h"
 #include "../Adapter/MPG.h"
 #include "../Adapter/AdapterMPG.h"
+#include "../Exceptions/FormatNotAvaible.h"
+
 
 class TuTubo {
 private:
@@ -30,7 +32,7 @@ public:
     std::shared_ptr<UsersController> getUsersManagement();
     std::string createUser(std::string,std::string,std::string);
     std::string login(std::string,std::string); // falta clase aunthenticator
-    std::string uploadVideo(std::string, int ); //falta ChannelsController
+    std::string uploadVideo(std::string); //falta ChannelsController
     std::string suscribeToChannel(std::string);
     std::string unsuscribeFromChannel(std::string);
     std::string searchVideoByTitle(std::string);

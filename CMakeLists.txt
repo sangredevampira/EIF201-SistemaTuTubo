@@ -65,4 +65,6 @@ add_executable(Proyecto_2___Kris_y_Derek
         Exceptions/IndexOutOfRange.h
         Exceptions/IndexOutOfRange.cpp
         Exceptions/Miscapture.cpp
+        Exceptions/FormatNotAvaible.cpp
+        Exceptions/FormatNotAvaible.h
 )

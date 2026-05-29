@@ -8,5 +8,6 @@
 #include <memory>
 #include <iostream>
 #include <sstream>
+#include <algorithm>
 
 #endif //PROYECTO_2_KRIS_Y_DEREK_UTILITIES_H
