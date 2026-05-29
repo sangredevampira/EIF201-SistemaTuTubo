@@ -18,7 +18,7 @@
 
 class TuTubo {
 private:
-    std::shared_ptr<ObserverInterface> activeSession;
+    std::shared_ptr<Channel> activeSession;
     std::shared_ptr<ChannelsController> channelsManagement;
     std::shared_ptr<VideosController> videosManagement;
     std::shared_ptr<Authenticator> loginManager;

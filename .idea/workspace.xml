@@ -29,13 +29,9 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2aad945c-61cf-4ded-8f60-d3eeab25ee47" name="Changes" comment="Channel">
+    <list default="true" id="2aad945c-61cf-4ded-8f60-d3eeab25ee47" name="Changes" comment="cambio de listas a interfaces de lista">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controllers/ChannelsController.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/ChannelsController.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controllers/ChannelsController.h" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/ChannelsController.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controllers/UsersController.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/UsersController.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controllers/UsersController.h" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/UsersController.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controllers/VideosController.h" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/VideosController.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Entities/TuTubo.h" beforeDir="false" afterPath="$PROJECT_DIR$/Entities/TuTubo.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -303,7 +299,15 @@
       <option name="project" value="LOCAL" />
       <updated>1779598839496</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="cambio de listas a interfaces de lista">
+      <option name="closed" value="true" />
+      <created>1780013737765</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1780013737765</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -322,7 +326,8 @@
     <MESSAGE value="controlador de videos" />
     <MESSAGE value="controlador de videos(commit dos)" />
     <MESSAGE value="Channel" />
-    <option name="LAST_COMMIT_MESSAGE" value="Channel" />
+    <MESSAGE value="cambio de listas a interfaces de lista" />
+    <option name="LAST_COMMIT_MESSAGE" value="cambio de listas a interfaces de lista" />
   </component>
   <component name="github-copilot-workspace">
     <instructionFileLocations>
