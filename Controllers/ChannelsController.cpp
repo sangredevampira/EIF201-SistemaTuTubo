@@ -26,10 +26,11 @@ std::shared_ptr<Channel> ChannelsController::searchChannel(std::string channelNa
     {
         auto currentChannel = iterator->getNext();
 
-        if (iterator->getNext()->getName() == channelName)
+        if (currentChannel->getName() == channelName)
         {
             found = true;
             channel = currentChannel;
+            break;
         }
     }
 
@@ -50,6 +51,7 @@ bool ChannelsController::existingChannel(std::string channelName)
 
         if (currentChannel->getName() == channelName) found = true;
     }
+
 
     return found;
 }

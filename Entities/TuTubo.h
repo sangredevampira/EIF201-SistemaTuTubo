@@ -38,6 +38,7 @@ public:
     std::string searchVideoByTitle(std::string);
     std::string searchVideoByChannel(std::string,std::string); //falta ChannelsController
     std::string playVideo(std::shared_ptr<Video>);
+    bool channelExists(std::string channelName);
 };
 
 

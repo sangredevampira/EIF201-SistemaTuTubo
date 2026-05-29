@@ -148,11 +148,6 @@ std::string TuTubo::searchVideoByChannel(std::string channelName, std::string vi
 
     std::shared_ptr<Channel> targetChannel = channelsManagement->searchChannel(channelName);
 
-    if (targetChannel == nullptr) {
-        throw MissingChannel();
-    }
-
-
     auto video = targetChannel->searchVideoName(videoName);
 
     if (video == nullptr) {
@@ -167,4 +162,8 @@ std::string TuTubo::searchVideoByChannel(std::string channelName, std::string vi
 
 std::string TuTubo::playVideo(std::shared_ptr<Video>) { //Derek
     //preguntar el video a ver y seleccionar
+}
+
+bool TuTubo::channelExists(std::string channelName) {
+    return channelsManagement->existingChannel(channelName);
 }

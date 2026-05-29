@@ -28,6 +28,13 @@ public:
     void unsubscribeToChannel();
 
     void videoHandling();
+    void videoHandlingActions();
+    void searchVideoByName();
+    void searchVideoByChannel();
+    void playVideoMenu();
+
+
+
     void saveDataManually();
     void loadDataManually();
 

@@ -39,7 +39,7 @@ void Menu::actionsMainMenu() {
                 case 1:
                     userManagementActions(); break;
                 case 2:
-                    videoHandling(); break;
+                    videoHandlingActions(); break;
                 case 3:
                     saveDataManually(); break;
                 case 4:
@@ -148,10 +148,115 @@ void Menu::unsubscribeToChannel()
 }
 
 void Menu::videoHandling() {
+    std::cout << "========================================\n"
+                     << "          Menu Videos  \n"
+                     << "========================================\n"
+                     << "(1) Buscar Videos por Nombre\n"
+                     << "(2) Buscar Videos por Canal de Usuario\n"
+                    << "(3)  Reproducir Video\n"
+                     << "(4) Salir\n"
+                     << "* Digita la opcion deseada: ";
 }
+
+void Menu::videoHandlingActions() {
+    int option = -1;
+    bool back = false;
+
+    do {
+        try {
+            videoHandling();
+            std::cin >> option;
+            if (std::cin.fail()) throw Miscapture();
+
+            switch (option) {
+                case 1:
+                    searchVideoByName(); break;
+                case 2:
+                    searchVideoByChannel(); break;
+                case 3:
+                    playVideoMenu(); break;
+                case 4:
+                    back = true; break;
+                default:
+                    throw IndexOutOfRange();
+            }
+        } catch (std::exception& e) {
+            ConsoleService::clearConsole();
+            std::cout << e.what() << '\n';
+            std::cin.clear();
+            std::cin.ignore(1000, '\n');
+        }
+    } while (!back);
+}
+
+void Menu::searchVideoByName() {
+    try {
+        ConsoleService::clearConsole();
+        std::string videoName;
+
+        std::cout << "----------------------------------------\n"
+                  << "    BUSCAR VIDEO POR NOMBRE\n"
+                  << "----------------------------------------\n"
+                  << "* Digita el nombre del video: ";
+        std::cin.ignore();
+        std::getline(std::cin, videoName);
+
+        if (!ConsoleService::validateInput(videoName)) throw Miscapture();
+
+        std::cout << tuTubo->searchVideoByTitle(videoName) << "\n";
+
+        ConsoleService::pause();
+    } catch (std::exception& e) {
+        ConsoleService::clearConsole();
+        std::cout << e.what() << '\n';
+        std::cin.clear();
+        std::cin.ignore(1000, '\n');
+    }
+
+}
+
+void Menu::searchVideoByChannel() {
+    try {
+        ConsoleService::clearConsole();
+        std::string channelName, videoName;
+
+        std::cout << "----------------------------------------\n"
+                  << "  BUSCAR VIDEOS POR CANAL DE USUARIO\n"
+                  << "----------------------------------------\n"
+                  << "* Digita el nombre del canal: ";
+        std::cin.ignore();
+        std::getline(std::cin, channelName);
+
+        if (!ConsoleService::validateInput(channelName)) throw Miscapture();
+
+        if (!tuTubo->channelExists(channelName)) throw MissingChannel();
+
+        std::cout << "* Digita el nombre del video en el canal: ";
+        std::getline(std::cin, videoName);
+
+        if (!ConsoleService::validateInput(videoName)) throw Miscapture();
+
+        std::cout << tuTubo->searchVideoByChannel(channelName, videoName) << "\n";
+
+        ConsoleService::pause();
+    } catch (const std::exception& e) {
+        ConsoleService::clearConsole();
+        std::cout << "Error: " << e.what() << '\n';
+        ConsoleService::pause();
+    }
+}
+
+void Menu::playVideoMenu() {
+}
+
+
+
 
 void Menu::saveDataManually() {
 }
 
 void Menu::loadDataManually() {
 }
+
+
+
