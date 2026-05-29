@@ -16,7 +16,7 @@ void TuTubo::setActiveSession(std::shared_ptr<Channel> loggedChannel) { activeSe
 std::shared_ptr<UsersController> TuTubo::getUsersManagement() { return usersManagement; }
 
 
-std::string TuTubo::createUser(std::string username, std::string password, std::string channelName) { //kris
+std::string TuTubo::createUser(std::string username, std::string password, std::string channelName) {
     if (!usersManagement->existingUser(username))
         channelsManagement->addChannel(usersManagement->addUser(username, password, channelName));
     else throw DuplicatedUser();
