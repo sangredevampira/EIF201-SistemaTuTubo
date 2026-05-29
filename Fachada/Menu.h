@@ -20,6 +20,13 @@ public:
     void finalMessage();
 
     void userManagement();
+    void userManagementActions();
+    void createUser();
+    void doLoging();
+    void uploadVideoToMyChannel();
+    void subscribeToChannel();
+    void unsubscribeToChannel();
+
     void videoHandling();
     void saveDataManually();
     void loadDataManually();

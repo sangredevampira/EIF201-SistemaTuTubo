@@ -31,13 +31,25 @@ std::shared_ptr<Channel> ChannelsController::searchChannel(std::string channelNa
             found = true;
             channel = currentChannel;
         }
-        {
-            found = true;
-            channel = currentChannel;
-        }
     }
 
     if (!found) throw MissingChannel();
 
     return channel;
+}
+
+bool ChannelsController::existingChannel(std::string channelName)
+{
+    bool found = false;
+
+    auto iterator = channelsList->createIterator();
+
+    while (iterator->hasNext())
+    {
+        auto currentChannel = iterator->getNext();
+
+        if (currentChannel->getName() == channelName) found = true;
+    }
+
+    return found;
 }
