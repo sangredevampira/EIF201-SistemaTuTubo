@@ -5,12 +5,10 @@
 
 #include "UsersController.h"
 
-UsersController::UsersController() {
-    usersList = std::make_shared<List<User>>();
-}
+UsersController::UsersController() { usersList = std::make_shared<List<User>>(); }
 
 
-std::shared_ptr<List<User>> UsersController::getUsersList() { return usersList; }
+std::shared_ptr<ListInterface<User>> UsersController::getUsersList() { return usersList; }
 
 std::shared_ptr<Channel> UsersController::login(std::string username, std::string password)
 {

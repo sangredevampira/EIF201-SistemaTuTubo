@@ -13,10 +13,10 @@
 class UsersController
 {
 private:
-    std::shared_ptr<List<User>> usersList;
+    std::shared_ptr<ListInterface<User>> usersList;
 public:
     UsersController();
-    std::shared_ptr<List<User>> getUsersList();
+    std::shared_ptr<ListInterface<User>> getUsersList();
     std::shared_ptr<Channel> login(std::string, std::string);
     std::string addUser(std::string, std::string, std::string);
 };

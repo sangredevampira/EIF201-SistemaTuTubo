@@ -12,13 +12,12 @@
 
 class ChannelsController {
 private:
-    std::shared_ptr<List<Channel>> channelsList;
+    std::shared_ptr<ListInterface<Channel>> channelsList;
 public:
     ChannelsController();
     std::string addChannel(std::shared_ptr<Channel>);
     std::shared_ptr<Channel> searchChannel(std::string);
-    std::shared_ptr<List<Channel>> getChannelsList();
-    std::string suscribeToChannel(std::string);
+    std::shared_ptr<ListInterface<Channel>> getChannelsList();
 };
 
 
