@@ -7,6 +7,7 @@
 
 #include "ObserverInterface.h"
 #include "../Iterator/List.h"
+#include "../Adapter/Video.h"
 #include "../Exceptions/MissingVideo.h"
 #include "../Exceptions/NoSuscribers.h"
 #include "../Exceptions/VideosNotAvailable.h"
@@ -21,11 +22,17 @@ private:
 public:
     Channel(std::string name = "");
     std::string getName();
+    std::shared_ptr<List<Channel>> getSubscriptions();
     std::string uploadVideo(std::shared_ptr<Video>);
     std::shared_ptr<List<Video>> getUploadedVideos();
     std::shared_ptr<Video> searchVideoName(std::string);
+    std::string addSuscriber(std::shared_ptr<ObserverInterface> suscriber);
+    std::string addChannelSuscription(std::shared_ptr<Channel> channel); //agrega a la lista de subs
+    std::string removeSuscriber(std::shared_ptr<ObserverInterface> suscriber);
 
     std::string notifySubscribers(std::string, std::string) override;
+
+    friend std::ostream& operator<<(std::ostream& os, const Channel &channel);
 };
 
 #endif //PROYECTO_2___KRIS_Y_DEREK_CHANNEL_H

@@ -1,0 +1,9 @@
+//
+// Created by derek on 27/05/2026.
+//
+
+#include "DuplicateVideo.h"
+
+DuplicateVideo::DuplicateVideo()
+    : GeneralException("El video que se intenta subir ya existe en la plataforma. Intenta con otro nombre o revisa tu lista de videos subidos.")
+{}

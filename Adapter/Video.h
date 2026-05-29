@@ -14,8 +14,7 @@ class Video
     Video(std::string name = "");
     virtual std::string getVideoName() = 0;
     virtual std::string play() = 0;
-
+    friend std::ostream& operator<<(std::ostream& os, const Video& video);
 };
-
-
+std::ostream& operator<<(std::ostream& os, const Video& video);
 #endif //PROYECTO_2_KRIS_Y_DEREK_VIDEO_H

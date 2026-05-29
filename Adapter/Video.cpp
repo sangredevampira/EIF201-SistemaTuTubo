@@ -6,3 +6,8 @@
 Video::Video(std::string name) {
     this->videoName = name;
 }
+
+std::ostream& operator<<(std::ostream& os, const Video& video) {
+    os << video.videoName;
+    return os;
+}

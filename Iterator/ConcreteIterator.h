@@ -6,40 +6,37 @@
 #define EJEMPLO_1_LISTITERATOR_H
 
 #include "../Utilities/Utilities.h"
+#include "IteratorInterface.h"
 #include "Nodo.h"
 
-//
-// Rol en el patrón: ConcreteIterator
-// ─────────────────────────────────────────────
-
 template<class T>
-class ConcreteIterator {
-    public:
+class ConcreteIterator : public IteratorInterface<T> {
+private:
+    std::shared_ptr<Nodo<T>> current;
+public:
     ConcreteIterator(std::shared_ptr<Nodo<T>> start);
-    bool hasNext();
-    std::shared_ptr<T> getNext();
-    private:
-    std::shared_ptr<Nodo<T>> m_current;
-
-
+    bool hasNext() override;
+    void reset(std::shared_ptr<Nodo<T>>) override;
+    std::shared_ptr<T> getNext() override;
 };
 
 
 template<class T>
-ConcreteIterator<T>::ConcreteIterator(std::shared_ptr<Nodo<T>> head)
-    : m_current(head) {}
+ConcreteIterator<T>::ConcreteIterator(std::shared_ptr<Nodo<T>> start)
+    : current(start) {}
 
 template<class T>
 bool ConcreteIterator<T>::hasNext() {
-    return m_current != nullptr;
+    return current != nullptr;
 }
 
 template<class T>
+void ConcreteIterator<T>::reset(std::shared_ptr<Nodo<T>> start) { current = start; }
+
+template<class T>
 std::shared_ptr<T> ConcreteIterator<T>::getNext() {
-    // Guardamos el elemento antes de avanzar
-    std::shared_ptr<T> data = m_current->getElement();
-    // Avanzamos al siguiente nodo
-    m_current = m_current->getNext();
+    std::shared_ptr<T> data = current->getElement();
+    current = current->getNext();
     return data;
 }
 

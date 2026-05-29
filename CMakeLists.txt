@@ -34,12 +34,35 @@ add_executable(Proyecto_2___Kris_y_Derek
         Exceptions/NoSuscribers.h
         Entities/User.cpp
         Entities/User.h
-        Entities/UsersController.cpp
-        Entities/UsersController.h
-        Entities/Authenticator.cpp
-        Entities/Authenticator.h
+        Controllers/UsersController.cpp
+        Controllers/UsersController.h
         Exceptions/NoRegisteredUsers.cpp
         Exceptions/NoRegisteredUsers.h
-        VideosController.cpp
-        VideosController.h
+        Controllers/VideosController.cpp
+        Controllers/VideosController.h
+        Entities/TuTubo.cpp
+        Entities/TuTubo.h
+        Controllers/ChannelsController.cpp
+        Controllers/ChannelsController.h
+        Iterator/IteratorInterface.h
+        Exceptions/NoExistingChannels.cpp
+        Exceptions/NoExistingChannels.h
+        Exceptions/MissingChannel.cpp
+        Exceptions/MissingChannel.h
+        Iterator/ListInterface.h
+        Observer/ObserverInterface.cpp
+        Exceptions/DuplicateVideo.cpp
+        Exceptions/DuplicateVideo.h
+        Exceptions/NoActiveAccount.cpp
+        Exceptions/NoActiveAccount.h
+        Exceptions/DuplicatedUser.cpp
+        Exceptions/DuplicatedUser.h
+        Fachada/Menu.cpp
+        Fachada/Menu.h
+        Exceptions/Miscapture.h
+        Utilities/ConsoleService.h
+        Utilities/ConsoleService.cpp
+        Exceptions/IndexOutOfRange.h
+        Exceptions/IndexOutOfRange.cpp
+        Exceptions/Miscapture.cpp
 )

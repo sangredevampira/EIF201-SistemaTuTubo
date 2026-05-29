@@ -7,22 +7,24 @@
 
 
 #include "Nodo.h"
+#include "ListInterface.h"
 #include "ConcreteIterator.h"
+
 template<class T>
-class List{
+class List : public ListInterface<T> {
 private:
     std::shared_ptr<Nodo<T>> first;
-    public:
+public:
     List();
-    void insertFirst(std::shared_ptr<T>);
-    void insertLast(std::shared_ptr<T> element);
-    bool isEmpty();
-    void deleteElement(std::shared_ptr<T>);
-    std::shared_ptr<Nodo<T>> getFirst() const;
-    int length();
-    std::string showList();
-    std::shared_ptr<List<T>> clone() const;
-    std::shared_ptr<ConcreteIterator<T>> createIterator();
+    void insertFirst(std::shared_ptr<T>) ;
+    void insertLast(std::shared_ptr<T> element) ;
+    bool isEmpty() ;
+    void deleteElement(std::shared_ptr<T>) ;
+    std::shared_ptr<Nodo<T>> getFirst() const ;
+    int length() ;
+    std::string showList() ;
+    std::shared_ptr<List<T>> clone() const ;
+    std::shared_ptr<IteratorInterface<T>> createIterator() override;
 };
 
 template<class T>
@@ -137,7 +139,7 @@ void List<T>::deleteElement(std::shared_ptr<T> target) {
 }
 
 template<class T>
-std::shared_ptr<ConcreteIterator<T>> List<T>::createIterator() {
+std::shared_ptr<IteratorInterface<T>> List<T>::createIterator() {
     return std::make_shared<ConcreteIterator<T>>(this->first);
 }
 
