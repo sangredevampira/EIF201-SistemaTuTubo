@@ -141,6 +141,22 @@ void Menu::uploadVideoToMyChannel()
 
 void Menu::subscribeToChannel()
 {
+    ConsoleService::clearConsole();
+
+    std::string channelName;
+
+    std::cout << "------------------ * -------------------\n"
+              << "       SUSCRIBIRSE A UN CANAL\n"
+              << "------------------ * -------------------\n";
+    std::cout << "* Digita el nombre del canal: ";
+    std::cin.ignore();
+    std::getline(std::cin, channelName);
+
+    if (!ConsoleService::validateInput(channelName)) throw Miscapture();
+
+    std::cout << tuTubo->suscribeToChannel(channelName) << "\n";
+
+    ConsoleService::pause();
 }
 
 void Menu::unsubscribeToChannel()
@@ -247,6 +263,24 @@ void Menu::searchVideoByChannel() {
 }
 
 void Menu::playVideoMenu() {
+    try {
+        ConsoleService::clearConsole();
+        std::string videoName;
+
+        std::cout << "* Digita el nombre del video: ";
+        std::cin.ignore();
+        std::getline(std::cin, videoName);
+
+        if (!ConsoleService::validateInput(videoName)) throw Miscapture();
+
+        std::cout << tuTubo->playVideo(videoName) << "\n";
+
+        ConsoleService::pause();
+    } catch (const std::exception& e) {
+        ConsoleService::clearConsole();
+        std::cout << "Error: " << e.what() << '\n';
+        ConsoleService::pause();
+    }
 }
 
 

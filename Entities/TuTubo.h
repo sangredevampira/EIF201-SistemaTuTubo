@@ -37,7 +37,7 @@ public:
     std::string unsuscribeFromChannel(std::string);
     std::string searchVideoByTitle(std::string);
     std::string searchVideoByChannel(std::string,std::string); //falta ChannelsController
-    std::string playVideo(std::shared_ptr<Video>);
+    std::string playVideo(std::string videoName);
     bool channelExists(std::string channelName);
 };
 

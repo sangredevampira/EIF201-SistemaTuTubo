@@ -48,7 +48,7 @@ std::string TuTubo::uploadVideo(std::string video) { //Derek
         throw MissingVideo(); //cambiarlo
     }
 
-    // Convierte la extensión a minúsculas
+
     std::string extension = video.substr(pos);
     std::transform(extension.begin(), extension.end(), extension.begin(), ::tolower);
 
@@ -60,7 +60,7 @@ std::string TuTubo::uploadVideo(std::string video) { //Derek
         newVideo = std::make_shared<AdapterMPG>(mpgVideo, video);
     }
     else {
-        throw FormatNotAvaible(); //cambiar
+        throw FormatNotAvaible();
     }
 
     videosManagement->addVideo(newVideo);
@@ -160,8 +160,22 @@ std::string TuTubo::searchVideoByChannel(std::string channelName, std::string vi
 
 }
 
-std::string TuTubo::playVideo(std::shared_ptr<Video>) { //Derek
-    //preguntar el video a ver y seleccionar
+std::string TuTubo::playVideo(std::string videoName) {
+    std::stringstream s;
+
+    if (videosManagement == nullptr) {
+        throw VideosNotAvailable();
+    }
+
+    auto video = videosManagement->searchVideoName(videoName);
+
+    if (video == nullptr) {
+        throw MissingVideo();
+    }
+
+    s << video->play();
+
+    return s.str();
 }
 
 bool TuTubo::channelExists(std::string channelName) {
