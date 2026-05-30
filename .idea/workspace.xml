@@ -29,13 +29,17 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2aad945c-61cf-4ded-8f60-d3eeab25ee47" name="Changes" comment="pull request, merge de rama de kris y mia">
+    <list default="true" id="2aad945c-61cf-4ded-8f60-d3eeab25ee47" name="Changes" comment="commit de metodos menu">
+      <change afterPath="$PROJECT_DIR$/Exceptions/DuplicatedChannel.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Exceptions/DuplicatedChannel.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Controllers/ChannelsController.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/ChannelsController.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controllers/ChannelsController.h" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/ChannelsController.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controllers/UsersController.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/UsersController.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Fachada/Menu.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Fachada/Menu.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Fachada/Menu.h" beforeDir="false" afterPath="$PROJECT_DIR$/Fachada/Menu.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Entities/TuTubo.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Entities/TuTubo.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Entities/TuTubo.h" beforeDir="false" afterPath="$PROJECT_DIR$/Entities/TuTubo.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Fachada/Menu.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Facade/Menu.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Fachada/Menu.h" beforeDir="false" afterPath="$PROJECT_DIR$/Facade/Menu.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -155,7 +159,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="Modulo-Fachada/Interfaz" />
+        <entry key="$PROJECT_DIR$" value="Menu-Kris" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -226,6 +230,7 @@
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.RadMigrateCodeStyle": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.cidr.known.project.marker": "true",
     "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.readMode.enableVisualFormatting": "true",
@@ -429,6 +434,17 @@
     <MESSAGE value="implementacion de metodos en channel para usarlos en TuTubo e inicio de Fachada :D" />
     <MESSAGE value="pull request, merge de rama de kris y mia" />
     <option name="LAST_COMMIT_MESSAGE" value="pull request, merge de rama de kris y mia" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/Entities/TuTubo.h</url>
+          <line>7</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="github-copilot-workspace">
     <instructionFileLocations>

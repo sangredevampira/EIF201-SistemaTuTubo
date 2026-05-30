@@ -9,14 +9,18 @@
 #include "../Exceptions/VideosNotAvailable.h"
 #include "../Exceptions/NoActiveAccount.h"
 #include "../Exceptions/DuplicatedUser.h"
+#include "../Exceptions/FormatNotAvaible.h"
+#include "../Exceptions/DuplicatedChannel.h"
+
 #include "../Controllers/ChannelsController.h"
 #include "../Controllers/UsersController.h"
 #include "../Controllers/VideosController.h"
 #include "../Controllers/UsersController.h"
+
 #include "../Adapter/MP4.h"
 #include "../Adapter/MPG.h"
 #include "../Adapter/AdapterMPG.h"
-#include "../Exceptions/FormatNotAvaible.h"
+
 
 
 class TuTubo {
@@ -29,14 +33,15 @@ public:
     TuTubo();
 
     void setActiveSession(std::shared_ptr<Channel>);
+    std::shared_ptr<Channel> getActiveSession();
     std::shared_ptr<UsersController> getUsersManagement();
     std::string createUser(std::string,std::string,std::string);
-    std::string login(std::string,std::string); // falta clase aunthenticator
-    std::string uploadVideo(std::string); //falta ChannelsController
+    std::string login(std::string,std::string);
+    std::string uploadVideo(std::string);
     std::string suscribeToChannel(std::string);
     std::string unsuscribeFromChannel(std::string);
     std::string searchVideoByTitle(std::string);
-    std::string searchVideoByChannel(std::string,std::string); //falta ChannelsController
+    std::string searchVideoByChannel(std::string,std::string);
     std::string playVideo(std::string videoName);
     bool channelExists(std::string channelName);
 };

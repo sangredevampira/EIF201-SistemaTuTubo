@@ -22,7 +22,7 @@ public:
     void userManagement();
     void userManagementActions();
     void createUser();
-    void doLoging();
+    void doLogin();
     void uploadVideoToMyChannel();
     void subscribeToChannel();
     void unsubscribeToChannel();

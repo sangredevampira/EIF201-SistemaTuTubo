@@ -57,8 +57,8 @@ add_executable(Proyecto_2___Kris_y_Derek
         Exceptions/NoActiveAccount.h
         Exceptions/DuplicatedUser.cpp
         Exceptions/DuplicatedUser.h
-        Fachada/Menu.cpp
-        Fachada/Menu.h
+        Facade/Menu.cpp
+        Facade/Menu.h
         Exceptions/Miscapture.h
         Utilities/ConsoleService.h
         Utilities/ConsoleService.cpp
@@ -67,4 +67,6 @@ add_executable(Proyecto_2___Kris_y_Derek
         Exceptions/Miscapture.cpp
         Exceptions/FormatNotAvaible.cpp
         Exceptions/FormatNotAvaible.h
+        Exceptions/DuplicatedChannel.cpp
+        Exceptions/DuplicatedChannel.h
 )

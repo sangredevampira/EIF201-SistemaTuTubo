@@ -13,24 +13,24 @@ TuTubo::TuTubo(){
 
 void TuTubo::setActiveSession(std::shared_ptr<Channel> loggedChannel) { activeSession = loggedChannel; }
 
+std::shared_ptr<Channel> TuTubo::getActiveSession() { return activeSession; }
+
 std::shared_ptr<UsersController> TuTubo::getUsersManagement() { return usersManagement; }
 
-
-std::string TuTubo::createUser(std::string username, std::string password, std::string channelName) { //kris
-    if (!usersManagement->existingUser(username))
-        channelsManagement->addChannel(usersManagement->addUser(username, password, channelName));
-    else throw DuplicatedUser();
+std::string TuTubo::createUser(std::string username, std::string password, std::string channelName) {
+    if (usersManagement->existingUser(username)) throw DuplicatedUser();
+    if (channelsManagement->existingChannel(channelName)) throw DuplicatedChannel();
+    channelsManagement->addChannel(usersManagement->addUser(username, password, channelName));
     return "* Usuario registrado exitosamente!";
 }
 
 std::string TuTubo::login(std::string username, std::string password) {
     auto loggedChannel = usersManagement->login(username, password);
     setActiveSession(loggedChannel);
-    return "[" + loggedChannel->getName() + "]: Has iniciado sesion con exito!";
+    return "[" + loggedChannel->getName() + "]: Has iniciado sesion exitosamente!";
 }
 
-std::string TuTubo::uploadVideo(std::string video) { //Derek
-    //agregar un video a la lista general y al canal
+std::string TuTubo::uploadVideo(std::string video) {
     std::stringstream s;
 
     if (activeSession == nullptr) {
@@ -45,7 +45,7 @@ std::string TuTubo::uploadVideo(std::string video) { //Derek
 
     size_t pos = video.rfind('.');
     if (pos == std::string::npos) {
-        throw MissingVideo(); //cambiarlo
+        throw MissingVideo();
     }
 
 
@@ -71,11 +71,7 @@ std::string TuTubo::uploadVideo(std::string video) { //Derek
 }
 
 std::string TuTubo::suscribeToChannel(std::string channelName) {
-    //Derek
-    //mostrar lista de canales, preguntar y que seleccionen por numero
-    //Agrega a Derek como suscriptor de MusicChannel (para notificaciones)
-    // MusicChannel a las suscripciones de Derek (para que lo vea)
-    std::stringstream s;
+   std::stringstream s;
 
     if (activeSession == nullptr) {
         throw NoActiveAccount();
@@ -86,18 +82,14 @@ std::string TuTubo::suscribeToChannel(std::string channelName) {
 
     std::shared_ptr<Channel> targetChannel = channelsManagement->searchChannel(channelName);
 
-    s << "\n" << targetChannel->addSuscriber(activeSession); //cuando el canal suba un video, notificara a Derek
+    s << "\n" << targetChannel->addSuscriber(activeSession);
 
-    s << "\n" << activeSession->addChannelSuscription(targetChannel); //Derek puede ver a que canales esta suscritos
+    s << "\n" << activeSession->addChannelSuscription(targetChannel);
 
     return s.str();
 }
 
-std::string TuTubo::unsuscribeFromChannel(std::string channelName) { //Derek
-    //mostrar todos los canales suscritos, preguntar y seleccionar por nombre
-    //Derek ya no ve a MusicChannel en su lista de suscripciones
-    //MusicChannel ya no envía notificaciones a Derek
-    //Derek no aparece más en los suscriptores de MusicChanne
+std::string TuTubo::unsuscribeFromChannel(std::string channelName) {
     std::stringstream s;
 
     if (activeSession == nullptr) {

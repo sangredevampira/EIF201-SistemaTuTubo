@@ -12,7 +12,7 @@ std::shared_ptr<ListInterface<Channel>> ChannelsController::getChannelsList() {
 
 std::string ChannelsController::addChannel(std::shared_ptr<Channel> newChannel) {
     channelsList->insertFirst(newChannel);
-    return "Canal registrado exitosamente!";
+    return "* Canal registrado exitosamente!";
 }
 
 std::shared_ptr<Channel> ChannelsController::searchChannel(std::string channelName) {

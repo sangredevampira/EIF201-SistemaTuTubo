@@ -4,9 +4,7 @@
 
 #include "Menu.h"
 
-Menu::Menu() {
-    this->tuTubo = std::make_unique<TuTubo>();
-}
+Menu::Menu() { tuTubo = std::make_unique<TuTubo>(); }
 
 void Menu::mainMenu() {
 
@@ -99,7 +97,7 @@ void Menu::userManagementActions()
         switch (option)
         {
             case 1: createUser(); break;
-            case 2: doLoging(); break;
+            case 2: doLogin(); break;
             case 3: uploadVideoToMyChannel(); break;
             case 4: subscribeToChannel(); break;
             case 5: unsubscribeToChannel(); break;
@@ -114,6 +112,7 @@ void Menu::createUser()
     ConsoleService::clearConsole();
 
     std::string username, password, channelName;
+    int index;
 
     std::cout << "------------------ * -------------------\n"
                           << "     INGRESA LOS DATOS DEL USUARIO\n"
@@ -128,15 +127,61 @@ void Menu::createUser()
     if (std::cin.fail() ||
         channelName.empty()) throw Miscapture();
 
-    std::cout << tuTubo->createUser(username, password, channelName);
+    std::cout << tuTubo->createUser(username, password, channelName) << "\n\n";
+
+    std::cout << "--- Deseas iniciar sesion en este momento? ---\n"
+                          << "(1) Si\n"
+                          << "(0) No\n"
+                          << "* Digita la opcion deseada: "; std::cin >> index;
+
+    if (std::cin.fail()) throw Miscapture();
+
+    switch (index)
+    {
+        case 1: doLogin(); break;
+        case 0: return;
+        default: throw IndexOutOfRange();
+    }
 }
 
-void Menu::doLoging()
+void Menu::doLogin()
 {
+    ConsoleService::clearConsole();
+
+    std::string username, password;
+
+    std::cout << "------------------ * -------------------\n"
+                         << "     INGRESA LOS DATOS DEL USUARIO\n"
+                         << "------------------ * -------------------\n";
+    std::cout << "* Digita el username: "; std::cin.ignore(); std::getline(std::cin, username);
+    if (std::cin.fail() || username.empty()) throw Miscapture();
+
+    std::cout << "* Digita la contrasena: "; std::cin.ignore(); std::getline(std::cin, password);
+    if (std::cin.fail() || password.empty()) throw Miscapture();
+
+    std::cout << tuTubo->login(username, password) << "\n\n";
+
+    ConsoleService::pause();
 }
 
 void Menu::uploadVideoToMyChannel()
 {
+    ConsoleService::clearConsole();
+
+    std::string videoTitle;
+
+    std::cout << "------------------ * -------------------\n"
+              << "     PUBLICAR UN VIDEO EN EL CANAL\n"
+              << "          [FORMATOS ACEPTADOS] \n"
+              << "              .MP4 Y .MPG"
+              << "------------------ * -------------------\n";
+
+    std::cout << "* Digita el titulo del video (debe indicar su formato): "; std::cin.ignore(); std::getline(std::cin, videoTitle);
+    if (std::cin.fail() || videoTitle.empty()) throw Miscapture();
+
+    std::cout << tuTubo->uploadVideo(videoTitle) << "\n\n";
+
+    ConsoleService::pause();
 }
 
 void Menu::subscribeToChannel()
@@ -161,6 +206,20 @@ void Menu::subscribeToChannel()
 
 void Menu::unsubscribeToChannel()
 {
+    ConsoleService::clearConsole();
+
+    std::string channelName;
+
+    std::cout << "------------------ * -------------------\n"
+              << "      DESUSCRIBIRSE DE UN CANAL\n"
+              << "------------------ * -------------------\n";
+
+    std::cout << "* Digita el nombre del canal: "; std::cin.ignore(); std::getline(std::cin, channelName);
+    if (std::cin.fail() || channelName.empty()) throw Miscapture();
+
+    std::cout << tuTubo->unsuscribeFromChannel(channelName) << "\n\n";
+
+    ConsoleService::pause();
 }
 
 void Menu::videoHandling() {
@@ -228,7 +287,6 @@ void Menu::searchVideoByName() {
         std::cin.clear();
         std::cin.ignore(1000, '\n');
     }
-
 }
 
 void Menu::searchVideoByChannel() {
@@ -282,8 +340,6 @@ void Menu::playVideoMenu() {
         ConsoleService::pause();
     }
 }
-
-
 
 
 void Menu::saveDataManually() {
