@@ -48,7 +48,7 @@ std::shared_ptr<Video> Channel::searchVideoName(std::string title)
     {
         auto currentVideo = iterator->getNext();
 
-        if (iterator->getNext()->getVideoName() == title)
+        if (currentVideo->getVideoName() == title)
         {
             found = true;
             video = currentVideo;

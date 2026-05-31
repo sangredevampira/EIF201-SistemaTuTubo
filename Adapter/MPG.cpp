@@ -5,5 +5,5 @@
 #include "MPG.h"
 
 std::string MPG::playAntiguo() {
-    return "Reproduciendo video: ";
+    return "Formato antiguo(mpg), ";
 }

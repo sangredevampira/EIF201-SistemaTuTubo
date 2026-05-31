@@ -18,6 +18,7 @@ public:
 
     static bool validateInput(const std::string&);
     static bool validateID(const std::string&);
+    static bool validateVideoName(const std::string&);
 };
 
 

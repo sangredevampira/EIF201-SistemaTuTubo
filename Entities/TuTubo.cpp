@@ -77,9 +77,6 @@ std::string TuTubo::suscribeToChannel(std::string channelName) {
         throw NoActiveAccount();
     }
 
-    auto channelsList = channelsManagement->getChannelsList();
-    s << "Canales disponibles:\n" << channelsList->showList();
-
     std::shared_ptr<Channel> targetChannel = channelsManagement->searchChannel(channelName);
 
     s << "\n" << targetChannel->addSuscriber(activeSession);
