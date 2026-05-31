@@ -69,4 +69,10 @@ add_executable(Proyecto_2___Kris_y_Derek
         Exceptions/FormatNotAvaible.h
         Exceptions/DuplicatedChannel.cpp
         Exceptions/DuplicatedChannel.h
+        "File Management/FileManagement.cpp"
+        "File Management/FileManagement.h"
+        Exceptions/SaveDataError.cpp
+        Exceptions/SaveDataError.h
+        Exceptions/LoadDataError.cpp
+        Exceptions/LoadDataError.h
 )

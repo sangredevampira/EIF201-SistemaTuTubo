@@ -16,15 +16,16 @@ class Channel : public ObserverInterface
 {
 private:
     std::string name;
-    std::shared_ptr<List<Video>> uploadedVideos;
-    std::shared_ptr<List<Channel>> subscriptions;
-    std::shared_ptr<List<ObserverInterface>> suscribers;
+    std::shared_ptr<ListInterface<Video>> uploadedVideos;
+    std::shared_ptr<ListInterface<Channel>> subscriptions;
+    std::shared_ptr<ListInterface<ObserverInterface>> suscribers;
 public:
     Channel(std::string name = "");
-    std::string getName();
-    std::shared_ptr<List<Channel>> getSubscriptions();
+    std::string getName() override;
+    std::shared_ptr<ListInterface<Channel>> getSubscriptions();
+    std::shared_ptr<ListInterface<ObserverInterface>> getSubscribers();
     std::string uploadVideo(std::shared_ptr<Video>);
-    std::shared_ptr<List<Video>> getUploadedVideos();
+    std::shared_ptr<ListInterface<Video>> getUploadedVideos();
     std::shared_ptr<Video> searchVideoName(std::string);
     std::string addSuscriber(std::shared_ptr<ObserverInterface> suscriber);
     std::string addChannelSuscription(std::shared_ptr<Channel> channel); //agrega a la lista de subs

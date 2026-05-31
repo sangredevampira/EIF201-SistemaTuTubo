@@ -14,9 +14,11 @@ Channel::Channel(std::string name)
 
 std::string Channel::getName() { return name; }
 
-std::shared_ptr<List<Channel>> Channel::getSubscriptions() {
+std::shared_ptr<ListInterface<Channel>> Channel::getSubscriptions() {
     return subscriptions;
 }
+
+std::shared_ptr<ListInterface<ObserverInterface>> Channel::getSubscribers() { return suscribers; }
 
 std::string Channel::uploadVideo(std::shared_ptr<Video> newVideo)
 {
@@ -32,7 +34,7 @@ std::string Channel::uploadVideo(std::shared_ptr<Video> newVideo)
     return ss.str();
 }
 
-std::shared_ptr<List<Video>> Channel::getUploadedVideos() { return uploadedVideos; }
+std::shared_ptr<ListInterface<Video>> Channel::getUploadedVideos() { return uploadedVideos; }
 
 std::shared_ptr<Video> Channel::searchVideoName(std::string title)
 {
