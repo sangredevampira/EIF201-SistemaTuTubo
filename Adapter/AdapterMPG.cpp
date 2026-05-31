@@ -9,10 +9,9 @@ AdapterMPG::AdapterMPG(std::shared_ptr<MPG> mpg, std::string name): Video(name) 
 }
 
 std::string AdapterMPG::play() {
-    mpg->playAntiguo();
-    return "Reproduciendo video: " + videoName;
+    return mpg->playAntiguo() + "reproduciendo video: " + videoName;
 }
 
 std::string AdapterMPG::getVideoName() {
-    return  mpg->playAntiguo() + videoName;
+    return  videoName;
 }

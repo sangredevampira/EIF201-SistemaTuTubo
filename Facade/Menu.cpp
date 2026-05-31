@@ -42,7 +42,7 @@ void Menu::actionsMainMenu() {
                     saveDataManually(); break;
                 case 4:
                     loadDataManually(); break;
-                case 0:
+                case 5:
                     ConsoleService::clearConsole();
                     finalMessage();
                     continueMenu = false; break;
@@ -197,7 +197,7 @@ void Menu::subscribeToChannel()
     std::cin.ignore();
     std::getline(std::cin, channelName);
 
-    if (!ConsoleService::validateInput(channelName)) throw Miscapture();
+    if (!ConsoleService::validateID(channelName)) throw Miscapture();
 
     std::cout << tuTubo->suscribeToChannel(channelName) << "\n";
 
@@ -215,7 +215,8 @@ void Menu::unsubscribeToChannel()
               << "------------------ * -------------------\n";
 
     std::cout << "* Digita el nombre del canal: "; std::cin.ignore(); std::getline(std::cin, channelName);
-    if (std::cin.fail() || channelName.empty()) throw Miscapture();
+    if (!ConsoleService::validateID(channelName)) throw Miscapture();
+    //if (std::cin.fail() || channelName.empty()) throw Miscapture();
 
     std::cout << tuTubo->unsuscribeFromChannel(channelName) << "\n\n";
 
@@ -276,7 +277,7 @@ void Menu::searchVideoByName() {
         std::cin.ignore();
         std::getline(std::cin, videoName);
 
-        if (!ConsoleService::validateInput(videoName)) throw Miscapture();
+        if (!ConsoleService::validateVideoName(videoName)) throw Miscapture();
 
         std::cout << tuTubo->searchVideoByTitle(videoName) << "\n";
 
@@ -301,14 +302,14 @@ void Menu::searchVideoByChannel() {
         std::cin.ignore();
         std::getline(std::cin, channelName);
 
-        if (!ConsoleService::validateInput(channelName)) throw Miscapture();
+        if (!ConsoleService::validateID(channelName)) throw Miscapture();
 
         if (!tuTubo->channelExists(channelName)) throw MissingChannel();
 
         std::cout << "* Digita el nombre del video en el canal: ";
         std::getline(std::cin, videoName);
 
-        if (!ConsoleService::validateInput(videoName)) throw Miscapture();
+        if (!ConsoleService::validateVideoName(videoName)) throw Miscapture();
 
         std::cout << tuTubo->searchVideoByChannel(channelName, videoName) << "\n";
 
@@ -329,8 +330,7 @@ void Menu::playVideoMenu() {
         std::cin.ignore();
         std::getline(std::cin, videoName);
 
-        if (!ConsoleService::validateInput(videoName)) throw Miscapture();
-
+        if (!ConsoleService::validateVideoName(videoName)) throw Miscapture();
         std::cout << tuTubo->playVideo(videoName) << "\n";
 
         ConsoleService::pause();
