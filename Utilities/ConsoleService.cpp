@@ -21,7 +21,6 @@ bool ConsoleService::validateInput(const std::string& input)
         return false;
     }
 
-    // Verificar que haya al menos una letra
     for (char c : input) {
         if ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z')) {
             return true;
@@ -33,6 +32,14 @@ bool ConsoleService::validateInput(const std::string& input)
 
 bool ConsoleService::validateID(const std::string& id)
 {
-    std::regex patron("^[A-Za-z0-9]+$");
+    std::regex patron("^[A-Za-z0-9  ]+$");
     return std::regex_match(id, patron);
+
+
+}
+
+bool ConsoleService::validateVideoName(const std::string& videoName)
+{
+    std::regex patron("^[A-Za-z0-9._() ]+$");
+    return std::regex_match(videoName, patron);
 }

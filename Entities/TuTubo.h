@@ -9,13 +9,25 @@
 #include "../Exceptions/VideosNotAvailable.h"
 #include "../Exceptions/NoActiveAccount.h"
 #include "../Exceptions/DuplicatedUser.h"
+#include "../Exceptions/FormatNotAvaible.h"
+#include "../Exceptions/DuplicatedChannel.h"
+#include "../Exceptions/NotSubscribed.h"
+#include "../Exceptions/AlreadySubscribed.h"
+#include "../Exceptions/NoChannelSubscriptions.h"
+#include "../Exceptions/CannotSubscribeToOwnChannel.h"
+
 #include "../Controllers/ChannelsController.h"
 #include "../Controllers/UsersController.h"
 #include "../Controllers/VideosController.h"
 #include "../Controllers/UsersController.h"
+
 #include "../Adapter/MP4.h"
 #include "../Adapter/MPG.h"
 #include "../Adapter/AdapterMPG.h"
+
+#include "../FileManagement/FileManagement.h"
+
+
 
 class TuTubo {
 private:
@@ -27,15 +39,23 @@ public:
     TuTubo();
 
     void setActiveSession(std::shared_ptr<Channel>);
+    ~TuTubo();
+    std::shared_ptr<ListInterface<User>> getUsersList();
+    std::shared_ptr<Channel> getActiveSession();
     std::shared_ptr<UsersController> getUsersManagement();
+    std::shared_ptr<ChannelsController> getChannelsManagement();
+    std::shared_ptr<VideosController> getVideosManagement();
     std::string createUser(std::string,std::string,std::string);
-    std::string login(std::string,std::string); // falta clase aunthenticator
-    std::string uploadVideo(std::string, int ); //falta ChannelsController
+    std::string login(std::string,std::string);
+    std::string uploadVideo(std::string);
     std::string suscribeToChannel(std::string);
     std::string unsuscribeFromChannel(std::string);
     std::string searchVideoByTitle(std::string);
-    std::string searchVideoByChannel(std::string,std::string); //falta ChannelsController
-    std::string playVideo(std::shared_ptr<Video>);
+    std::string searchVideoByChannel(std::string,std::string);
+    std::string playVideo(std::string videoName);
+    bool channelExists(std::string channelName);
+    std::string showSubscriptionsList();
+    std::string showAllChannels();
 };
 
 

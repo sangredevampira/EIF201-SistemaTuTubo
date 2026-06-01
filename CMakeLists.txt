@@ -57,12 +57,35 @@ add_executable(Proyecto_2___Kris_y_Derek
         Exceptions/NoActiveAccount.h
         Exceptions/DuplicatedUser.cpp
         Exceptions/DuplicatedUser.h
-        Fachada/Menu.cpp
-        Fachada/Menu.h
+        Facade/Menu.cpp
+        Facade/Menu.h
         Exceptions/Miscapture.h
         Utilities/ConsoleService.h
         Utilities/ConsoleService.cpp
         Exceptions/IndexOutOfRange.h
         Exceptions/IndexOutOfRange.cpp
         Exceptions/Miscapture.cpp
+        Exceptions/FormatNotAvaible.cpp
+        Exceptions/FormatNotAvaible.h
+        Exceptions/DuplicatedChannel.cpp
+        Exceptions/DuplicatedChannel.h
+        Exceptions/NotSubscribed.cpp
+        Exceptions/NotSubscribed.h
+        Exceptions/AlreadySubscribed.h
+        Exceptions/AlreadySubscribed.cpp
+        Exceptions/NoChannelSubscriptions.cpp
+        Exceptions/NoChannelSubscriptions.h
+        Exceptions/CannotSubscribeToOwnChannel.cpp
+        Exceptions/CannotSubscribeToOwnChannel.h
+        FileManagement/FileManagement.cpp
+        FileManagement/FileManagement.h
+        Exceptions/SaveDataError.cpp
+        Exceptions/SaveDataError.h
+        Exceptions/LoadDataError.cpp
+        Exceptions/LoadDataError.h
+        dist/json/json.h
+        dist/jsoncpp.cpp
+        Exceptions/MissingFile.cpp
+        Exceptions/MissingFile.h
 )
+

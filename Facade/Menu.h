@@ -9,6 +9,8 @@
 #include "../Exceptions/Miscapture.h"
 #include "../Utilities/ConsoleService.h"
 #include "../Exceptions/IndexOutOfRange.h"
+#include "../FileManagement/FileManagement.h"
+
 class Menu {
 private:
     std::unique_ptr<TuTubo> tuTubo;
@@ -20,7 +22,21 @@ public:
     void finalMessage();
 
     void userManagement();
+    void userManagementActions();
+    void createUser();
+    void doLogin();
+    void uploadVideoToMyChannel();
+    void subscribeToChannel();
+    void unsubscribeToChannel();
+
     void videoHandling();
+    void videoHandlingActions();
+    void searchVideoByName();
+    void searchVideoByChannel();
+    void playVideoMenu();
+
+
+
     void saveDataManually();
     void loadDataManually();
 

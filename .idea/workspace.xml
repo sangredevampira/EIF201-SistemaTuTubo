@@ -29,7 +29,20 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2aad945c-61cf-4ded-8f60-d3eeab25ee47" name="Changes" comment="pull request, merge de rama de kris y mia" />
+    <list default="true" id="2aad945c-61cf-4ded-8f60-d3eeab25ee47" name="Changes" comment="metodos de file management">
+      <change beforePath="$PROJECT_DIR$/.idea/editor.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/editor.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Entities/TuTubo.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Entities/TuTubo.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Entities/TuTubo.h" beforeDir="false" afterPath="$PROJECT_DIR$/Entities/TuTubo.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Entities/User.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Entities/User.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Entities/User.h" beforeDir="false" afterPath="$PROJECT_DIR$/Entities/User.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Facade/Menu.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Facade/Menu.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Facade/Menu.h" beforeDir="false" afterPath="$PROJECT_DIR$/Facade/Menu.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/File Management/FileManagement.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/FileManagement/FileManagement.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/File Management/FileManagement.h" beforeDir="false" afterPath="$PROJECT_DIR$/FileManagement/FileManagement.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Utilities/ConsoleService.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Utilities/ConsoleService.cpp" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -41,7 +54,7 @@
   <component name="CopilotChats">
     <option name="panelChat">
       <chat>
-        <option name="activeSessionId" value="79e08d23-4a9d-43ae-b8a5-680956caf4db" />
+        <option name="activeSessionId" value="8f34031d-31c0-40d8-ab66-24cfb4bd8605" />
         <option name="sessions">
           <session>
             <option name="chatType" value="PANEL" />
@@ -126,6 +139,23 @@
             <option name="modelValue" value="claude-haiku-4.5" />
             <option name="targetType" value="LOCAL" />
           </session>
+          <session>
+            <option name="chatType" value="PANEL" />
+            <option name="id" value="c8fdd10a-6c39-4d0a-b8eb-09a59670a24a" />
+            <option name="modeId" value="Ask" />
+            <option name="modelType" value="builtin_id" />
+            <option name="modelValue" value="gpt-4.1" />
+            <option name="status" value="Completed" />
+            <option name="targetType" value="LOCAL" />
+          </session>
+          <session>
+            <option name="chatType" value="PANEL" />
+            <option name="id" value="8f34031d-31c0-40d8-ab66-24cfb4bd8605" />
+            <option name="modeId" value="Ask" />
+            <option name="modelType" value="builtin_family" />
+            <option name="modelValue" value="claude-haiku-4.5" />
+            <option name="targetType" value="LOCAL" />
+          </session>
         </option>
         <option name="type" value="PANEL" />
       </chat>
@@ -134,21 +164,22 @@
   <component name="CopilotPersistence">
     <persistenceIdMap>
       <entry key="_C:/Users/XPC/Documents/Proyecto 2 - Grupo 8" value="3E77p5AaSrYC8ClGYeYLQYkMn6s" />
+      <entry key="_C:/Users/XPC/Documents/UNIVERSIDAD/Programacion 2/Proyecto 2 - Kris y Derek" value="3ET8A6nYN4b9XPuTZY3iKtmOuUi" />
       <entry key="_E:/Clion/Proyecto-2---Kris-y-Derek" value="3E3wdxmu6qsrP2mCNDKc5Y98hDa" />
       <entry key="_E:/Clion/Proyecto_2___Kris_y_Derek" value="3ELJBlh3MlgSrtxidsIYkp1xZB7" />
     </persistenceIdMap>
   </component>
   <component name="CopilotUserSelectedModel">
     <selectedModels>
-      <entry key="agent-panel" value="Claude Haiku 4.5" />
-      <entry key="chat-panel" value="Claude Haiku 4.5" />
+      <entry key="agent-panel" value="GPT-4.1" />
+      <entry key="chat-panel" value="GPT-4.1" />
     </selectedModels>
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="Modulo-Usuario-Canal" />
+        <entry key="$PROJECT_DIR$" value="Menu-Kris" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -162,7 +193,7 @@
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/sangredevampira/Proyecto-2---Kris-y-Derek.git&quot;,
-    &quot;accountId&quot;: &quot;c808a30d-f741-4a06-b8f4-fe9a61194d3d&quot;
+    &quot;accountId&quot;: &quot;e826efe3-0324-475a-ba6f-9945e83258ef&quot;
   },
   &quot;recentNewPullRequestHead&quot;: {
     &quot;server&quot;: {
@@ -201,8 +232,8 @@
         <option name="modeId" value="Ask" />
         <option name="model">
           <model>
-            <option name="modelType" value="builtin_family" />
-            <option name="modelValue" value="claude-haiku-4.5" />
+            <option name="modelType" value="builtin_id" />
+            <option name="modelValue" value="gpt-4.1" />
           </model>
         </option>
         <option name="targetType" value="LOCAL" />
@@ -213,31 +244,34 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;CMake Application.Proyecto_2___Kris_y_Derek.executor&quot;: &quot;Run&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.RadMigrateCodeStyle&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.west.config.association.type.startup.service&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
-    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;Modulo-Fachada/Interfaz&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;E:/Clion/Proyecto_2___Kris_y_Derek&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;org.rust.first.attach.projects&quot;: &quot;true&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.github.copilot.settings.completions.CompletionsConfigurable&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "CMake Application.Proyecto_2___Kris_y_Derek.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.RadMigrateCodeStyle": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.readMode.enableVisualFormatting": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "RunOnceActivity.west.config.association.type.startup.service": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "cf.first.check.clang-format": "false",
+    "cidr.known.project.marker": "true",
+    "git-widget-placeholder": "Modulo-Archivos",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/Users/XPC/Documents/UNIVERSIDAD/Programacion 2/Proyecto 2 - Kris y Derek/Exceptions",
+    "nodejs_package_manager_path": "npm",
+    "org.rust.first.attach.projects": "true",
+    "settings.editor.selected.configurable": "com.github.copilot.settings.completions.CompletionsConfigurable",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\XPC\Documents\UNIVERSIDAD\Programacion 2\Proyecto 2 - Kris y Derek\Exceptions" />
+      <recent name="C:\Users\XPC\Documents\UNIVERSIDAD\Programacion 2\Proyecto 2 - Kris y Derek" />
       <recent name="E:\Clion\Proyecto_2___Kris_y_Derek" />
       <recent name="C:\Users\XPC\Documents\Proyecto 2 - Grupo 8\Exceptions" />
       <recent name="E:\Clion\Proyecto-2---Kris-y-Derek" />
@@ -251,12 +285,12 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration name="Proyecto_2___Kris_y_Derek" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Proyecto_2___Kris_y_Derek" TARGET_NAME="Proyecto_2___Kris_y_Derek" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Proyecto_2___Kris_y_Derek" RUN_TARGET_NAME="Proyecto_2___Kris_y_Derek">
+    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
+    <configuration name="Proyecto_2___Kris_y_Derek" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Proyecto_2___Kris_y_Derek" TARGET_NAME="Proyecto_2___Kris_y_Derek" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Proyecto_2___Kris_y_Derek" RUN_TARGET_NAME="Proyecto_2___Kris_y_Derek">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -277,6 +311,10 @@
       <workItem from="1779568258924" duration="4457000" />
       <workItem from="1779598121724" duration="4077000" />
       <workItem from="1779951789959" duration="1367000" />
+      <workItem from="1780191053599" duration="5058000" />
+      <workItem from="1780198765030" duration="11944000" />
+      <workItem from="1780259986339" duration="124000" />
+      <workItem from="1780260123768" duration="13289000" />
     </task>
     <task id="LOCAL-00001" summary="commit">
       <option name="closed" value="true" />
@@ -398,7 +436,23 @@
       <option name="project" value="LOCAL" />
       <updated>1780031643241</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="arreglo de los metodos eliminados de la fachada">
+      <option name="closed" value="true" />
+      <created>1780130670566</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1780130670566</updated>
+    </task>
+    <task id="LOCAL-00017" summary="metodos de file management">
+      <option name="closed" value="true" />
+      <created>1780261079548</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1780261079549</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -421,7 +475,20 @@
     <MESSAGE value="commit" />
     <MESSAGE value="implementacion de metodos en channel para usarlos en TuTubo e inicio de Fachada :D" />
     <MESSAGE value="pull request, merge de rama de kris y mia" />
-    <option name="LAST_COMMIT_MESSAGE" value="pull request, merge de rama de kris y mia" />
+    <MESSAGE value="arreglo de los metodos eliminados de la fachada" />
+    <MESSAGE value="metodos de file management" />
+    <option name="LAST_COMMIT_MESSAGE" value="metodos de file management" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/Entities/TuTubo.h</url>
+          <line>7</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="github-copilot-workspace">
     <instructionFileLocations>

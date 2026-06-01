@@ -6,7 +6,9 @@
 #define PROYECTO_2_KRIS_Y_DEREK_UTILITIES_H
 
 #include <memory>
-#include <iostream>
 #include <sstream>
+#include <fstream>
+#include <iostream>
+#include <algorithm>
 
 #endif //PROYECTO_2_KRIS_Y_DEREK_UTILITIES_H

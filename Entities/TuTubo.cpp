@@ -9,32 +9,43 @@ TuTubo::TuTubo(){
     channelsManagement = std::make_shared<ChannelsController>();
     videosManagement = std::make_shared<VideosController>();
     usersManagement = std::make_shared<UsersController>();
+    FileManagement::getInstance()->loadData(getUsersList(),getChannelsManagement()->getChannelsList(), getChannelsManagement(), getVideosManagement()->getVideoList());
 }
 
 void TuTubo::setActiveSession(std::shared_ptr<Channel> loggedChannel) { activeSession = loggedChannel; }
 
+TuTubo::~TuTubo() {
+    FileManagement::getInstance()->saveData(getUsersList());
+}
+
+std::shared_ptr<ListInterface<User>> TuTubo::getUsersList() { return usersManagement->getUsersList(); }
+
+std::shared_ptr<Channel> TuTubo::getActiveSession() { return activeSession; }
+
 std::shared_ptr<UsersController> TuTubo::getUsersManagement() { return usersManagement; }
 
+std::shared_ptr<ChannelsController> TuTubo::getChannelsManagement() {return channelsManagement; }
 
-std::string TuTubo::createUser(std::string username, std::string password, std::string channelName) { //kris
-    if (!usersManagement->existingUser(username))
-        channelsManagement->addChannel(usersManagement->addUser(username, password, channelName));
-    else throw DuplicatedUser();
+std::shared_ptr<VideosController> TuTubo::getVideosManagement() { return videosManagement; }
+
+std::string TuTubo::createUser(std::string username, std::string password, std::string channelName) {
+    if (usersManagement->existingUser(username)) throw DuplicatedUser();
+    if (channelsManagement->existingChannel(channelName)) throw DuplicatedChannel();
+    channelsManagement->addChannel(usersManagement->addUser(username, password, channelName));
     return "* Usuario registrado exitosamente!";
 }
 
 std::string TuTubo::login(std::string username, std::string password) {
     auto loggedChannel = usersManagement->login(username, password);
     setActiveSession(loggedChannel);
-    return "[" + loggedChannel->getName() + "]: Has iniciado sesion con exito!";
+    return "[" + loggedChannel->getName() + "]: Has iniciado sesion exitosamente!";
 }
 
-std::string TuTubo::uploadVideo(std::string video, int type) { //Derek
-    //agregar un video a la lista general y al canal
+std::string TuTubo::uploadVideo(std::string video) {
     std::stringstream s;
 
     if (activeSession == nullptr) {
-        throw MissingAccount();
+        throw NoActiveAccount();
     }
 
     if (videosManagement == nullptr) {
@@ -43,15 +54,24 @@ std::string TuTubo::uploadVideo(std::string video, int type) { //Derek
 
     std::shared_ptr<Video> newVideo;
 
-    if (type == 1) {
+    size_t pos = video.rfind('.');
+    if (pos == std::string::npos) {
+        throw MissingVideo();
+    }
+
+
+    std::string extension = video.substr(pos);
+    std::transform(extension.begin(), extension.end(), extension.begin(), ::tolower);
+
+    if (extension == ".mp4") {
         newVideo = std::make_shared<MP4>(video);
     }
-    else if (type == 2) {
+    else if (extension == ".mpg") {
         std::shared_ptr<MPG> mpgVideo = std::make_shared<MPG>();
         newVideo = std::make_shared<AdapterMPG>(mpgVideo, video);
     }
     else {
-        throw VideosNotAvailable();
+        throw FormatNotAvaible();
     }
 
     videosManagement->addVideo(newVideo);
@@ -62,53 +82,44 @@ std::string TuTubo::uploadVideo(std::string video, int type) { //Derek
 }
 
 std::string TuTubo::suscribeToChannel(std::string channelName) {
-    //Derek
-    //mostrar lista de canales, preguntar y que seleccionen por numero
-    //Agrega a Derek como suscriptor de MusicChannel (para notificaciones)
-    // MusicChannel a las suscripciones de Derek (para que lo vea)
     std::stringstream s;
 
     if (activeSession == nullptr) {
         throw NoActiveAccount();
     }
 
-    auto channelsList = channelsManagement->getChannelsList();
-    s << "Canales disponibles:\n" << channelsList->showList();
-
     std::shared_ptr<Channel> targetChannel = channelsManagement->searchChannel(channelName);
 
-    s << "\n" << targetChannel->addSuscriber(activeSession); //cuando el canal suba un video, notificara a Derek
+    if (activeSession == targetChannel) {
+        throw CannotSubscribeToOwnChannel();
+    }
 
-    s << "\n" << activeSession->addChannelSuscription(targetChannel); //Derek puede ver a que canales esta suscritos
+    if (activeSession->isSubscribedTo(targetChannel)) {
+        throw AlreadySubscribed();
+    }
+
+    s << "\n" << targetChannel->addSuscriber(activeSession);
+    s << "\n" << activeSession->addChannelSuscription(targetChannel);
 
     return s.str();
 }
 
-std::string TuTubo::unsuscribeFromChannel(std::string channelName) { //Derek
-    //mostrar todos los canales suscritos, preguntar y seleccionar por nombre
-    //Derek ya no ve a MusicChannel en su lista de suscripciones
-    //MusicChannel ya no envía notificaciones a Derek
-    //Derek no aparece más en los suscriptores de MusicChanne
+std::string TuTubo::unsuscribeFromChannel(std::string channelName) {
     std::stringstream s;
 
     if (activeSession == nullptr) {
         throw NoActiveAccount();
     }
 
-    auto subscriptionsList = activeSession->getSubscriptions();
-    s << "Canales a los que estás suscrito:\n" << subscriptionsList->showList();
-
     std::shared_ptr<Channel> targetChannel = channelsManagement->searchChannel(channelName);
 
-    subscriptionsList->deleteElement(targetChannel);
-
-    s << "\n" << targetChannel->removeSuscriber(activeSession);
-
-    if (targetChannel != nullptr)
-    {
-        subscriptionsList->deleteElement(targetChannel);
-        s << "\nTe desuscribiste de: " << targetChannel->getName();
+    if (!activeSession->isSubscribedTo(targetChannel)) {
+        throw NotSubscribed();
     }
+
+    auto subscriptionsList = activeSession->getSubscriptions();
+    subscriptionsList->deleteElement(targetChannel);
+    s << targetChannel->removeSuscriber(activeSession);
 
     return s.str();
 }
@@ -139,11 +150,6 @@ std::string TuTubo::searchVideoByChannel(std::string channelName, std::string vi
 
     std::shared_ptr<Channel> targetChannel = channelsManagement->searchChannel(channelName);
 
-    if (targetChannel == nullptr) {
-        throw MissingChannel();
-    }
-
-
     auto video = targetChannel->searchVideoName(videoName);
 
     if (video == nullptr) {
@@ -156,6 +162,47 @@ std::string TuTubo::searchVideoByChannel(std::string channelName, std::string vi
 
 }
 
-std::string TuTubo::playVideo(std::shared_ptr<Video>) { //Derek
-    //preguntar el video a ver y seleccionar
+std::string TuTubo::playVideo(std::string videoName) {
+    std::stringstream s;
+
+    if (videosManagement == nullptr) {
+        throw VideosNotAvailable();
+    }
+
+    auto video = videosManagement->searchVideoName(videoName);
+
+    if (video == nullptr) {
+        throw MissingVideo();
+    }
+
+    s << video->play();
+
+    return s.str();
+}
+
+std::string TuTubo::showSubscriptionsList() {
+    if (activeSession == nullptr) {
+        throw NoActiveAccount();
+    }
+    return activeSession->showSubscriptionsList();
+}
+
+std::string TuTubo::showAllChannels() {
+    std::stringstream s;
+
+    if (activeSession == nullptr) {
+        throw NoActiveAccount();
+    }
+
+    if (channelsManagement == nullptr) {
+        throw MissingChannel();
+    }
+
+    s << "Canales disponibles:\n" << channelsManagement->showChannelsList();
+
+    return s.str();
+}
+
+bool TuTubo::channelExists(std::string channelName) {
+    return channelsManagement->existingChannel(channelName);
 }

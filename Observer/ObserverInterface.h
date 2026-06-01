@@ -10,6 +10,7 @@
 
 class ObserverInterface {
 public:
+    virtual std::string getName() = 0;
     virtual std::string notifySubscribers(std::string, std::string) = 0;
     friend std::ostream& operator<<(std::ostream& os, const ObserverInterface& observer);
 };

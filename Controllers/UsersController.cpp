@@ -44,10 +44,9 @@ std::shared_ptr<Channel> UsersController::addUser(std::string username, std::str
     return newUser->getOwnedChannel();
 }
 
-bool UsersController::existingUser(std::string username) {
+bool UsersController::existingUser(std::string username)
+{
     bool found = false;
-
-    if (usersList->isEmpty()) throw NoRegisteredUsers();
 
     auto iterator = usersList->createIterator();
 
@@ -55,8 +54,7 @@ bool UsersController::existingUser(std::string username) {
     {
         auto user = iterator->getNext();
 
-        if (user->verifyUsername(username))
-            found = true;
+        if (user->verifyUsername(username)) found = true;
     }
 
     return found;
