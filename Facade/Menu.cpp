@@ -101,7 +101,7 @@ void Menu::userManagementActions()
             case 3: uploadVideoToMyChannel(); break;
             case 4: subscribeToChannel(); break;
             case 5: unsubscribeToChannel(); break;
-            case 0: back = true; break;
+            case 0: back = true; ConsoleService::clearConsole(); break;
             default: throw IndexOutOfRange();
         }
     }while (!back);
@@ -241,8 +241,8 @@ void Menu::videoHandling() {
                      << "========================================\n"
                      << "(1) Buscar Videos por Nombre\n"
                      << "(2) Buscar Videos por Canal de Usuario\n"
-                    << "(3)  Reproducir Video\n"
-                     << "(4) Salir\n"
+                     << "(3) Reproducir Video\n"
+                     << "(0) Salir\n"
                      << "* Digita la opcion deseada: ";
 }
 
@@ -263,7 +263,7 @@ void Menu::videoHandlingActions() {
                     searchVideoByChannel(); break;
                 case 3:
                     playVideoMenu(); break;
-                case 4:
+                case 0:
                     back = true; break;
                 default:
                     throw IndexOutOfRange();
