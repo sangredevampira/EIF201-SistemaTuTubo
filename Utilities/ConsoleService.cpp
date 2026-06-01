@@ -32,7 +32,7 @@ bool ConsoleService::validateInput(const std::string& input)
 
 bool ConsoleService::validateID(const std::string& id)
 {
-    std::regex patron("^[A-Za-z0-9  ]+$");
+    std::regex patron(R"(^[\x20-\x7E]+$)");
     return std::regex_match(id, patron);
 
 
@@ -40,6 +40,6 @@ bool ConsoleService::validateID(const std::string& id)
 
 bool ConsoleService::validateVideoName(const std::string& videoName)
 {
-    std::regex patron("^[A-Za-z0-9._() ]+$");
+    std::regex patron(R"(^[\x20-\x7E]+$)");
     return std::regex_match(videoName, patron);
 }

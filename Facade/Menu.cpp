@@ -15,7 +15,7 @@ void Menu::mainMenu() {
             << "(2) Manejo de Videos" << "\n"
             << "(3) Guardar Datos Manualmente" << "\n"
             << "(4) Recuperar Datos Manualmente" << "\n"
-            << "(0) Salir" << "\n"
+            << "(5) Salir" << "\n"
             << "* Digita la opcion deseada: ";
 }
 
@@ -42,7 +42,7 @@ void Menu::actionsMainMenu() {
                     saveDataManually(); break;
                 case 4:
                     loadDataManually(); break;
-                case 0:
+                case 5:
                     ConsoleService::clearConsole();
                     finalMessage();
                     continueMenu = false; break;
@@ -76,7 +76,7 @@ void Menu::userManagement() {
                   << "(3) Subir Video a mi Canal\n"
                   << "(4) Suscribirme a un Canal\n"
                   << "(5) Desuscribirme de un Canal\n"
-                  << "(0) Volver\n"
+                  << "(6) Salir\n"
                   << "* Digita la opcion deseada: ";
 
 }
@@ -91,7 +91,7 @@ void Menu::userManagementActions()
         ConsoleService::clearConsole();
         userManagement(); std::cin >> option;
 
-        if (option < 0 || option > 5) throw IndexOutOfRange();
+        if (option < 0 || option > 6) throw IndexOutOfRange();
         if (std::cin.fail()) throw Miscapture();
 
         switch (option)
@@ -101,10 +101,11 @@ void Menu::userManagementActions()
             case 3: uploadVideoToMyChannel(); break;
             case 4: subscribeToChannel(); break;
             case 5: unsubscribeToChannel(); break;
-            case 0: back = true; break;
+            case 6: back = true; break;
             default: throw IndexOutOfRange();
         }
     }while (!back);
+    ConsoleService::clearConsole();
 }
 
 void Menu::createUser()
@@ -252,6 +253,7 @@ void Menu::videoHandlingActions() {
 
     do {
         try {
+            ConsoleService::clearConsole();
             videoHandling();
             std::cin >> option;
             if (std::cin.fail()) throw Miscapture();
@@ -275,6 +277,7 @@ void Menu::videoHandlingActions() {
             std::cin.ignore(1000, '\n');
         }
     } while (!back);
+    ConsoleService::clearConsole();
 }
 
 void Menu::searchVideoByName() {
