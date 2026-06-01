@@ -149,6 +149,6 @@ std::string Channel::showSubscriptionsList() {
 
 
 std::ostream & operator<<(std::ostream &os, const Channel &channel) {
-    os << channel.name << ",";
+    os << channel.name;
     return os;
 }

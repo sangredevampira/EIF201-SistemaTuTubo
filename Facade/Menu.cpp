@@ -117,7 +117,7 @@ void Menu::createUser()
     std::cout << "------------------ * -------------------\n"
                           << "     INGRESA LOS DATOS DEL USUARIO\n"
                           << "------------------ * -------------------\n";
-    std::cout << "* Digita el username: "; std::cin.ignore(); std::getline(std::cin, username);
+    std::cout << "* Digita el username: "; std::getline(std::cin >> std::ws, username);
     if (std::cin.fail() || username.empty()) throw Miscapture();
     std::cout << "* Digita la contrasena: "; std::getline(std::cin, password);
     if (std::cin.fail() || password.empty()) throw Miscapture();
@@ -151,7 +151,7 @@ void Menu::doLogin()
     std::cout << "------------------ * -------------------\n"
                          << "     INGRESA LOS DATOS DEL USUARIO\n"
                          << "------------------ * -------------------\n";
-    std::cout << "* Digita el username: "; std::cin.ignore(); std::getline(std::cin, username);
+    std::cout << "* Digita el username: "; std::getline(std::cin >> std::ws, username);
     if (std::cin.fail() || username.empty()) throw Miscapture();
 
     std::cout << "* Digita la contrasena: "; std::getline(std::cin, password);
@@ -174,7 +174,7 @@ void Menu::uploadVideoToMyChannel()
               << "              .MP4 Y .MPG \n"
               << "------------------ * -------------------\n";
 
-    std::cout << "* Digita el titulo del video (debe indicar su formato): "; std::cin.ignore(); std::getline(std::cin, videoTitle);
+    std::cout << "* Digita el titulo del video (debe indicar su formato): "; std::getline(std::cin >> std::ws, videoTitle);
     if (std::cin.fail() || videoTitle.empty()) throw Miscapture();
 
     std::cout << tuTubo->uploadVideo(videoTitle) << "\n\n";
@@ -194,8 +194,7 @@ void Menu::subscribeToChannel()
 
     std::cout << tuTubo->showAllChannels() << "\n";
     std::cout << "* Digita el nombre del canal: ";
-    std::cin.ignore();
-    std::getline(std::cin, channelName);
+    std::getline(std::cin >> std::ws, channelName);
 
     if (!ConsoleService::validateID(channelName)) throw Miscapture();
 
@@ -214,9 +213,8 @@ void Menu::unsubscribeToChannel()
               << "      DESUSCRIBIRSE DE UN CANAL\n"
               << "------------------ * -------------------\n";
     std::cout << tuTubo->showSubscriptionsList() << "\n";
-    std::cout << "* Digita el nombre del canal: "; std::cin.ignore(); std::getline(std::cin, channelName);
+    std::cout << "* Digita el nombre del canal: "; std::getline(std::cin >> std::ws, channelName);
     if (!ConsoleService::validateID(channelName)) throw Miscapture();
-    //if (std::cin.fail() || channelName.empty()) throw Miscapture();
 
     std::cout << tuTubo->unsuscribeFromChannel(channelName) << "\n\n";
 
@@ -274,8 +272,7 @@ void Menu::searchVideoByName() {
                   << "    BUSCAR VIDEO POR NOMBRE\n"
                   << "----------------------------------------\n"
                   << "* Digita el nombre del video: ";
-        std::cin.ignore();
-        std::getline(std::cin, videoName);
+        std::getline(std::cin >> std::ws, videoName);
 
         if (!ConsoleService::validateVideoName(videoName)) throw Miscapture();
 
@@ -299,15 +296,14 @@ void Menu::searchVideoByChannel() {
                   << "  BUSCAR VIDEOS POR CANAL DE USUARIO\n"
                   << "----------------------------------------\n"
                   << "* Digita el nombre del canal: ";
-        std::cin.ignore();
-        std::getline(std::cin, channelName);
+        std::getline(std::cin >> std::ws, channelName);
 
         if (!ConsoleService::validateID(channelName)) throw Miscapture();
 
         if (!tuTubo->channelExists(channelName)) throw MissingChannel();
 
         std::cout << "* Digita el nombre del video en el canal: ";
-        std::getline(std::cin, videoName);
+        std::getline(std::cin >> std::ws, videoName);
 
         if (!ConsoleService::validateVideoName(videoName)) throw Miscapture();
 
@@ -327,8 +323,7 @@ void Menu::playVideoMenu() {
         std::string videoName;
 
         std::cout << "* Digita el nombre del video: ";
-        std::cin.ignore();
-        std::getline(std::cin, videoName);
+        std::getline(std::cin >> std::ws, videoName);
 
         if (!ConsoleService::validateVideoName(videoName)) throw Miscapture();
         std::cout << tuTubo->playVideo(videoName) << "\n";
