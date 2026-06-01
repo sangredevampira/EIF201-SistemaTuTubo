@@ -164,20 +164,34 @@ void Menu::doLogin()
 
 void Menu::uploadVideoToMyChannel()
 {
-    ConsoleService::clearConsole();
+    try {
+        ConsoleService::clearConsole();
 
-    std::string videoTitle;
+        if (tuTubo->getActiveSession() == nullptr) {
+            throw NoActiveAccount();
+        }
 
-    std::cout << "------------------ * -------------------\n"
-              << "     PUBLICAR UN VIDEO EN EL CANAL\n"
-              << "          [FORMATOS ACEPTADOS] \n"
-              << "              .MP4 Y .MPG \n"
-              << "------------------ * -------------------\n";
+        std::string videoTitle;
 
-    std::cout << "* Digita el titulo del video (debe indicar su formato): "; std::getline(std::cin >> std::ws, videoTitle);
-    if (std::cin.fail() || videoTitle.empty()) throw Miscapture();
+        std::cout << "------------------ * -------------------\n"
+                  << "     PUBLICAR UN VIDEO EN EL CANAL\n"
+                  << "          [FORMATOS ACEPTADOS] \n"
+                  << "              .MP4 Y .MPG \n"
+                  << "------------------ * -------------------\n";
 
-    std::cout << tuTubo->uploadVideo(videoTitle) << "\n\n";
+        std::cout << "* Digita el titulo del video (debe indicar su formato): ";
+        std::getline(std::cin >> std::ws, videoTitle);
+
+        if (std::cin.fail() || videoTitle.empty()) throw Miscapture();
+
+        std::cout << tuTubo->uploadVideo(videoTitle) << "\n\n";
+    }
+    catch (const std::exception& e) {
+        ConsoleService::clearConsole();
+        std::cout << e.what() << '\n';
+        std::cin.clear();
+        std::cin.ignore(1000, '\n');
+    }
 
     ConsoleService::pause();
 }

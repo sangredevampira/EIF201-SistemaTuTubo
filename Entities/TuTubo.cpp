@@ -45,7 +45,7 @@ std::string TuTubo::uploadVideo(std::string video) {
     std::stringstream s;
 
     if (activeSession == nullptr) {
-        throw MissingAccount();
+        throw NoActiveAccount();
     }
 
     if (videosManagement == nullptr) {
