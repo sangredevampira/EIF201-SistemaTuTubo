@@ -29,9 +29,9 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2aad945c-61cf-4ded-8f60-d3eeab25ee47" name="Changes" comment="metodos de file management">
+    <list default="true" id="2aad945c-61cf-4ded-8f60-d3eeab25ee47" name="Changes" comment="version completa del proyecto">
+      <change beforePath="$PROJECT_DIR$/.idea/editor.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/editor.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Facade/Menu.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Facade/Menu.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,10 +41,13 @@
   <component name="ClangdSettings">
     <option name="formatViaClangd" value="false" />
   </component>
+  <component name="CopilotBackgroundAgentModePicker">
+    <option name="selectedModeId" value="Ask" />
+  </component>
   <component name="CopilotChats">
     <option name="panelChat">
       <chat>
-        <option name="activeSessionId" value="c8fdd10a-6c39-4d0a-b8eb-09a59670a24a" />
+        <option name="activeSessionId" value="327f56a2-9c22-47fa-a61d-a5d4fe573fdd" />
         <option name="sessions">
           <session>
             <option name="chatType" value="PANEL" />
@@ -118,7 +121,8 @@
             <option name="id" value="79e08d23-4a9d-43ae-b8a5-680956caf4db" />
             <option name="modeId" value="Ask" />
             <option name="modelType" value="builtin_family" />
-            <option name="modelValue" value="auto" />
+            <option name="modelValue" value="claude-haiku-4.5" />
+            <option name="status" value="Completed" />
             <option name="targetType" value="LOCAL" />
           </session>
           <session>
@@ -131,19 +135,19 @@
           </session>
           <session>
             <option name="chatType" value="PANEL" />
-            <option name="id" value="c8fdd10a-6c39-4d0a-b8eb-09a59670a24a" />
+            <option name="id" value="efc81094-65de-4e4f-b834-c419b9d33f4f" />
             <option name="modeId" value="Ask" />
-            <option name="modelType" value="builtin_id" />
-            <option name="modelValue" value="gpt-4.1" />
-            <option name="status" value="Completed" />
+            <option name="modelType" value="builtin_family" />
+            <option name="modelValue" value="claude-haiku-4.5" />
             <option name="targetType" value="LOCAL" />
           </session>
           <session>
             <option name="chatType" value="PANEL" />
-            <option name="id" value="8f34031d-31c0-40d8-ab66-24cfb4bd8605" />
+            <option name="id" value="327f56a2-9c22-47fa-a61d-a5d4fe573fdd" />
             <option name="modeId" value="Ask" />
             <option name="modelType" value="builtin_family" />
             <option name="modelValue" value="claude-haiku-4.5" />
+            <option name="status" value="Completed" />
             <option name="targetType" value="LOCAL" />
           </session>
         </option>
@@ -154,22 +158,27 @@
   <component name="CopilotPersistence">
     <persistenceIdMap>
       <entry key="_C:/Users/XPC/Documents/Proyecto 2 - Grupo 8" value="3E77p5AaSrYC8ClGYeYLQYkMn6s" />
-      <entry key="_C:/Users/XPC/Documents/UNIVERSIDAD/Programacion 2/Proyecto 2 - Kris y Derek" value="3ET8A6nYN4b9XPuTZY3iKtmOuUi" />
       <entry key="_E:/Clion/Proyecto-2---Kris-y-Derek" value="3E3wdxmu6qsrP2mCNDKc5Y98hDa" />
       <entry key="_E:/Clion/Proyecto_2___Kris_y_Derek" value="3ELJBlh3MlgSrtxidsIYkp1xZB7" />
     </persistenceIdMap>
   </component>
   <component name="CopilotUserSelectedModel">
     <selectedModels>
-      <entry key="agent-panel" value="GPT-4.1" />
-      <entry key="chat-panel" value="GPT-4.1" />
+      <entry key="agent-panel" value="Claude Haiku 4.5" />
+      <entry key="chat-panel" value="Claude Haiku 4.5" />
     </selectedModels>
   </component>
+  <component name="EmbeddingIndexingInfo">
+    <option name="cachedIndexableFilesCount" value="143" />
+  </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="ExportToHTMLSettings">
+    <option name="OUTPUT_DIRECTORY" value="$PROJECT_DIR$/../Proyecto_2___Kris_y_Derek\exportToHTML" />
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="Menu-Kris" />
+        <entry key="$PROJECT_DIR$" value="Modulo-Archivos" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -183,7 +192,7 @@
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/sangredevampira/Proyecto-2---Kris-y-Derek.git&quot;,
-    &quot;accountId&quot;: &quot;e826efe3-0324-475a-ba6f-9945e83258ef&quot;
+    &quot;accountId&quot;: &quot;c808a30d-f741-4a06-b8f4-fe9a61194d3d&quot;
   },
   &quot;recentNewPullRequestHead&quot;: {
     &quot;server&quot;: {
@@ -202,6 +211,69 @@
   <component name="MacroExpansionManager">
     <option name="directoryName" value="c0BFYCoC" />
   </component>
+  <component name="McpProjectServerCommands">
+    <commands />
+    <urls />
+  </component>
+  <component name="NextEditCompletionFeaturesState">
+    <decayedCancelled>
+      <entry key="MS100" value="1.3716200372873009" />
+      <entry key="MS500" value="2.1446480253811684" />
+      <entry key="S2" value="4.352203011189747" />
+      <entry key="S5" value="6.0675944180986265" />
+      <entry key="S10" value="6.927843236697833" />
+      <entry key="S30" value="7.615749319887263" />
+      <entry key="S60" value="7.804350547030883" />
+      <entry key="M2" value="7.935253836539973" />
+      <entry key="M5" value="13.219475436810443" />
+      <entry key="M10" value="45.07472914389196" />
+      <entry key="M15" value="93.6981593124239" />
+      <entry key="M30" value="284.9713184917172" />
+      <entry key="H1" value="632.2025555932809" />
+      <entry key="H2" value="1024.5189381144573" />
+      <entry key="H4" value="1336.7064541260236" />
+      <entry key="D1" value="1690.9325629714353" />
+      <entry key="W1" value="1762.6843818458854" />
+    </decayedCancelled>
+    <decayedSelected>
+      <entry key="MS100" value="0.0" />
+      <entry key="MS500" value="0.0" />
+      <entry key="S2" value="0.0" />
+      <entry key="S5" value="3.7132312554341513E-202" />
+      <entry key="S10" value="1.926974637984148E-101" />
+      <entry key="S30" value="2.6809702796525497E-34" />
+      <entry key="S60" value="1.6373668738774673E-17" />
+      <entry key="M2" value="4.046446578704252E-9" />
+      <entry key="M5" value="4.4161927019440567E-4" />
+      <entry key="M10" value="0.02256279442959993" />
+      <entry key="M15" value="0.09295622438059735" />
+      <entry key="M30" value="0.5630341710343869" />
+      <entry key="H1" value="2.093287283755039" />
+      <entry key="H2" value="4.623249145013996" />
+      <entry key="H4" value="7.073869429405365" />
+      <entry key="D1" value="10.209298880863443" />
+      <entry key="W1" value="10.883144288624214" />
+    </decayedSelected>
+    <decayedShown>
+      <entry key="MS100" value="1.315749150348345" />
+      <entry key="MS500" value="2.1233630827001506" />
+      <entry key="S2" value="4.298594151700778" />
+      <entry key="S5" value="6.023898976990872" />
+      <entry key="S10" value="6.899951555873836" />
+      <entry key="S30" value="7.60479252543325" />
+      <entry key="S60" value="7.798640901726204" />
+      <entry key="M2" value="7.932274099579035" />
+      <entry key="M5" value="13.218074784042813" />
+      <entry key="M10" value="45.09552809967517" />
+      <entry key="M15" value="93.78926799330657" />
+      <entry key="M30" value="285.53200601076236" />
+      <entry key="H1" value="634.2928915049315" />
+      <entry key="H2" value="1029.1393941879192" />
+      <entry key="H4" value="1343.778316072061" />
+      <entry key="D1" value="1701.1413999240228" />
+      <entry key="W1" value="1773.5674562748975" />
+    </decayedShown>
+  </component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
@@ -217,13 +289,25 @@
 }</component>
   <component name="ProjectId" id="3E3wdxmu6qsrP2mCNDKc5Y98hDa" />
   <component name="ProjectSessionTemplates">
+    <option name="inlineTemplate">
+      <template>
+        <option name="modeId" value="InlineAgent" />
+        <option name="model">
+          <model>
+            <option name="modelType" value="builtin_family" />
+            <option name="modelValue" value="auto" />
+          </model>
+        </option>
+        <option name="targetType" value="LOCAL" />
+      </template>
+    </option>
     <option name="panelTemplate">
       <template>
         <option name="modeId" value="Ask" />
         <option name="model">
           <model>
-            <option name="modelType" value="builtin_id" />
-            <option name="modelValue" value="gpt-4.1" />
+            <option name="modelType" value="builtin_family" />
+            <option name="modelValue" value="claude-haiku-4.5" />
           </model>
         </option>
         <option name="targetType" value="LOCAL" />
@@ -238,6 +322,7 @@
   &quot;keyToString&quot;: {
     &quot;CMake Application.Proyecto_2___Kris_y_Derek.executor&quot;: &quot;Run&quot;,
     &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.RadMigrateCodeStyle&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
@@ -249,9 +334,14 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
     &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;Modulo-Archivos&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/XPC/Documents/UNIVERSIDAD/Programacion 2/Proyecto 2 - Kris y Derek/Exceptions&quot;,
+    &quot;last_opened_file_path&quot;: &quot;E:/Clion/Proyecto_2___Kris_y_Derek&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;org.rust.first.attach.projects&quot;: &quot;true&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;com.github.copilot.settings.completions.CompletionsConfigurable&quot;,
@@ -260,8 +350,6 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\XPC\Documents\UNIVERSIDAD\Programacion 2\Proyecto 2 - Kris y Derek\Exceptions" />
-      <recent name="C:\Users\XPC\Documents\UNIVERSIDAD\Programacion 2\Proyecto 2 - Kris y Derek" />
       <recent name="E:\Clion\Proyecto_2___Kris_y_Derek" />
       <recent name="C:\Users\XPC\Documents\Proyecto 2 - Grupo 8\Exceptions" />
       <recent name="E:\Clion\Proyecto-2---Kris-y-Derek" />
@@ -276,11 +364,6 @@
   </component>
   <component name="RunManager">
     <configuration name="Proyecto_2___Kris_y_Derek" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Proyecto_2___Kris_y_Derek" TARGET_NAME="Proyecto_2___Kris_y_Derek" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Proyecto_2___Kris_y_Derek" RUN_TARGET_NAME="Proyecto_2___Kris_y_Derek">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -301,11 +384,14 @@
       <workItem from="1779568258924" duration="4457000" />
       <workItem from="1779598121724" duration="4077000" />
       <workItem from="1779951789959" duration="1367000" />
-      <workItem from="1780191053599" duration="5058000" />
-      <workItem from="1780198765030" duration="11944000" />
-      <workItem from="1780259986339" duration="124000" />
-      <workItem from="1780260123768" duration="13693000" />
-      <workItem from="1780336004980" duration="2117000" />
+      <workItem from="1780047584920" duration="109000" />
+      <workItem from="1780117171176" duration="255000" />
+      <workItem from="1780119230396" duration="9937000" />
+      <workItem from="1780131135057" duration="797000" />
+      <workItem from="1780196653481" duration="6912000" />
+      <workItem from="1780260073703" duration="28192000" />
+      <workItem from="1780303985452" duration="7881000" />
+      <workItem from="1780340976760" duration="3944000" />
     </task>
     <task id="LOCAL-00001" summary="commit">
       <option name="closed" value="true" />
@@ -427,31 +513,87 @@
       <option name="project" value="LOCAL" />
       <updated>1780031643241</updated>
     </task>
-    <task id="LOCAL-00016" summary="arreglo de los metodos eliminados de la fachada">
+    <task id="LOCAL-00016" summary="commit">
       <option name="closed" value="true" />
-      <created>1780130670566</created>
+      <created>1780031718587</created>
       <option name="number" value="00016" />
       <option name="presentableId" value="LOCAL-00016" />
       <option name="project" value="LOCAL" />
-      <updated>1780130670566</updated>
+      <updated>1780031718587</updated>
     </task>
-    <task id="LOCAL-00017" summary="metodos de file management">
+    <task id="LOCAL-00017" summary="exepcion y metodo modificado">
       <option name="closed" value="true" />
-      <created>1780261079548</created>
+      <created>1780037191125</created>
       <option name="number" value="00017" />
       <option name="presentableId" value="LOCAL-00017" />
       <option name="project" value="LOCAL" />
-      <updated>1780261079549</updated>
+      <updated>1780037191125</updated>
     </task>
-    <task id="LOCAL-00018" summary="metodos de file management">
+    <task id="LOCAL-00018" summary="metodos del menu y agregacion de metodo en TuTubo">
       <option name="closed" value="true" />
-      <created>1780274659826</created>
+      <created>1780047668880</created>
       <option name="number" value="00018" />
       <option name="presentableId" value="LOCAL-00018" />
       <option name="project" value="LOCAL" />
-      <updated>1780274659826</updated>
+      <updated>1780047668880</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="metodos del menu">
+      <option name="closed" value="true" />
+      <created>1780127156829</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1780127156830</updated>
+    </task>
+    <task id="LOCAL-00020" summary="menu mejorado">
+      <option name="closed" value="true" />
+      <created>1780260245918</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1780260245918</updated>
+    </task>
+    <task id="LOCAL-00021" summary="menu completo, implementacion de algunos metodos y excepciones">
+      <option name="closed" value="true" />
+      <created>1780279571036</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1780279571036</updated>
+    </task>
+    <task id="LOCAL-00022" summary="Version de archivos automaticos y manuales funional">
+      <option name="closed" value="true" />
+      <created>1780305567789</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1780305567789</updated>
+    </task>
+    <task id="LOCAL-00023" summary="Version archivos y menu completa. Agregue cosillas en el console service">
+      <option name="closed" value="true" />
+      <created>1780309616995</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1780309616995</updated>
+    </task>
+    <task id="LOCAL-00024" summary="version completa del menu con pequena adicion de excepcion y el txt del Json">
+      <option name="closed" value="true" />
+      <created>1780311512324</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1780311512324</updated>
+    </task>
+    <task id="LOCAL-00025" summary="version completa del proyecto">
+      <option name="closed" value="true" />
+      <created>1780345458340</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1780345458340</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -461,6 +603,7 @@
     <isAutomaticCheckingOnLaunch value="false" />
     <isAutomaticFoundErrors value="true" />
     <isAutomaticReloadCMake value="true" />
+    <isAutomaticBootstrapAfterUpdate value="false" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="implementacion del adapter sujeto a cambios" />
@@ -471,23 +614,27 @@
     <MESSAGE value="Archivo Channel.cpp" />
     <MESSAGE value="Creacion del modulo fachada" />
     <MESSAGE value="commit merge" />
-    <MESSAGE value="commit" />
     <MESSAGE value="implementacion de metodos en channel para usarlos en TuTubo e inicio de Fachada :D" />
     <MESSAGE value="pull request, merge de rama de kris y mia" />
-    <MESSAGE value="arreglo de los metodos eliminados de la fachada" />
-    <MESSAGE value="metodos de file management" />
-    <option name="LAST_COMMIT_MESSAGE" value="metodos de file management" />
+    <MESSAGE value="commit" />
+    <MESSAGE value="exepcion y metodo modificado" />
+    <MESSAGE value="metodos del menu y agregacion de metodo en TuTubo" />
+    <MESSAGE value="metodos del menu" />
+    <MESSAGE value="menu mejorado" />
+    <MESSAGE value="menu completo, implementacion de algunos metodos y excepciones" />
+    <MESSAGE value="Version de archivos automaticos y manuales funional" />
+    <MESSAGE value="Version archivos y menu completa. Agregue cosillas en el console service" />
+    <MESSAGE value="version completa del menu con pequena adicion de excepcion y el txt del Json" />
+    <MESSAGE value="version completa del proyecto" />
+    <option name="LAST_COMMIT_MESSAGE" value="version completa del proyecto" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/Entities/TuTubo.h</url>
-          <line>7</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="CMakeRunConfiguration">
+        <watch expression="channelsList.get()-&gt;first.get()-&gt;element.get()-&gt;subscriptions" />
+        <watch expression="channelsList.get()-&gt;first.get()-&gt;element.get()-&gt;subscriptions" />
+      </configuration>
+    </watches-manager>
   </component>
   <component name="github-copilot-workspace">
     <instructionFileLocations>
