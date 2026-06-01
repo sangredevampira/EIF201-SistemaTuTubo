@@ -55,3 +55,11 @@ bool ChannelsController::existingChannel(std::string channelName)
 
     return found;
 }
+
+std::string ChannelsController::showChannelsList() {
+    if (channelsList->isEmpty()) {
+        throw NoExistingChannels();
+    }
+
+    return channelsList->showList();
+}

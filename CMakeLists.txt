@@ -69,6 +69,14 @@ add_executable(Proyecto_2___Kris_y_Derek
         Exceptions/FormatNotAvaible.h
         Exceptions/DuplicatedChannel.cpp
         Exceptions/DuplicatedChannel.h
+        Exceptions/NotSubscribed.cpp
+        Exceptions/NotSubscribed.h
+        Exceptions/AlreadySubscribed.h
+        Exceptions/AlreadySubscribed.cpp
+        Exceptions/NoChannelSubscriptions.cpp
+        Exceptions/NoChannelSubscriptions.h
+        Exceptions/CannotSubscribeToOwnChannel.cpp
+        Exceptions/CannotSubscribeToOwnChannel.h
         FileManagement/FileManagement.cpp
         FileManagement/FileManagement.h
         Exceptions/SaveDataError.cpp
@@ -80,3 +88,4 @@ add_executable(Proyecto_2___Kris_y_Derek
         Exceptions/MissingFile.cpp
         Exceptions/MissingFile.h
 )
+

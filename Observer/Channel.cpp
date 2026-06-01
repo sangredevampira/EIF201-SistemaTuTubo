@@ -26,10 +26,13 @@ std::string Channel::uploadVideo(std::shared_ptr<Video> newVideo)
     if (newVideo != nullptr)
     {
         uploadedVideos->insertFirst(newVideo);
+        ss << "* Video subido correctamente! *\n";
 
-        ss << "* Video subido correctamente! *\n"
-        << "Se ha Notificado a los suscriptores:\n"
-        << notifySubscribers(getName(), newVideo->getVideoName());
+        try {
+            ss << notifySubscribers(getName(), newVideo->getVideoName());
+        } catch (const NoSuscribers& e) {
+            ss << e.what();
+        }
     }
     return ss.str();
 }
@@ -62,7 +65,9 @@ std::shared_ptr<Video> Channel::searchVideoName(std::string title)
 
 std::string Channel::notifySubscribers(std::string channelName, std::string videoTitle)
 {
-    if (suscribers->isEmpty()) throw NoSuscribers();
+    if (suscribers->isEmpty()) {
+        throw NoSuscribers();
+    }
 
     std::stringstream ss;
     auto iterator = suscribers->createIterator();
@@ -103,6 +108,45 @@ std::string Channel::removeSuscriber(std::shared_ptr<ObserverInterface> suscribe
     return s.str();
 
 }
+
+bool Channel::isSubscribedTo(std::shared_ptr<Channel> channel) {
+    if (subscriptions->isEmpty()) {
+        return false;
+    }
+
+    auto iterator = subscriptions->createIterator();
+    while (iterator->hasNext()) {
+        if (iterator->getNext() == channel) {
+            return true;
+        }
+    }
+    return false;
+}
+
+bool Channel::hasSubscriber(std::shared_ptr<ObserverInterface> subscriber) {
+    if (suscribers->isEmpty()) {
+        return false;
+    }
+
+    auto iterator = suscribers->createIterator();
+    while (iterator->hasNext()) {
+        if (iterator->getNext() == subscriber) {
+            return true;
+        }
+    }
+    return false;
+}
+
+std::string Channel::showSubscriptionsList() {
+    if (subscriptions->isEmpty()) {
+        throw NoChannelSubscriptions();
+    }
+
+    std::stringstream s;
+    s << "Canales a los que estas suscrito:\n" << subscriptions->showList();
+    return s.str();
+}
+
 
 std::ostream & operator<<(std::ostream &os, const Channel &channel) {
     os << channel.name << ",";

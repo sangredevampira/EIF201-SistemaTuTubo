@@ -19,6 +19,7 @@ public:
     std::shared_ptr<Channel> searchChannel(std::string);
     bool existingChannel(std::string);
     std::shared_ptr<ListInterface<Channel>> getChannelsList();
+    std::string showChannelsList();
 };
 
 
