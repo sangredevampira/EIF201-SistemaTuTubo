@@ -16,6 +16,7 @@ public:
     VideosController();
     std::shared_ptr<Video> searchVideoName(std::string name);
     std::string addVideo(std::shared_ptr<Video> newVideo);
+    std::shared_ptr<ListInterface<Video>> getVideoList();
 };
 
 

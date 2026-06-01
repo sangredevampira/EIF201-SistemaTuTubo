@@ -39,12 +39,12 @@ public:
     Json::Value saveSubscribersData(std::shared_ptr<ListInterface<ObserverInterface>>);
 
 
-    std::string loadData(std::shared_ptr<ListInterface<User>> &, std::shared_ptr<ListInterface<Channel>> &, std::shared_ptr<ChannelsController>, std::shared_ptr<ListInterface<Video>> &);
+    std::string loadData(std::shared_ptr<ListInterface<User>> , std::shared_ptr<ListInterface<Channel>> , std::shared_ptr<ChannelsController> , std::shared_ptr<ListInterface<Video>> );
     void loadUsersData(const Json::Value& object, std::shared_ptr<ListInterface<User>> &, std::shared_ptr<ListInterface<Channel>> &, std::shared_ptr<ListInterface<Video>> &);
     void loadChannelsData(const Json::Value& object, std::shared_ptr<ListInterface<Channel>> &, std::shared_ptr<ListInterface<Video>> &, std::shared_ptr<User>);
-    void loadVideosData(const Json::Value& object, std::shared_ptr<ListInterface<Video>> &, std::shared_ptr<Channel>);
-    void loadSubscriptionsData(const Json::Value& object, std::shared_ptr<Channel>);
-    void loadSubscribersData(const Json::Value& object, std::shared_ptr<Channel>);
+    void loadVideosData(const Json::Value& object, std::shared_ptr<ListInterface<Video>> &, std::shared_ptr<Channel> );
+    void loadSubscriptionsData(const Json::Value& object, std::shared_ptr<Channel>&, std::shared_ptr<ChannelsController>&);
+    void loadSubscribersData(const Json::Value& object, std::shared_ptr<Channel>, std::shared_ptr<ChannelsController>&);
 
     FileManagement(FileManagement &other) = delete;
     void operator=(const FileManagement &) = delete;

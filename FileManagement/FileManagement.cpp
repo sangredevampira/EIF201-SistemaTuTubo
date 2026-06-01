@@ -127,8 +127,8 @@ Json::Value FileManagement::saveSubscribersData(std::shared_ptr<ListInterface<Ob
 
 //  metodos para leer archivos
 
-std::string FileManagement::loadData(std::shared_ptr<ListInterface<User>> &usersList,
-    std::shared_ptr<ListInterface<Channel>> &channelsList, std::shared_ptr<ChannelsController> channelsManagement, std::shared_ptr<ListInterface<Video>> &videosList)
+std::string FileManagement::loadData( std::shared_ptr<ListInterface<User>> usersList,
+    std::shared_ptr<ListInterface<Channel>> channelsList, std::shared_ptr<ChannelsController> channelsManagement, std::shared_ptr<ListInterface<Video>> videosList)
 {
     std::ifstream file("SistemaTutubo.txt");
     if (!file.is_open()) throw MissingFile();
@@ -144,19 +144,16 @@ std::string FileManagement::loadData(std::shared_ptr<ListInterface<User>> &users
 
     loadUsersData(object["Users"], usersList, channelsList, videosList);
 
-    auto iterador = channelsList->createIterator();
-    auto currentChannel = nullptr;
-    object = object["Users"]["Channel"]["Subscribers"];
-    for (Json::ArrayIndex i = 0; i < object.size(); i++)
-    {
+    for (Json::ArrayIndex i = 0; i < object["Users"].size(); i++) {
+        std::string channelName = object["Users"][i]["Channel"]["Channel_Name"].asString();
+        auto channel = channelsManagement->searchChannel(channelName);
 
-       channelsManagement->searchChannel(object[i]["Channel_Name"].asString());
+        if (channel) {
+            loadSubscriptionsData(object["Users"][i]["Channel"]["Subscriptions"], channel, channelsManagement);
+            loadSubscribersData(object["Users"][i]["Channel"]["Subscribers"], channel, channelsManagement);
+        }
     }
 
-    while (iterador->hasNext())
-    {
-
-    }
 
     return "Datos cargados correctamente!";
 }
@@ -215,14 +212,25 @@ void FileManagement::loadVideosData(const Json::Value& object, std::shared_ptr<L
     }
 }
 
-void FileManagement::loadSubscriptionsData(const Json::Value& object, std::shared_ptr<Channel> channel)
+void FileManagement::loadSubscriptionsData(const Json::Value& object, std::shared_ptr<Channel> &channel, std::shared_ptr<ChannelsController> &channelManagement)
 {
-    for (Json::ArrayIndex i = 0; i < object.size(); i++)
-    {
-
+    for (Json::ArrayIndex i = 0; i < object.size(); i++) {
+        auto subscription = channelManagement->searchChannel(object[i]["Channel_Name"].asString());
+        if (subscription) {
+            channel->addChannelSuscription(subscription);
+        }
     }
+
+
 }
 
-void FileManagement::loadSubscribersData(const Json::Value& object, std::shared_ptr<Channel> channel)
+void FileManagement::loadSubscribersData(const Json::Value& object, std::shared_ptr<Channel> channel, std::shared_ptr<ChannelsController> &channelManagement)
 {
+
+    for (Json::ArrayIndex i = 0; i < object.size(); i++) {
+        auto subscriber = channelManagement->searchChannel(object[i]["Channel_Name"].asString());
+        if (subscriber) {
+            channel->addSuscriber(subscriber);
+        }
+    }
 }

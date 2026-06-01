@@ -45,3 +45,6 @@ std::string VideosController::addVideo(std::shared_ptr<Video> newVideo) {
     return s.str();
 }
 
+std::shared_ptr<ListInterface<Video>> VideosController::getVideoList() {
+    return videoList;
+}

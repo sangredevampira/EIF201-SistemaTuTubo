@@ -21,6 +21,8 @@
 #include "../Adapter/MPG.h"
 #include "../Adapter/AdapterMPG.h"
 
+#include "../FileManagement/FileManagement.h"
+
 
 
 class TuTubo {
@@ -33,9 +35,12 @@ public:
     TuTubo();
 
     void setActiveSession(std::shared_ptr<Channel>);
+    ~TuTubo();
     std::shared_ptr<ListInterface<User>> getUsersList();
     std::shared_ptr<Channel> getActiveSession();
     std::shared_ptr<UsersController> getUsersManagement();
+    std::shared_ptr<ChannelsController> getChannelsManagement();
+    std::shared_ptr<VideosController> getVideosManagement();
     std::string createUser(std::string,std::string,std::string);
     std::string login(std::string,std::string);
     std::string uploadVideo(std::string);

@@ -347,6 +347,8 @@ void Menu::saveDataManually()
 }
 
 void Menu::loadDataManually() {
+    std::cout << FileManagement::getInstance()->loadData(tuTubo->getUsersList(), tuTubo->getChannelsManagement()->getChannelsList(), tuTubo->getChannelsManagement(), tuTubo->getVideosManagement()->getVideoList()) << "\n\n";
+    ConsoleService::pause();
 }
 
 

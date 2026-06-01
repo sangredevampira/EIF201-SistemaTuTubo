@@ -9,15 +9,24 @@ TuTubo::TuTubo(){
     channelsManagement = std::make_shared<ChannelsController>();
     videosManagement = std::make_shared<VideosController>();
     usersManagement = std::make_shared<UsersController>();
+    FileManagement::getInstance()->loadData(getUsersList(),getChannelsManagement()->getChannelsList(), getChannelsManagement(), getVideosManagement()->getVideoList());
 }
 
 void TuTubo::setActiveSession(std::shared_ptr<Channel> loggedChannel) { activeSession = loggedChannel; }
+
+TuTubo::~TuTubo() {
+    FileManagement::getInstance()->saveData(getUsersList());
+}
 
 std::shared_ptr<ListInterface<User>> TuTubo::getUsersList() { return usersManagement->getUsersList(); }
 
 std::shared_ptr<Channel> TuTubo::getActiveSession() { return activeSession; }
 
 std::shared_ptr<UsersController> TuTubo::getUsersManagement() { return usersManagement; }
+
+std::shared_ptr<ChannelsController> TuTubo::getChannelsManagement() {return channelsManagement; }
+
+std::shared_ptr<VideosController> TuTubo::getVideosManagement() { return videosManagement; }
 
 std::string TuTubo::createUser(std::string username, std::string password, std::string channelName) {
     if (usersManagement->existingUser(username)) throw DuplicatedUser();
