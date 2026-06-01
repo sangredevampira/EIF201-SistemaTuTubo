@@ -47,7 +47,7 @@ std::string FileManagement::saveData(std::shared_ptr<ListInterface<User>> usersL
     Json::Value event;
 
     event["Users"] = saveUserData(usersList);
-    if (!writer->write(event, &file)) throw SaveDataError();
+    writer->write(event, &file);
     file.close();
 
     return "Datos guardados correctamente!";
@@ -77,6 +77,8 @@ Json::Value FileManagement::saveChannelData(std::shared_ptr<Channel> channel)
     channelEvent["Uploaded_Videos"] = saveVideosData(channel->getUploadedVideos());
     channelEvent["Subscriptions"] = saveSubscriptionsData(channel->getSubscriptions());
     channelEvent["Subscribers"] = saveSubscribersData(channel->getSubscribers());
+
+    return channelEvent;
 }
 
 Json::Value FileManagement::saveVideosData(std::shared_ptr<ListInterface<Video>> videosList)
@@ -125,7 +127,8 @@ Json::Value FileManagement::saveSubscribersData(std::shared_ptr<ListInterface<Ob
 
 //  metodos para leer archivos
 
-std::string FileManagement::loadData(std::shared_ptr<ListInterface<User>> &usersList, std::shared_ptr<ListInterface<Channel>> &channelsList, std::shared_ptr<ListInterface<Video>> &videosList)
+std::string FileManagement::loadData(std::shared_ptr<ListInterface<User>> &usersList,
+    std::shared_ptr<ListInterface<Channel>> &channelsList, std::shared_ptr<ChannelsController> channelsManagement, std::shared_ptr<ListInterface<Video>> &videosList)
 {
     std::ifstream file("SistemaTutubo.txt");
     if (!file.is_open()) throw MissingFile();
@@ -139,32 +142,87 @@ std::string FileManagement::loadData(std::shared_ptr<ListInterface<User>> &users
 
     if (!reader.parse(file, object)) throw LoadDataError();
 
-    loadUsersData(object, usersList);
+    loadUsersData(object["Users"], usersList, channelsList, videosList);
+
+    auto iterador = channelsList->createIterator();
+    auto currentChannel = nullptr;
+    object = object["Users"]["Channel"]["Subscribers"];
+    for (Json::ArrayIndex i = 0; i < object.size(); i++)
+    {
+
+       channelsManagement->searchChannel(object[i]["Channel_Name"].asString());
+    }
+
+    while (iterador->hasNext())
+    {
+
+    }
+
+    return "Datos cargados correctamente!";
 }
 
-std::string FileManagement::loadUsersData(const Json::Value& object, std::shared_ptr<ListInterface<User>> &usersList,
-    std::shared_ptr<ListInterface<Channel>> &, std::shared_ptr<ListInterface<Video>> &)
+void FileManagement::loadUsersData(const Json::Value& object, std::shared_ptr<ListInterface<User>> &usersList,
+    std::shared_ptr<ListInterface<Channel>> &channelsList, std::shared_ptr<ListInterface<Video>> &videosList)
 {
-    const Json::Value& clients = object["User"];
+    for (Json::ArrayIndex i = 0; i < object.size(); i++)
+    {
+        std::string username = object[i]["Username"].asString();
+        std::string password = object[i]["Password"].asString();
 
+        auto user = std::make_shared<User>(username, password);
 
+        loadChannelsData(object[i]["Channel"], channelsList, videosList, user);
 
+        usersList->insertLast(user);
+    }
 }
 
-std::string FileManagement::loadChannelsData(const Json::Value& object, std::shared_ptr<ListInterface<Channel>> &channelsList,
+void FileManagement::loadChannelsData(const Json::Value& object, std::shared_ptr<ListInterface<Channel>> &channelsList,
     std::shared_ptr<ListInterface<Video>> &videosList, std::shared_ptr<User> user)
 {
+    std::string channelName = object["Channel_Name"].asString();
+
+    auto channel = std::make_shared<Channel>(channelName);
+    user->setOwnedChannel(channel);
+    channelsList->insertLast(channel);
+
+    loadVideosData(object["Uploaded_Videos"], videosList, channel);
 }
 
-std::string FileManagement::loadVideosData(const Json::Value& object, std::shared_ptr<ListInterface<Video>>&,
-    std::shared_ptr<Channel>)
+void FileManagement::loadVideosData(const Json::Value& object, std::shared_ptr<ListInterface<Video>> &videosList,
+    std::shared_ptr<Channel> channel)
 {
+    std::shared_ptr<Video> newVideo = nullptr;
+
+    for (Json::ArrayIndex i = 0; i < object.size(); i++)
+    {
+        std::string title = object[i]["Title"].asString();
+
+        size_t pos = title.rfind('.');
+        std::string extension = title.substr(pos);
+        std::transform(extension.begin(), extension.end(), extension.begin(), ::tolower);
+
+        if (extension == ".mp4") {
+            newVideo = std::make_shared<MP4>(title);
+        }
+        else if (extension == ".mpg") {
+            std::shared_ptr<MPG> mpgVideo = std::make_shared<MPG>();
+            newVideo = std::make_shared<AdapterMPG>(mpgVideo, title);
+        }
+
+        channel->getUploadedVideos()->insertLast(newVideo);
+        videosList->insertLast(newVideo);
+    }
 }
 
-std::string FileManagement::loadSubscriptionsData(const Json::Value& object, std::shared_ptr<Channel>)
+void FileManagement::loadSubscriptionsData(const Json::Value& object, std::shared_ptr<Channel> channel)
 {
+    for (Json::ArrayIndex i = 0; i < object.size(); i++)
+    {
+
+    }
 }
 
-std::string FileManagement::loadSubscribersData(const Json::Value& object, std::shared_ptr<Channel>)
+void FileManagement::loadSubscribersData(const Json::Value& object, std::shared_ptr<Channel> channel)
 {
 }

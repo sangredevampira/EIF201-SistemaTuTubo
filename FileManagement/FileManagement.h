@@ -10,6 +10,10 @@
 #include "../Controllers/UsersController.h"
 #include "../Controllers/ChannelsController.h"
 
+#include "../Adapter/AdapterMPG.h"
+#include "../Adapter/MPG.h"
+#include "../Adapter/MP4.h"
+
 #include "../Exceptions/SaveDataError.h"
 #include "../Exceptions/LoadDataError.h"
 #include "../Exceptions/MissingFile.h"
@@ -35,12 +39,12 @@ public:
     Json::Value saveSubscribersData(std::shared_ptr<ListInterface<ObserverInterface>>);
 
 
-    std::string loadData(std::shared_ptr<ListInterface<User>> &, std::shared_ptr<ListInterface<Channel>> &, std::shared_ptr<ListInterface<Video>> &);
-    std::string loadUsersData(const Json::Value& object, std::shared_ptr<ListInterface<User>> &, std::shared_ptr<ListInterface<Channel>> &, std::shared_ptr<ListInterface<Video>> &);
-    std::string loadChannelsData(const Json::Value& object, std::shared_ptr<ListInterface<Channel>> &, std::shared_ptr<ListInterface<Video>> &, std::shared_ptr<User>);
-    std::string loadVideosData(const Json::Value& object, std::shared_ptr<ListInterface<Video>> &, std::shared_ptr<Channel>);
-    std::string loadSubscriptionsData(const Json::Value& object, std::shared_ptr<Channel>);
-    std::string loadSubscribersData(const Json::Value& object, std::shared_ptr<Channel>);
+    std::string loadData(std::shared_ptr<ListInterface<User>> &, std::shared_ptr<ListInterface<Channel>> &, std::shared_ptr<ChannelsController>, std::shared_ptr<ListInterface<Video>> &);
+    void loadUsersData(const Json::Value& object, std::shared_ptr<ListInterface<User>> &, std::shared_ptr<ListInterface<Channel>> &, std::shared_ptr<ListInterface<Video>> &);
+    void loadChannelsData(const Json::Value& object, std::shared_ptr<ListInterface<Channel>> &, std::shared_ptr<ListInterface<Video>> &, std::shared_ptr<User>);
+    void loadVideosData(const Json::Value& object, std::shared_ptr<ListInterface<Video>> &, std::shared_ptr<Channel>);
+    void loadSubscriptionsData(const Json::Value& object, std::shared_ptr<Channel>);
+    void loadSubscribersData(const Json::Value& object, std::shared_ptr<Channel>);
 
     FileManagement(FileManagement &other) = delete;
     void operator=(const FileManagement &) = delete;

@@ -69,10 +69,14 @@ add_executable(Proyecto_2___Kris_y_Derek
         Exceptions/FormatNotAvaible.h
         Exceptions/DuplicatedChannel.cpp
         Exceptions/DuplicatedChannel.h
-        "File Management/FileManagement.cpp"
-        "File Management/FileManagement.h"
+        FileManagement/FileManagement.cpp
+        FileManagement/FileManagement.h
         Exceptions/SaveDataError.cpp
         Exceptions/SaveDataError.h
         Exceptions/LoadDataError.cpp
         Exceptions/LoadDataError.h
+        dist/json/json.h
+        dist/jsoncpp.cpp
+        Exceptions/MissingFile.cpp
+        Exceptions/MissingFile.h
 )

@@ -15,9 +15,11 @@ private:
     std::shared_ptr<Channel> ownedChannel;
 public:
     User(std::string, std::string, std::string);
+    User(std::string, std::string);
     std::string getUsername() const;
     std::string getPassword() const;
     std::shared_ptr<Channel> getOwnedChannel() const;
+    void setOwnedChannel(std::shared_ptr<Channel>);
     bool verifyUsername(std::string) const;
     bool verifyPassword(std::string) const;
     friend std::ostream& operator<<(std::ostream& os, const User &user);

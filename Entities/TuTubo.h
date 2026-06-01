@@ -33,6 +33,7 @@ public:
     TuTubo();
 
     void setActiveSession(std::shared_ptr<Channel>);
+    std::shared_ptr<ListInterface<User>> getUsersList();
     std::shared_ptr<Channel> getActiveSession();
     std::shared_ptr<UsersController> getUsersManagement();
     std::string createUser(std::string,std::string,std::string);

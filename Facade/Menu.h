@@ -9,6 +9,8 @@
 #include "../Exceptions/Miscapture.h"
 #include "../Utilities/ConsoleService.h"
 #include "../Exceptions/IndexOutOfRange.h"
+#include "../FileManagement/FileManagement.h"
+
 class Menu {
 private:
     std::unique_ptr<TuTubo> tuTubo;

@@ -15,7 +15,7 @@ void Menu::mainMenu() {
             << "(2) Manejo de Videos" << "\n"
             << "(3) Guardar Datos Manualmente" << "\n"
             << "(4) Recuperar Datos Manualmente" << "\n"
-            << "(5) Salir" << "\n"
+            << "(0) Salir" << "\n"
             << "* Digita la opcion deseada: ";
 }
 
@@ -42,7 +42,7 @@ void Menu::actionsMainMenu() {
                     saveDataManually(); break;
                 case 4:
                     loadDataManually(); break;
-                case 5:
+                case 0:
                     ConsoleService::clearConsole();
                     finalMessage();
                     continueMenu = false; break;
@@ -119,13 +119,11 @@ void Menu::createUser()
                           << "------------------ * -------------------\n";
     std::cout << "* Digita el username: "; std::cin.ignore(); std::getline(std::cin, username);
     if (std::cin.fail() || username.empty()) throw Miscapture();
-
-    std::cout << "* Digita la contrasena: "; std::cin.ignore(); std::getline(std::cin, password);
+    std::cout << "* Digita la contrasena: "; std::getline(std::cin, password);
     if (std::cin.fail() || password.empty()) throw Miscapture();
 
     std::cout << "* Digita el nombre del canal: "; std::cin >> channelName;
-    if (std::cin.fail() ||
-        channelName.empty()) throw Miscapture();
+    if (std::cin.fail() || channelName.empty()) throw Miscapture();
 
     std::cout << tuTubo->createUser(username, password, channelName) << "\n\n";
 
@@ -156,7 +154,7 @@ void Menu::doLogin()
     std::cout << "* Digita el username: "; std::cin.ignore(); std::getline(std::cin, username);
     if (std::cin.fail() || username.empty()) throw Miscapture();
 
-    std::cout << "* Digita la contrasena: "; std::cin.ignore(); std::getline(std::cin, password);
+    std::cout << "* Digita la contrasena: "; std::getline(std::cin, password);
     if (std::cin.fail() || password.empty()) throw Miscapture();
 
     std::cout << tuTubo->login(username, password) << "\n\n";
@@ -173,7 +171,7 @@ void Menu::uploadVideoToMyChannel()
     std::cout << "------------------ * -------------------\n"
               << "     PUBLICAR UN VIDEO EN EL CANAL\n"
               << "          [FORMATOS ACEPTADOS] \n"
-              << "              .MP4 Y .MPG"
+              << "              .MP4 Y .MPG \n"
               << "------------------ * -------------------\n";
 
     std::cout << "* Digita el titulo del video (debe indicar su formato): "; std::cin.ignore(); std::getline(std::cin, videoTitle);
@@ -342,7 +340,10 @@ void Menu::playVideoMenu() {
 }
 
 
-void Menu::saveDataManually() {
+void Menu::saveDataManually()
+{
+    std::cout << FileManagement::getInstance()->saveData(tuTubo->getUsersList()) << "\n\n";
+    ConsoleService::pause();
 }
 
 void Menu::loadDataManually() {

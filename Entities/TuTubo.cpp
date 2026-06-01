@@ -13,6 +13,8 @@ TuTubo::TuTubo(){
 
 void TuTubo::setActiveSession(std::shared_ptr<Channel> loggedChannel) { activeSession = loggedChannel; }
 
+std::shared_ptr<ListInterface<User>> TuTubo::getUsersList() { return usersManagement->getUsersList(); }
+
 std::shared_ptr<Channel> TuTubo::getActiveSession() { return activeSession; }
 
 std::shared_ptr<UsersController> TuTubo::getUsersManagement() { return usersManagement; }
