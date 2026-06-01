@@ -193,6 +193,8 @@ void Menu::subscribeToChannel()
     std::cout << "------------------ * -------------------\n"
               << "       SUSCRIBIRSE A UN CANAL\n"
               << "------------------ * -------------------\n";
+
+    std::cout << tuTubo->showAllChannels() << "\n";
     std::cout << "* Digita el nombre del canal: ";
     std::cin.ignore();
     std::getline(std::cin, channelName);
@@ -213,7 +215,7 @@ void Menu::unsubscribeToChannel()
     std::cout << "------------------ * -------------------\n"
               << "      DESUSCRIBIRSE DE UN CANAL\n"
               << "------------------ * -------------------\n";
-
+    std::cout << tuTubo->showSubscriptionsList() << "\n";
     std::cout << "* Digita el nombre del canal: "; std::cin.ignore(); std::getline(std::cin, channelName);
     if (!ConsoleService::validateID(channelName)) throw Miscapture();
     //if (std::cin.fail() || channelName.empty()) throw Miscapture();

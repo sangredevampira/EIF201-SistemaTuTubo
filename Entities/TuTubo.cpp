@@ -71,7 +71,7 @@ std::string TuTubo::uploadVideo(std::string video) {
 }
 
 std::string TuTubo::suscribeToChannel(std::string channelName) {
-   std::stringstream s;
+    std::stringstream s;
 
     if (activeSession == nullptr) {
         throw NoActiveAccount();
@@ -79,8 +79,15 @@ std::string TuTubo::suscribeToChannel(std::string channelName) {
 
     std::shared_ptr<Channel> targetChannel = channelsManagement->searchChannel(channelName);
 
-    s << "\n" << targetChannel->addSuscriber(activeSession);
+    if (activeSession == targetChannel) {
+        throw CannotSubscribeToOwnChannel();
+    }
 
+    if (activeSession->isSubscribedTo(targetChannel)) {
+        throw AlreadySubscribed();
+    }
+
+    s << "\n" << targetChannel->addSuscriber(activeSession);
     s << "\n" << activeSession->addChannelSuscription(targetChannel);
 
     return s.str();
@@ -93,20 +100,15 @@ std::string TuTubo::unsuscribeFromChannel(std::string channelName) {
         throw NoActiveAccount();
     }
 
-    auto subscriptionsList = activeSession->getSubscriptions();
-    s << "Canales a los que estás suscrito:\n" << subscriptionsList->showList();
-
     std::shared_ptr<Channel> targetChannel = channelsManagement->searchChannel(channelName);
 
-    subscriptionsList->deleteElement(targetChannel);
-
-    s << "\n" << targetChannel->removeSuscriber(activeSession);
-
-    if (targetChannel != nullptr)
-    {
-        subscriptionsList->deleteElement(targetChannel);
-        s << "\nTe desuscribiste de: " << targetChannel->getName();
+    if (!activeSession->isSubscribedTo(targetChannel)) {
+        throw NotSubscribed();
     }
+
+    auto subscriptionsList = activeSession->getSubscriptions();
+    subscriptionsList->deleteElement(targetChannel);
+    s << targetChannel->removeSuscriber(activeSession);
 
     return s.str();
 }
@@ -163,6 +165,29 @@ std::string TuTubo::playVideo(std::string videoName) {
     }
 
     s << video->play();
+
+    return s.str();
+}
+
+std::string TuTubo::showSubscriptionsList() {
+    if (activeSession == nullptr) {
+        throw NoActiveAccount();
+    }
+    return activeSession->showSubscriptionsList();
+}
+
+std::string TuTubo::showAllChannels() {
+    std::stringstream s;
+
+    if (activeSession == nullptr) {
+        throw NoActiveAccount();
+    }
+
+    if (channelsManagement == nullptr) {
+        throw MissingChannel();
+    }
+
+    s << "Canales disponibles:\n" << channelsManagement->showChannelsList();
 
     return s.str();
 }

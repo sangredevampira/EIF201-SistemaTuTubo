@@ -69,4 +69,13 @@ add_executable(Proyecto_2___Kris_y_Derek
         Exceptions/FormatNotAvaible.h
         Exceptions/DuplicatedChannel.cpp
         Exceptions/DuplicatedChannel.h
+        Exceptions/NotSubscribed.cpp
+        Exceptions/NotSubscribed.h
+        Exceptions/AlreadySubscribed.h
+        Exceptions/AlreadySubscribed.cpp
+        Exceptions/NoChannelSubscriptions.cpp
+        Exceptions/NoChannelSubscriptions.h
+        Exceptions/CannotSubscribeToOwnChannel.cpp
+        Exceptions/CannotSubscribeToOwnChannel.h
+
 )

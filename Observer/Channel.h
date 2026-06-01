@@ -11,6 +11,7 @@
 #include "../Exceptions/MissingVideo.h"
 #include "../Exceptions/NoSuscribers.h"
 #include "../Exceptions/VideosNotAvailable.h"
+#include "../Exceptions/NoChannelSubscriptions.h"
 
 class Channel : public ObserverInterface
 {
@@ -29,6 +30,9 @@ public:
     std::string addSuscriber(std::shared_ptr<ObserverInterface> suscriber);
     std::string addChannelSuscription(std::shared_ptr<Channel> channel); //agrega a la lista de subs
     std::string removeSuscriber(std::shared_ptr<ObserverInterface> suscriber);
+    bool isSubscribedTo(std::shared_ptr<Channel> channel);
+    bool hasSubscriber(std::shared_ptr<ObserverInterface> suscriber);
+    std::string showSubscriptionsList();
 
     std::string notifySubscribers(std::string, std::string) override;
 

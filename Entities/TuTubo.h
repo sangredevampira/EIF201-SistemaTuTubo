@@ -11,6 +11,10 @@
 #include "../Exceptions/DuplicatedUser.h"
 #include "../Exceptions/FormatNotAvaible.h"
 #include "../Exceptions/DuplicatedChannel.h"
+#include "../Exceptions/NotSubscribed.h"
+#include "../Exceptions/AlreadySubscribed.h"
+#include "../Exceptions/NoChannelSubscriptions.h"
+#include "../Exceptions/CannotSubscribeToOwnChannel.h"
 
 #include "../Controllers/ChannelsController.h"
 #include "../Controllers/UsersController.h"
@@ -44,6 +48,8 @@ public:
     std::string searchVideoByChannel(std::string,std::string);
     std::string playVideo(std::string videoName);
     bool channelExists(std::string channelName);
+    std::string showSubscriptionsList();
+    std::string showAllChannels();
 };
 
 
