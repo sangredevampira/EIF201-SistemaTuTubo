@@ -4,12 +4,14 @@
 
 #include "TuTubo.h"
 
-TuTubo::TuTubo(){
+TuTubo::TuTubo() {
     activeSession = nullptr;
     channelsManagement = std::make_shared<ChannelsController>();
     videosManagement = std::make_shared<VideosController>();
     usersManagement = std::make_shared<UsersController>();
-    FileManagement::getInstance()->loadData(getUsersList(),getChannelsManagement()->getChannelsList(), getChannelsManagement(), getVideosManagement()->getVideoList());
+    try {
+        FileManagement::getInstance()->loadData(getUsersList(),getChannelsManagement()->getChannelsList(), getChannelsManagement(), getVideosManagement()->getVideoList());
+    } catch (...) {}
 }
 
 void TuTubo::setActiveSession(std::shared_ptr<Channel> loggedChannel) { activeSession = loggedChannel; }
