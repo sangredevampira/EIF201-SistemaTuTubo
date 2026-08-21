@@ -19,7 +19,7 @@ public:
     void insertFirst(std::shared_ptr<T>) ;
     void insertLast(std::shared_ptr<T> element) ;
     bool isEmpty() ;
-    void deleteElement(std::shared_ptr<T>) ;
+    void deleteElement(std::shared_ptr<T>);
     std::shared_ptr<Nodo<T>> getFirst() const ;
     int length() ;
     std::string showList() ;
